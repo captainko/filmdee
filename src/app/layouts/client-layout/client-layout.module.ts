@@ -7,6 +7,7 @@ import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { ClientLayoutRoutingModule } from './client-layout-routing.module';
 
 import { SearchService } from '@services/search/search.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SearchService } from '@services/search/search.service';
   imports: [
     CommonModule,
     ClientLayoutRoutingModule,
+    FormsModule
   ],
   providers: [SearchService]
 })

@@ -28,8 +28,9 @@ header{
       text-align: right;
     }
   
-     .search-box{
-      border: 1px solid #f2f2f2;
+     .search{
+      box-sizing: border-box;
+      width: 90%;
     }
     
   /* Dropdown Button */

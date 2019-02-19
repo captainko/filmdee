@@ -9,21 +9,19 @@ import { FooterComponent } from './layouts/client-layout/footer/footer.component
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ClientLayoutModule } from './layouts/client-layout/client-layout.module';
+import { SlideShowComponent } from './layouts/client-layout/slide-show/slide-show.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent,
-    LoginComponent
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ClientLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

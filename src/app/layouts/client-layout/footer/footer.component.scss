@@ -1,0 +1,180 @@
+$colors: (facebook: #365899,
+twitter: #006dbf,
+google: #d93025,
+youtube: #ff0000,
+filmdee: aqua,
+instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+
+.footer {
+  font-family: OpenSans-Regular;
+  background-color: #0f1619;
+  //   background-color: aquamarine;
+
+  ul {
+    cursor: pointer;
+    list-style: none;
+
+    li {
+        &:hover {
+            color: color(filmdee);
+            transition-duration: .5s;
+        }
+    }
+  }
+
+  .intro {
+    p {
+      color: #b4b4b4;
+    }
+
+    h5 {
+      color: white;
+    }
+  }
+
+  .cl-2,
+  .cl-3 {
+    color: white;
+  }
+
+  .contact {
+    .s-m {
+      display: inline-flex;
+      cursor: pointer;
+    }
+
+    .s-m a {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      //   background: rgba(137, 130, 247, .1);
+      background: white;
+      color: white;
+      margin: 0 6px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s;
+      font-size: 22px;
+      text-decoration: none;
+    }
+
+    .s-m {
+      .hv-1 {
+        i {
+          color: color(facebook);
+        }
+
+        a:hover {
+          background: color(facebook);
+
+          i {
+            color: white;
+          }
+        }
+      }
+
+      .hv-2 {
+        i {
+          color: color(twitter);
+        }
+
+        a:hover {
+          background: color(twitter);
+
+          i {
+            color: white;
+          }
+        }
+      }
+
+      .hv-3 {
+        i {
+          color: color(google);
+        }
+
+        a:hover {
+          background: color(google);
+
+          i {
+            color: white;
+          }
+        }
+      }
+
+      .hv-4 {
+        i {
+          color: color(youtube);
+        }
+
+        a:hover {
+          background: color(youtube);
+
+          i {
+            color: white;
+          }
+        }
+      }
+
+      .hv-5 {
+        i {
+          color: #8a3ab9;
+        }
+
+        a:hover {
+          background: color(instagram);
+
+          i {
+            color: white;
+          }
+        }
+      }
+
+    }
+
+    .s-m a i {
+      transition: 0.4s all;
+    }
+  }
+
+  form {
+    .email {
+      display: inline-flex;
+
+      input {
+        color: white;
+        background: transparent;
+        outline: none;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+
+        &:focus {
+          border: 2px solid rgba(255, 255, 255, 0.15) !important; 
+        }
+      }
+
+      button {
+        border: 2px solid rgba(255, 255, 255, 0.15);
+
+        i {
+          color: color(filmdee);
+        }
+      }
+    }
+
+    p {
+      color: color(filmdee);
+    }
+  }
+
+}
+
+.copyright {
+  border-top: solid 1px gray;
+  color: #b4b4b4;
+}
+

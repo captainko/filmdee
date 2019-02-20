@@ -1,0 +1,55 @@
+<div>Some tags before</div>
+<div class="list-film">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let listFilm of listFilms"><img src="assets/images/thumb-film/{{listFilm.id}}.jpg"
+        alt=""></ng-template>
+  </owl-carousel-o>
+</div>
+
+<div>Some tags after</div>
+
+<!-- 
+<div class="listfilm">
+  <div class="list-header">
+    <h3 class="list-title float-left">Mới Cập Nhật</h3>
+    <div class="list-nav float-right row">
+      <div (click)="previous()" class="col-2 list-previous d-flex justify-content-center align-items-center"><i class="fal fa-arrow-circle-left"></i></div>
+      <ul class="list-dots d-flex justify-content-center align-items-center">
+        <li (click)="dots(0)" class="list-one-dot active"></li>
+        <li (click)="dots(8)" class="list-one-dot"></li>
+        <li (click)="dots(16)" class="list-one-dot"></li>
+        <li (click)="dots(24)" class="list-one-dot"></li>
+        <li (click)="dots(32)" class="list-one-dot"></li>
+      </ul>
+      <div (click)="next()" class="col-2 list-next d-flex justify-content-center align-items-center"><i class="fal fa-arrow-circle-right"></i></div>
+    </div>
+  </div>
+  <owl-carousel #owlElement [options]="{items: 8, slideBy: 8, center: false, dots: false, nav: false, loop: true, margin: 10}" [items]="listFilms"
+  [carouselClasses]="['owl-theme']" class="kla">
+    <div *ngFor="let listFilm of listFilms" class="item grid">
+      <div class="cell cell-g">
+        <div class="show">
+          <div class="part">{{listFilm.now}}/{{listFilm.total}}</div>
+          <div class="quality">{{listFilm.quality}}</div>
+          <img src="../../../assets/images/thumb-film/{{listFilm.id}}.jpg" />
+          <div class="play">
+            <a class="video-play-button" href="#">
+              <span class="icon-play"></span>
+            </a>
+          </div>
+          <div class="title">{{listFilm.name}}</div>
+        </div>
+      </div>
+    </div>
+  </owl-carousel>
+</div>
+
+
+
+<ul id="dff" class="dff list-dots">
+    <li class="list-one-dot"></li>
+    <li class="list-one-dot"></li>
+    <li class="list-one-dot"></li>
+    <li class="list-one-dot"></li>
+    <li class="list-one-dot"></li>
+  </ul> -->

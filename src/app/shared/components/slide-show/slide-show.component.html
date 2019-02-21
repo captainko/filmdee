@@ -1,25 +1,47 @@
-<div class="carousel slide" data-ride="carousel">
+<!-- <div class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
+
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
 
-  <!-- The slideshow -->
+
   <div class="slideshow">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe #player id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/w7pYhpJaJW8"
         allowfullscreen></iframe>
     </div>
   </div>
-  <!-- Left and right controls -->
+
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
   <a class="carousel-control-next" href="#demo" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
+
+</div> -->
+
+<div class="carousel-option">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <video loop id="myVideo" controls autoplay #myVideo>
+        <source src="assets/images/vd.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <!-- <a class="video-play-button" (click)="playVideo()">
+        <span class="icon-play"></span>
+      </a> -->
+      <div class="content">
+        <h1>Avenger: Endgame</h1>
+        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque
+          expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+          latine molestiae, ad mutat oblique delicatissimi pro.</p>
+      </div>
+    </ng-template>
+
+  </owl-carousel-o>
 
 </div>

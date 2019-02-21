@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ClientLayoutRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [SearchService]
 })

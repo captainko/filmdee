@@ -6,23 +6,23 @@
 [ FONT ]*/
 
 @font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  font-family: OpenSans-Bold;
+  src: url('../fonts/open-sans/OpenSans-Bold.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  font-family: OpenSans-Italic;
+  src: url('../fonts/open-sans/OpenSans-Italic.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  font-family: OpenSans-Regular;
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  font-family: OpenSans-Light;
+  src: url('../fonts/open-sans/OpenSans-Light.ttf'); 
 }
 
 
@@ -39,12 +39,12 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: OpenSans-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: OpenSans-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+	font-family: OpenSans-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -136,14 +136,14 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
+  font-family: OpenSans-Regular;
   font-size: 14px;
   line-height: 1.5;
   color: #666666;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
+  font-family: OpenSans-Regular;
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
@@ -216,7 +216,7 @@ iframe {
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
+  font-family: OpenSans-Regular;
   font-size: 14px;
   color: #333333;
   line-height: 1.5;
@@ -397,7 +397,7 @@ iframe {
   right: 2px;
   pointer-events: none;
 
-  font-family: Poppins-Regular;
+  font-family: OpenSans-Regular;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;

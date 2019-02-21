@@ -3,7 +3,7 @@ header {
 }
 
 nav {
-  background: black;
+  background: transparent;
 }
 
 .btn {
@@ -130,8 +130,11 @@ nav {
   }
 }
 
-.search {
-  position: relative;
+.search-box {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: white;
+  border-radius: 5px;
 }
 
 .search input {

@@ -159,4 +159,14 @@ nav {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  z-index: 999;
+}
+
+.fixednav {
+  position: fixed !important;
+  top: 0px !important;
+  transition-duration: .5s;
+  left: 0;
+  right: 0;
 }

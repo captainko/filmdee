@@ -11,7 +11,6 @@ export class BoxCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.boxCard);
   }
 
 }

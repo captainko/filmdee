@@ -16,7 +16,7 @@
   <owl-carousel-o [options]="customOptions" (translated)="active($event)" (initialized)="getData($event)" #owlCar>
     <ng-container *ngFor="let listFilm of listFilms; let i = index">
       <ng-template carouselSlide [id]="i">
-        <div class="cell cell-g">
+        <!-- <div class="cell cell-g">
           <div class="show">
             <div class="part">{{listFilm.now}}/{{listFilm.total}}</div>
             <div class="quality">{{listFilm.quality}}</div>
@@ -27,14 +27,15 @@
               </a>
             </div>
             <div class="title">{{listFilm.name}}</div>
-          </div>
-        </div>
+          </div> -->
+          <box-card [card]="listFilm"></box-card>
+        <!-- </div> -->
       </ng-template>
     </ng-container>
   </owl-carousel-o>
 </div>
 
-<!-- 
+<!--
 <div class="listfilm">
   <div class="list-header">
     <h3 class="list-title float-left">Mới Cập Nhật</h3>

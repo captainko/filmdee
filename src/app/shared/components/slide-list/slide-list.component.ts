@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BoxCard } from '../cards/box-card/box-card';
 
 @Component({
   selector: 'app-slide-list',
@@ -82,7 +83,7 @@ export class SlideListComponent implements OnInit {
     }
   }
 
-  listFilms = [
+  listFilms: BoxCard[] = [
     { id: 1, total: 20, now: 12, quality: 'HD', name: 'Đảo Hải Tặc' },
     { id: 2, total: 30, now: 16, quality: '2K', name: 'Vụ Nổ Lớn: Phần 12' },
     { id: 3, total: 20, now: 20, quality: 'HD', name: 'Người Hùng Tia Chớp Phần 5' },
@@ -125,7 +126,12 @@ export class SlideListComponent implements OnInit {
     { id: 40, total: 1, now: 1, quality: '4K', name: 'Triều Đại Của Siêu Nhân' }
   ]
 
-  constructor() { }
+  constructor() {
+
+      this.listFilms.forEach((x: any)=> {
+        x.link = `assets/images/thumb-film/${x.id}.jpg`
+      })
+   }
 
   ngOnInit() {
   }

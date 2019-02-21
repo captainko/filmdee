@@ -2,7 +2,7 @@ $colors: (facebook: #365899,
 twitter: #006dbf,
 google: #d93025,
 youtube: #ff0000,
-filmdee: aqua,
+filmdee: #0396ff,
 instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
 
 @function color($type) {
@@ -14,6 +14,10 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
   font-family: OpenSans-Regular;
   background-color: #0f1619;
   //   background-color: aquamarine;
+
+  img {
+    width: 200px;
+  }
 
   ul {
     cursor: pointer;

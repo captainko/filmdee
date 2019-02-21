@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from "@angular/core";
-import { BoxCard } from './box-card';
+import { BoxCard } from './box-card.d';
 @Component({
   selector: 'box-card',
   templateUrl: './box-card.component.html',
@@ -11,6 +11,7 @@ export class BoxCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.boxCard);
   }
 
 }

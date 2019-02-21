@@ -27,7 +27,8 @@ import { SearchBarComponent } from './components/search/search-bar/search-bar.co
     HttpClientModule,
     SlideListComponent,
     BoxCardComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    SearchBarComponent
   ]
 })
 export class SharedModule { }

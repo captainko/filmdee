@@ -5,16 +5,18 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { SlideShowComponent } from './components/slide-show/slide-show.component';
-import { SlideListComponent } from './components/slide-list/slide-list.component';
+import { SlideShowComponent } from './components/slides/slide-show/slide-show.component';
+import { SlideListComponent } from './components/slides/slide-list/slide-list.component';
 import { BoxCardComponent } from './components/cards/box-card/box-card.component';
+import { SearchBarComponent } from './components/search/search-bar/search-bar.component';
 
 
 @NgModule({
   declarations: [
     SlideShowComponent,
     SlideListComponent,
-    BoxCardComponent
+    BoxCardComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,

@@ -21,7 +21,6 @@ import { HomeModule } from '@app/pages/home/home.module';
     CommonModule,
     ClientLayoutRoutingModule,
     FormsModule,
-    HomeModule
   ],
   providers: [SearchService]
 })

@@ -14,3 +14,10 @@ body{
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
+
+
+app-slide-show {
+    .owl-stage-outer {
+        // height: 80vh !important;
+    }
+}

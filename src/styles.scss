@@ -3,11 +3,19 @@
 @import './assets/fontawesome/css/all.css';
 // @import "~font-awesome/css/font-awesome.css";
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
-
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 
 
 body{
     background: black;
     font-family: 'Roboto' !important;
+}
+
+
+app-slide-show {
+    .owl-stage-outer {
+        // height: 80vh !important;
+    }
 }

@@ -9,15 +9,31 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=vietnamese');
 
 
-body{
-    background: #141414;
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
+body {
+  background: #141414;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 
 app-slide-show {
-    .owl-stage-outer {
-        // height: 80vh !important;
-    }
+  .owl-stage-outer {
+    // height: 80vh !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #0396ff;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #141414;
 }

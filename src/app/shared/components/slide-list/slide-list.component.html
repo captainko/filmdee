@@ -1,12 +1,38 @@
-<div>Some tags before</div>
 <div class="list-film">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let listFilm of listFilms"><img src="assets/images/thumb-film/{{listFilm.id}}.jpg"
-        alt=""></ng-template>
+  <div class="row list-header justify-content-between">
+    <div class="col-6">
+      <h3 class="list-title">Mới Cập Nhật</h3>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+      <div class="list-nav row">
+        <div (click)="owlCar.prev()" class="button-pre col-auto list-previous d-flex justify-content-center align-items-center"><i class="fal fa-arrow-circle-left"></i></div>
+        <ul class="col-auto list-dots d-flex justify-content-center align-items-center">
+          <li *ngFor="let total_dot of total_dots" [ngClass]="{'active' : total_dot.id == activeDot}" (click)="owlCar.to(total_dot.dot)" class="list-one-dot"></li>
+        </ul>
+        <div (click)="owlCar.next()" class="button-next col-auto list-next d-flex justify-content-center align-items-center"><i class="fal fa-arrow-circle-right"></i></div>
+      </div>
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions" (translated)="active($event)" (initialized)="getData($event)" #owlCar>
+    <ng-container *ngFor="let listFilm of listFilms; let i = index">
+      <ng-template carouselSlide [id]="i">
+        <div class="cell cell-g">
+          <div class="show">
+            <div class="part">{{listFilm.now}}/{{listFilm.total}}</div>
+            <div class="quality">{{listFilm.quality}}</div>
+            <img src="../../../assets/images/thumb-film/{{listFilm.id}}.jpg" />
+            <div class="play">
+              <a class="video-play-button" href="#">
+                <span class="icon-play"></span>
+              </a>
+            </div>
+            <div class="title">{{listFilm.name}}</div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
   </owl-carousel-o>
 </div>
-
-<div>Some tags after</div>
 
 <!-- 
 <div class="listfilm">

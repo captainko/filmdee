@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=vietnamese');
-  
+
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #141414 !important;
-    font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #141414 !important;
+  font-size: 16px;
 }
 
 // Header List
 
 .list-header {
-    display: flow-root;
-    color: white;
+  color: white;
 }
 
 h3.list-title {
@@ -41,11 +40,13 @@ li.active {
   background: white !important;
 }
 
+li.list-one-dot:hover {
+  background: white;
+}
+
 .list-nav {
   font-size: 25px;
-  width: 190px;
-  margin: 0px !important;
-  padding: 10px 0px;
+  margin: 0px 15px 0px 0px !important;
 }
 
 .list-previous {
@@ -56,8 +57,22 @@ li.active {
   cursor: pointer;
 }
 
+.button-pre {
+  padding-right: 5px;
+  padding-left: 0px;
+}
+
+.button-next {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
 .list-film {
-  padding: 10px;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  margin: 25px 0px;
 }
 
 
@@ -70,81 +85,81 @@ li.active {
   padding: 20px 20px;
 }
 
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
-  .grid .cell {
-    position: relative;
-    float: left;
-    margin: 0px;
-    transform: scale3d(1, 1, 1);
-    cursor: pointer;
-  }
+.grid .cell {
+  position: relative;
+  float: left;
+  margin: 0px;
+  transform: scale3d(1, 1, 1);
+  cursor: pointer;
+}
 
-  .grid .cell .inside {
-    position: absolute;
-    background: #34495eed;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
+.grid .cell .inside {
+  position: absolute;
+  background: #34495eed;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
 
-  .grid .cell img {
-    position: relative;
-    display: block;
-    width: 100%;
-  }
+.grid .cell img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
 
-  .grid .cell h2 {
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    color: #ecf0f1;
-  }
+.grid .cell h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color: #ecf0f1;
+}
 
-  .grid .cell p {
-    text-align: center;
-    color: #bdc3c7;
-  }
+.grid .cell p {
+  text-align: center;
+  color: #bdc3c7;
+}
 
-  .cell-xxx .inside {
-    display: none;
-  }
+.cell-xxx .inside {
+  display: none;
+}
 
-  .cell-g:hover .play {
-    display: block;
-  }
+.cell-g:hover .play {
+  display: block;
+}
 
-  .cell-g img {
-    transition: transform 0.3s ease-in;
-    transform: scale(1);
-  }
+.cell-g img {
+  transition: transform 0.3s ease-in;
+  transform: scale(1);
+}
 
-  .cell-g .inside {
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    opacity: 0;
-  }
+.cell-g .inside {
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  opacity: 0;
+}
 
-  .cell-g .inside * {
-    transition: transform 0.3s ease-in;
-    transform: scale(1.3);
-  }
+.cell-g .inside * {
+  transition: transform 0.3s ease-in;
+  transform: scale(1.3);
+}
 
 .show {
-    position: relative;
+  position: relative;
 }
 
 .part {
-    background: #50535dc9;
-    display: -webkit-inline-box;
-    padding: 3px 5px;
-    position: absolute;
-    z-index: 10;
-    color: white;
+  background: #50535dc9;
+  display: -webkit-inline-box;
+  padding: 3px 5px;
+  position: absolute;
+  z-index: 10;
+  color: white;
 }
 
 // .quality {
@@ -219,7 +234,7 @@ li.active {
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   box-sizing: content-box;
   display: block;
   width: 25px;
@@ -236,14 +251,14 @@ li.active {
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   display: block;
   width: 60px;
   height: 60px;
   background: #fff;
   border-radius: 50%;
   -webkit-animation: pulse-border 1500ms ease-out infinite;
-          animation: pulse-border 1500ms ease-out infinite;
+  animation: pulse-border 1500ms ease-out infinite;
 }
 
 .video-play-button:after {
@@ -253,7 +268,7 @@ li.active {
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   display: block;
   width: 60px;
   height: 60px;
@@ -267,7 +282,7 @@ li.active {
   background-color: #1e67b5;
 }
 
-.video-play-button:hover > .icon-play {
+.video-play-button:hover>.icon-play {
   border-left: 25px solid #ffffff;
 }
 
@@ -293,12 +308,13 @@ li.active {
 @-webkit-keyframes pulse-border {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 }
@@ -306,12 +322,13 @@ li.active {
 @keyframes pulse-border {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 }
@@ -336,5 +353,3 @@ li.active {
   text-overflow: ellipsis;
   width: 100%;
 }
-
-

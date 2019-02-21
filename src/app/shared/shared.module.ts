@@ -14,7 +14,7 @@ import { BoxCardComponent } from './components/cards/box-card/box-card.component
   declarations: [
     SlideShowComponent,
     SlideListComponent,
-
+    BoxCardComponent
   ],
   imports: [
     CommonModule,

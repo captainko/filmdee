@@ -25,7 +25,6 @@ import { BoxCardComponent } from './components/cards/box-card/box-card.component
     HttpClientModule,
     SlideListComponent,
     BoxCardComponent,
-
   ]
 })
 export class SharedModule { }

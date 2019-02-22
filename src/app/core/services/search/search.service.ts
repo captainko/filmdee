@@ -59,8 +59,10 @@ const listFilms = [
 export class SearchService {
   private env = environment;
   movieStream: Subject<BoxCard[]>;
+
   constructor(private http: HttpClient) {
     this.movieStream = new Subject();
+    this.movieStream.next(listFilms);
   }
   getMovies(query: string): Observable<BoxCard[]> {
     query.trim();

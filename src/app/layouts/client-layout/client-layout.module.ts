@@ -20,7 +20,6 @@ import { SearchModule } from '@shared/components/search/search.module';
   imports: [
     CommonModule,
     ClientLayoutRoutingModule,
-    FormsModule,
     SearchModule
   ],
   providers: [SearchService]

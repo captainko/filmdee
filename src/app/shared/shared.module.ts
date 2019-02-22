@@ -9,14 +9,14 @@ import { SlideListComponent } from './components/slides/slide-list/slide-list.co
 import { BoxCardComponent } from './components/cards/box-card/box-card.component';
 import { SearchBarComponent } from './components/search/search-bar/search-bar.component';
 import { VideoBackgroundComponent } from './components/video-background/video-background.component';
+import { FormsModule } from '@angular/forms';
+import { SearchModule } from './components/search/search.module';
 
 
 @NgModule({
   declarations: [
     SlideShowComponent,
     SlideListComponent,
-    BoxCardComponent,
-    SearchBarComponent,
     VideoBackgroundComponent
   ],
   imports: [
@@ -29,7 +29,6 @@ import { VideoBackgroundComponent } from './components/video-background/video-ba
     SlideListComponent,
     BoxCardComponent,
     SlideShowComponent,
-    SearchBarComponent,
     VideoBackgroundComponent
   ]
 })

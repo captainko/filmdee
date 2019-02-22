@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BoxCard } from '../cards/box-card/box-card';
+import { BoxCard } from '@shared/components/cards/box-card/box-card';
 
 @Component({
   selector: 'app-slide-list',

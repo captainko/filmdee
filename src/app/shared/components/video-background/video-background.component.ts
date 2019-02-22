@@ -6,6 +6,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./video-background.component.scss']
 })
 export class VideoBackgroundComponent implements OnInit {
+
+  title = 'Anh Da Đen Hai Súng: Đức Nhọ (2019)';
+  content = 'Ngày xửa ngày xưa có mụ bán dưa, mụ ngồi mụ địt, có mụ bán bịch mụ ngồi mụ ngửi, có mụ bán bưởi mụ ngồi mụ chửi.';
+
   @ViewChild("video") video: ElementRef;
   constructor() {
     this.playDelay();

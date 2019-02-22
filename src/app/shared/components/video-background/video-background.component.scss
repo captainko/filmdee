@@ -48,6 +48,29 @@
     bottom: 0;
 }
 
+.content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    // background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, rgba(1, 0, 0, 1), rgba(1, 0, 0, 0));
+    color: #f1f1f1;
+    width: 50%;
+    height: 100%;
+    padding: 9%;
+    padding-top: 18%;
+    z-index: 40;
+  
+    p {
+      font-size: 15px;
+      color: white;
+    }
+  
+    img {
+      width: 300px;
+    }
+  }
+
 @media only screen and (max-width: 768px) {
     .fa-volume-up:before {
         bottom: 20px;
@@ -70,3 +93,6 @@
         height: calc(100vw / 16 * 9);
     }
 }
+
+
+

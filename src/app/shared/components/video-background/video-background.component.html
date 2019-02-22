@@ -5,7 +5,14 @@
       type="video/mp4">
   </video>
   <div class="button-control">
-    <button [ngStyle]="{'display':!check_index ? 'block' : 'none' }" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}" class="fal fa-2x" (click)="muted()"></button>
+    <button [ngStyle]="{'display':!check_index ? 'block' : 'none' }" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
+      class="fal fa-2x" (click)="muted()"></button>
     <button [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></button>
+  </div>
+  <div class="content">
+    <img src="assets/images/icons/logo.png" alt="">
+    <h4>{{title}}</h4>
+    <p>{{content}}</p>
+    <button class="btn btn-primary">Xem luôn >></button>
   </div>
 </div>

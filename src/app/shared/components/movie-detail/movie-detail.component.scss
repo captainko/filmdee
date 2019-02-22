@@ -1,0 +1,259 @@
+.container-fluid {
+  height: 80%;
+  position: relative;
+}
+
+.container-fluid .row:first-child {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container-fluid .left-info{
+  color: #999;
+  background-color: transparent;
+  height: 100%;
+  position: absolute;
+  max-width: 50%;
+  z-index: 1;
+}
+
+.col-9{
+  flex: unset;
+}
+
+.left-info .logo{
+  margin-bottom: 5px;
+}
+
+.left-info .vote-time{
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+.left-info .vote-time i{
+  font-size: 4px;
+  margin: 0 12px;
+}
+
+.left-info .vote-time i:first-child{
+  font-size: 16px;
+  margin: 0;
+}
+
+.left-info .vote-time span:last-child{
+  border: 1px solid white;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.left-info p{
+  color: #999;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+
+.left-info ul a{
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  margin: 0 5px;
+}
+
+.left-info .button{
+  display: flex;
+}
+
+.left-info .btn{
+  display: flex;
+  color: white;
+  font-size: 16px;
+  padding-left: 0;
+  align-items: center;
+  cursor: pointer !important;
+}
+
+.left-info .btn i{
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.left-info a{
+  cursor: pointer;
+}
+
+
+.container-fluid .right-image{
+  background: url('/assets/images/movie-detail/Lucian_Gun_1.png') no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+}
+
+.container-fluid .right-image::after{
+  content: '';
+  position: absolute;
+  z-index: 10;
+  background-image: -webkit-gradient(linear,left top,right top,from(#000),to(rgba(0, 0, 0, 0.0)));
+  background-image: -webkit-linear-gradient(left,#000,rgba(0, 0, 0, 0.0));
+  background-image: -moz-linear-gradient(left,#000,rgba(0, 0, 0, 0.0));
+  background-image: -o-linear-gradient(left,#000,rgba(0, 0, 0, 0.0));
+  background-image: linear-gradient(to right,#000,rgba(0, 0, 0, 0.0));
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+}
+
+.left-info .btn:hover{
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px){
+
+  .left-info .logo img{
+    width: 50% !important;
+  }
+
+  .left-info .vote-time{
+    font-size: 24px !important;
+  }
+
+  .left-info ul a, .left-info ul span{
+    font-size: 24px !important;
+  }
+
+  .left-info p{
+    font-size: 26px !important;
+  }
+
+  .left-info .btn{
+    font-size: 22px !important;
+  }
+
+  .container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    max-height: 100%;
+  }
+
+  .col-3{
+    position: absolute;
+    background-color: unset !important;
+    max-width: 80% !important;
+    top: 0;
+    left: 2%;
+    padding-left: 25px;
+  }
+
+  .col-9{
+    max-width: 100% !important;
+    flex: unset;
+  }
+
+
+}
+
+@media screen and (max-width: 992px){
+
+  .left-info .logo img{
+    width: 60%;
+  }
+
+  .left-info .vote-time{
+    margin: 7px 0 !important;
+  }
+
+  .left-info .vote-time{
+    font-size: 12px;
+    margin: 20px 0;
+  }
+
+  .left-info .kind{
+    margin-bottom: 0;
+  }
+
+  .col-3{
+    max-width: 90% !important;
+  }
+
+  .col-9{
+    max-height: 80% !important;
+  }
+
+  .left-info ul a, .left-info ul span{
+    font-size: 14px;
+  }
+
+  .left-info p {
+    font-size: 24px !important;
+    line-height: 25px;
+  }
+
+  .left-info p, .left-info ul{
+    margin: 2px 0;
+  }
+
+  .left-info .btn{
+    font-size: 16px !important;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  .col-3{
+    max-width: 100%;
+  }
+
+  .right-image{
+    max-height: 100% !important;
+  }
+
+  .left-info .vote-time{
+    margin: 5px 0;
+  }
+
+  .left-info p{
+    font-size: 24px !important;
+    line-height: 45px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .left-info .btn{
+    font-size: 24px !important;
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 576px){
+  .left-info .logo img{
+    max-width: 50%;
+  }
+
+  .left-info .vote-time{
+    font-size: 16px !important;
+  }
+
+  .left-info p{
+    font-size: 18px !important;
+    line-height: 24px;
+  }
+
+  .left-info ul a, .left-info ul span{
+    font-size: 14px !important;
+  }
+
+  .left-info ul{
+    margin-bottom: 3px;
+  }
+
+  .left-info .btn{
+    font-size: 14px !important;
+  }
+
+}

@@ -14,9 +14,15 @@
     </div>
   </div>
 </header>
-<nav class="container navbar navbar-expand-lg navbar-dark" [ngClass]="currentFixed">
+<nav class="container-fluid mx-auto navbar navbar-expand-lg navbar-dark" [ngClass]="currentFixed">
   <!-- <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded">Filmdee</span></a> -->
-  <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded"> <img [src]="logo" alt=""></span></a>
+  <!-- <a class="navbar-brand anim-text-flow rounded p-1" href="#">
+    <span class="text-white rounded">
+      <img [src]="logo" alt="">
+    </span>
+  </a> -->
+
+  <img [src]="logo" alt="">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
     aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">

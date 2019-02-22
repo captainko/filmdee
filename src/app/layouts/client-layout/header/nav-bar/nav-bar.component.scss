@@ -78,7 +78,7 @@ nav {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -113,6 +113,7 @@ nav {
   border: 0;
   color: #fff;
   font-size: 200%;
+
   &:hover {
     animation: rainbow 15s linear infinite;
 
@@ -155,18 +156,21 @@ nav {
 nav {
   img {
     padding-bottom: 7px;
-    width: 130px;
+    width: 150px;
     margin-left: 5px;
     margin-right: 5px;
   }
 
   z-index: 999;
+  padding-left: 9%;
+  padding-right: 9%;
 }
 
 .fixednav {
   position: fixed !important;
   top: 0px !important;
   transition-duration: .5s;
+  background-color: rgba(0, 0, 0, 0.9);
   left: 0;
   right: 0;
 }

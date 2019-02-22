@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '@shared/shared.module';
 import { SearchModule } from '@shared/components/search/search.module';
+import { VideoBackgroundModule } from '@shared/components/video-background/video-background.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -11,7 +12,8 @@ import { SearchModule } from '@shared/components/search/search.module';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    SearchModule
+    SearchModule,
+    VideoBackgroundModule
   ],
   exports: [
 

@@ -14,7 +14,6 @@ import { VideoBackgroundComponent } from './components/video-background/video-ba
   declarations: [
     SlideShowComponent,
     SlideListComponent,
-    VideoBackgroundComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +25,6 @@ import { VideoBackgroundComponent } from './components/video-background/video-ba
     SlideListComponent,
     BoxCardComponent,
     SlideShowComponent,
-    VideoBackgroundComponent
   ]
 })
 export class SharedModule { }

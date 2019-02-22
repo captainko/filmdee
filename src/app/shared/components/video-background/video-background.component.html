@@ -1,0 +1,9 @@
+<div class="video-background">
+  <video id="background" (ended)="vidEnd()" #video [muted]="true">
+    <source
+      src="https://firebasestorage.googleapis.com/v0/b/haha123-aca36.appspot.com/o/A%20New%20Devil%E2%80%99s%20In%20Town%20High%20Noon%202018%20Reveal%20Traile.mp4?alt=media&token=745a3f0c-f0e0-4cbc-bc69-722200e9da41"
+      type="video/mp4">
+  </video>
+  <button [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}" class="fal fa-2x" (click)="muted()"></button>
+  <button [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}"class="fal fa-2x"  (click)="replay()"></button>
+</div>

@@ -9,6 +9,7 @@ import { SlideShowComponent } from './components/slides/slide-show/slide-show.co
 import { SlideListComponent } from './components/slides/slide-list/slide-list.component';
 import { BoxCardComponent } from './components/cards/box-card/box-card.component';
 import { SearchBarComponent } from './components/search/search-bar/search-bar.component';
+import { VideoBackgroundComponent } from './components/video-background/video-background.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SearchBarComponent } from './components/search/search-bar/search-bar.co
     SlideShowComponent,
     SlideListComponent,
     BoxCardComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VideoBackgroundComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { SearchBarComponent } from './components/search/search-bar/search-bar.co
     SlideListComponent,
     BoxCardComponent,
     SlideShowComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VideoBackgroundComponent
   ]
 })
 export class SharedModule { }

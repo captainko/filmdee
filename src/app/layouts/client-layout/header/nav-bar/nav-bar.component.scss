@@ -132,23 +132,23 @@ nav {
   }
 }
 
-.search-box {
-  padding-left: 10px;
-  padding-right: 10px;
-  background: white;
-  border-radius: 5px;
-}
+// .search-box {
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   background: white;
+//   border-radius: 5px;
+// }
 
-.search input {
-  text-indent: 30px;
-}
+// .search input {
+//   text-indent: 30px;
+// }
 
-.search .fa-search {
-  position: absolute;
-  top: 30%;
-  left: 85%;
-  font-size: 15px;
-}
+// .search .fa-search {
+//   position: absolute;
+//   top: 30%;
+//   left: 85%;
+//   font-size: 15px;
+// }
 
 .navbar-brand span {
   background: black;
@@ -158,14 +158,13 @@ nav {
 nav {
   img {
     padding-bottom: 7px;
-    width: 150px;
-    margin-left: 5px;
+    width: 130px;
     margin-right: 5px;
   }
 
   z-index: 999;
-  padding-left: 9%;
-  padding-right: 9%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .fixednav {
@@ -175,4 +174,30 @@ nav {
   background-color: rgba(0, 0, 0, 0.9);
   left: 0;
   right: 0;
+}
+
+
+.set-width {
+  width: 100%;
+}
+
+search-bar {
+  position: relative;
+  width: 100%;
+  display: -webkit-inline-box;
+}
+
+.login, .reg {
+  background: #ffffff00;
+  display: -webkit-inline-box;
+  border: 2px solid #FFFFFF;
+  padding: 3px 9px;
+  color: white;
+  border-radius: 35px;
+  margin: 2px 0px;
+  cursor: pointer;
+}
+
+.login {
+  margin-right: 15px;
 }

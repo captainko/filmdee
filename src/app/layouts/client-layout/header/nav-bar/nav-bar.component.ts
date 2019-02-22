@@ -15,7 +15,7 @@ export class NavBarComponent implements OnInit {
 
   scrollHandler(event) { // hieu ung day navbar
 
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
       this.currentFixed = { fixednav: this.isFixed }
     } else
       this.currentFixed = { fixednav: !this.isFixed }

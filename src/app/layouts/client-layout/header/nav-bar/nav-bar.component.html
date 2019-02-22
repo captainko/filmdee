@@ -1,4 +1,4 @@
-<header class="topbar text-white " id="topbar">
+<!-- <header class="topbar text-white " id="topbar">
   <div class="container">
     <div class="row ">
       <div class="col-lg-6 col-sm-9">
@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-</header>
+</header> -->
 <nav class="container-fluid mx-auto navbar navbar-expand-lg navbar-dark" [ngClass]="currentFixed">
   <!-- <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded">Filmdee</span></a> -->
   <!-- <a class="navbar-brand anim-text-flow rounded p-1" href="#">
@@ -30,139 +30,153 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">THỂ LOẠI</a>
-          <div class="dropdown-content rounded">
-            <div class="row">
-              <div class="column ">
-                <a href="#">Hành Động</a>
-                <a href="#">Tình Cảm</a>
-                <a href="#">Hài Hước</a>
-                <a href="#">Thần Thoại</a>
-                <a href="#">Âm Nhạc</a>
-                <a href="#">Khoa Học</a>
-                <a href="#">Lịch Sử</a>
-                <a href="#">Kiếm Hiệp</a>
-                <a href="#">Tiểu Sử</a>
-              </div>
-              <div class="column">
-                <a href="#">Phiêu Lưu</a>
-                <a href="#">Hoạt Hình</a>
-                <a href="#">Tâm Lý</a>
-                <a href="#">Chiến Tranh</a>
-                <a href="#">Hình Sự</a>
-                <a href="#">Tài Liệu</a>
-                <a href="#">Gia Đình</a>
-                <a href="#">Kịch Tính</a>
-              </div>
-              <div class="column">
-                <a href="#">Kinh Dị</a>
-                <a href="#">Võ Thuật</a>
-                <a href="#">Viễn Tưởng</a>
-                <a href="#">Cổ Trang</a>
-                <a href="#">TV Shows</a>
-                <a href="#">Others</a>
-                <a href="#">Thể Thao</a>
-                <a href="#">Bí Ẩn</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">QUỐC GIA</a>
-          <div class="dropdown-content rounded">
-            <div class="row">
-              <div class="column">
-                <a href="#">Mỹ</a>
-                <a href="#">Trung Quốc</a>
-                <a href="#">Nhật Bản</a>
-                <a href="#">Ấn Độ</a>
-                <a href="#">Hồng Kông</a>
-                <a href="#">Canada</a>
-              </div>
-              <div class="column">
-                <a href="#">Nga</a>
-                <a href="#">Hàn Quốc</a>
-                <a href="#">Châu Âu</a>
-                <a href="#">Thái Lan</a>
-                <a href="#">Pháp</a>
-                <a href="#">Úc</a>
-              </div>
-              <div class="column">
-                <a href="#">Đức</a>
-                <a href="#">Đài Loan</a>
-                <a href="#">Châu Á</a>
-                <a href="#">Anh</a>
-                <a href="#">Tây Ban Nha</a>
+    <div class="row justify-content-between set-width ml-0">
+      <div class="col-8">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">THỂ LOẠI</a>
+              <div class="dropdown-content rounded">
+                <div class="row">
+                  <div class="column ">
+                    <a href="#">Hành Động</a>
+                    <a href="#">Tình Cảm</a>
+                    <a href="#">Hài Hước</a>
+                    <a href="#">Thần Thoại</a>
+                    <a href="#">Âm Nhạc</a>
+                    <a href="#">Khoa Học</a>
+                    <a href="#">Lịch Sử</a>
+                    <a href="#">Kiếm Hiệp</a>
+                    <a href="#">Tiểu Sử</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Phiêu Lưu</a>
+                    <a href="#">Hoạt Hình</a>
+                    <a href="#">Tâm Lý</a>
+                    <a href="#">Chiến Tranh</a>
+                    <a href="#">Hình Sự</a>
+                    <a href="#">Tài Liệu</a>
+                    <a href="#">Gia Đình</a>
+                    <a href="#">Kịch Tính</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Kinh Dị</a>
+                    <a href="#">Võ Thuật</a>
+                    <a href="#">Viễn Tưởng</a>
+                    <a href="#">Cổ Trang</a>
+                    <a href="#">TV Shows</a>
+                    <a href="#">Others</a>
+                    <a href="#">Thể Thao</a>
+                    <a href="#">Bí Ẩn</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM LẺ</a>
-          <div class="dropdown-content rounded">
-            <div class="row">
-              <div class="column">
-                <a href="#">Mới Nhất</a>
-                <a href="#">Năm 2018</a>
-                <a href="#">Năm 2017</a>
-                <a href="#">Năm 2016</a>
-              </div>
-              <div class="column">
-                <a href="#">Năm 2015</a>
-                <a href="#">Năm 2014</a>
-                <a href="#">Năm 2013</a>
-                <a href="#">Năm 2012</a>
-              </div>
-              <div class="column">
-                <a href="#">Năm 2011</a>
-                <a href="#">Năm 2010</a>
-                <a href="#">Năm 2009</a>
-                <a href="#">Năm 2008</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM BỘ</a>
-          <div class="dropdown-content rounded">
-            <div class="row">
-              <div class="column">
-                <a href="#">Mới Cập Nhật</a>
-                <a href="#">Đài Loan</a>
-                <a href="#">Hồng Kông</a>
-
-              </div>
-              <div class="column">
-                <a href="#">Trung Quốc</a>
-                <a href="#">Mỹ</a>
-                <a href="#">Thái Lan</a>
-
-              </div>
-              <div class="column">
-                <a href="#">Hàn Quốc</a>
-                <a href="#">Nhật Bản</a>
-                <a href="#">Ấn Độ</a>
-
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">QUỐC GIA</a>
+              <div class="dropdown-content rounded">
+                <div class="row">
+                  <div class="column">
+                    <a href="#">Mỹ</a>
+                    <a href="#">Trung Quốc</a>
+                    <a href="#">Nhật Bản</a>
+                    <a href="#">Ấn Độ</a>
+                    <a href="#">Hồng Kông</a>
+                    <a href="#">Canada</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Nga</a>
+                    <a href="#">Hàn Quốc</a>
+                    <a href="#">Châu Âu</a>
+                    <a href="#">Thái Lan</a>
+                    <a href="#">Pháp</a>
+                    <a href="#">Úc</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Đức</a>
+                    <a href="#">Đài Loan</a>
+                    <a href="#">Châu Á</a>
+                    <a href="#">Anh</a>
+                    <a href="#">Tây Ban Nha</a>
+                  </div>
+                </div>
               </div>
             </div>
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM LẺ</a>
+              <div class="dropdown-content rounded">
+                <div class="row">
+                  <div class="column">
+                    <a href="#">Mới Nhất</a>
+                    <a href="#">Năm 2018</a>
+                    <a href="#">Năm 2017</a>
+                    <a href="#">Năm 2016</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Năm 2015</a>
+                    <a href="#">Năm 2014</a>
+                    <a href="#">Năm 2013</a>
+                    <a href="#">Năm 2012</a>
+                  </div>
+                  <div class="column">
+                    <a href="#">Năm 2011</a>
+                    <a href="#">Năm 2010</a>
+                    <a href="#">Năm 2009</a>
+                    <a href="#">Năm 2008</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM BỘ</a>
+              <div class="dropdown-content rounded">
+                <div class="row">
+                  <div class="column">
+                    <a href="#">Mới Cập Nhật</a>
+                    <a href="#">Đài Loan</a>
+                    <a href="#">Hồng Kông</a>
+
+                  </div>
+                  <div class="column">
+                    <a href="#">Trung Quốc</a>
+                    <a href="#">Mỹ</a>
+                    <a href="#">Thái Lan</a>
+
+                  </div>
+                  <div class="column">
+                    <a href="#">Hàn Quốc</a>
+                    <a href="#">Nhật Bản</a>
+                    <a href="#">Ấn Độ</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">PHIM CHIẾU RẠP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">BXH</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-4 pr-0">
+        <div class="row justify-content-end">
+          <div class="col-auto px-0">
+              <search-bar></search-bar>
+          </div>
+          <div class="col-auto">
+              <div class="login">Đăng nhập</div>
+              <div class="reg">Đăng ký</div>
           </div>
         </div>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">PHIM CHIẾU RẠP</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">BXH</a>
-      </li>
-    </ul>
-
-    <search-bar class="form-inline"></search-bar>
+      </div>
+    </div>
 
   </div>
 </nav>

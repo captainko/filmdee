@@ -26,6 +26,7 @@ export class VideoBackgroundComponent implements OnInit {
   vidEnd() {
     this.checkEnd = true;
     this.check_index = true;
+    this.video.nativeElement.load();
   }
 
   muted() {
@@ -47,6 +48,6 @@ export class VideoBackgroundComponent implements OnInit {
       this.video.nativeElement.play();
       clearTimeout(this.setTime);
       this.check_index = false;
-    }, 5000);
+    }, 3000);
   }
 }

@@ -1,7 +1,8 @@
 <div class="video-background">
-  <div [ngStyle]="{'display':check_index ? 'block' : 'none' }" class="backgrourd-video"></div>
-  <video id="background" (ended)="vidEnd()" #video [muted]="true">
-    <source src="https://firebasestorage.googleapis.com/v0/b/haha123-aca36.appspot.com/o/A%20New%20Devil%E2%80%99s%20In%20Town%20High%20Noon%202018%20Reveal%20Traile.mp4?alt=media&token=745a3f0c-f0e0-4cbc-bc69-722200e9da41"
+  <!-- <div [ngStyle]="{'display':check_index ? 'block' : 'none' }" class="backgrourd-video"></div> -->
+  <video id="background" (ended)="vidEnd()" #video [muted]="true"
+  poster="../../../../assets/images/background.jpg">
+    <source src="https://firebasestorage.googleapis.com/v0/b/fb-17632.appspot.com/o/A%20New%20Devil%E2%80%99s%20In%20Town%20High%20Noon%202018%20Reveal%20Traile.mp4?alt=media&token=88de6b79-48a0-4b4e-903e-89616b98b1a3"
       type="video/mp4">
   </video>
   <div class="button-control">

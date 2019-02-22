@@ -6,31 +6,23 @@
 
   video#background {
     width: 100%;
+    height: 100%;
     position: absolute;
     z-index: 11;
+    object-fit: cover;
   }
 
-  .fa-volume-up:before {
+  .fa-volume-up:before, .fa-volume-mute:before, .fa-redo:before {
     color: white;
     position: absolute;
-    bottom: 140px;
+    bottom: 190px;
     right: 50px;
+    border: 2px solid white;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 50%;
+    background: #595d6187;
   }
-
-  .fa-volume-mute:before {
-    color: white;
-    position: absolute;
-    bottom: 140px;
-    right: 50px;
-  }
-
-  .fa-redo:before {
-    color: white;
-    position: absolute;
-    bottom: 140px;
-    right: 50px
-  }
-
 
 .backgrourd-video {
   background: url(../../../../assets/images/background.jpg);

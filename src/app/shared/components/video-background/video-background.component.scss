@@ -1,27 +1,72 @@
-.video-background{
+.video-background {
     position: relative;
-    bottom: 61px;
-    height: calc(100vh - 61px);
-    video#background {
-        width: 100%;
-        position: relative;
-    }
+    bottom: 100px;
+    height: calc(100vw / 16 * 9);
+}
+
+  video#background {
+    width: 100%;
+    position: absolute;
+    z-index: 11;
+  }
+
+  .fa-volume-up:before {
+    color: white;
+    position: absolute;
+    bottom: 140px;
+    right: 50px;
+  }
+
+  .fa-volume-mute:before {
+    color: white;
+    position: absolute;
+    bottom: 140px;
+    right: 50px;
+  }
+
+  .fa-redo:before {
+    color: white;
+    position: absolute;
+    bottom: 140px;
+    right: 50px
+  }
+
+
+.backgrourd-video {
+  background: url(../../../../assets/images/background.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: 12;
+    height: calc(100vw / 16 * 9);
+    width: 100%;
+}
+
+.button-control {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
     .fa-volume-up:before {
-        color: white;
-        position: absolute;
-        bottom: 0px;
-        right: 50px;
-    }
-    .fa-volume-mute:before {
-        color: white;
-        position: absolute;
-        bottom: 0px;
-        right: 50px;
-    }
-    .fa-redo:before{
-        color: white;
-        position: absolute;
-        bottom: 0px;
-        right: 105px
+        bottom: 20px;
+        right: 20px;
+      }
+    
+      .fa-volume-mute:before {
+        bottom: 20px;
+        right: 20px;
+      }
+    
+      .fa-redo:before {
+        bottom: 20px;
+        right: 20px
+      }
+
+      .video-background {
+        position: relative;
+        bottom: 70px;
+        height: calc(100vw / 16 * 9);
     }
 }

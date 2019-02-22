@@ -353,3 +353,17 @@ li.list-one-dot:hover {
   text-overflow: ellipsis;
   width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+  ul.list-dots {
+    display: none !important;
+  }
+
+  .row.list-header {
+    margin-right: 0px !important;
+  }
+  
+  .col-6.d-flex.justify-content-end {
+    padding-right: 0px;
+  }
+}

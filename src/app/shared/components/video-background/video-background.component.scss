@@ -1,0 +1,27 @@
+.video-background{
+    position: relative;
+    bottom: 61px;
+    height: calc(100vh - 61px);
+    video#background {
+        width: 100%;
+        position: relative;
+    }
+    .fa-volume-up:before {
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+    }
+    .fa-volume-mute:before {
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+    }
+    .fa-redo:before{
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        right: 105px
+    }
+}

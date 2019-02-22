@@ -1,0 +1,53 @@
+.video-background {
+  position: relative;
+  bottom: 65px;
+  height: calc(100vh - 61px);
+
+  video#background {
+    width: 100%;
+    position: relative;
+  }
+
+  .fa-volume-up:before {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+  }
+
+  .fa-volume-mute:before {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+  }
+
+  .fa-redo:before {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 105px
+  }
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  // background: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, rgba(1, 0, 0, 1), rgba(1, 0, 0, 0));
+  color: #f1f1f1;
+  width: 50%;
+  height: 100vh;
+  padding: 9%;
+  padding-top: 18%;
+
+  p {
+    font-size: 15px;
+    color: white;
+  }
+
+  img {
+    width: 300px;
+  }
+}

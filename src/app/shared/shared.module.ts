@@ -1,3 +1,4 @@
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,8 @@ import { SearchBarComponent } from './components/search/search-bar/search-bar.co
     SlideShowComponent,
     SlideListComponent,
     BoxCardComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MovieDetailComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { SearchBarComponent } from './components/search/search-bar/search-bar.co
     SlideListComponent,
     BoxCardComponent,
     SlideShowComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MovieDetailComponent
   ]
 })
 export class SharedModule { }

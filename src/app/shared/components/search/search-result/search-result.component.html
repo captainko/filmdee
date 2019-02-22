@@ -1,0 +1,8 @@
+<!-- <box-card></box-card> -->
+<div *ngIf="boxCards" class="container-fluid">
+ <div class="row">
+    <box-card *ngFor="let item of boxCards " [card]="item" class="col-2">
+
+    </box-card>
+ </div>
+</div>

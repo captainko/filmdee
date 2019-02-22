@@ -1,0 +1,24 @@
+* {
+  height: 100%;
+}
+input {
+  width: 90%;
+}
+.search-box {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: white;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.search input {
+  text-indent: 30px;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 30%;
+  left: 85%;
+  font-size: 15px;
+}

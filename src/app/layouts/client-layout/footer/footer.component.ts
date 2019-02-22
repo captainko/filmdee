@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  logo = 'assets/images/logo-filmdee.png';
+  para = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus, atque. Praesentium suscipit provident explicabo dignissimos nostrum numquam deserunt earum accusantium et fugit.';
+  connect = 'Connect with';
   constructor() { }
 
   ngOnInit() {

@@ -14,10 +14,12 @@
     </div>
   </div>
 </header>
-<nav class="container navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded">Filmdee</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+<nav class="container navbar navbar-expand-lg navbar-dark" [ngClass]="currentFixed">
+  <!-- <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded">Filmdee</span></a> -->
+  <a class="navbar-brand anim-text-flow rounded p-1" href="#"><span class="text-white rounded"> <img [src]="logo" alt=""></span></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
+    aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -26,7 +28,7 @@
       <li class="nav-item dropdown">
         <div class="dropdown">
           <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">THỂ LOẠI</a>
-          <div class="dropdown-content bg-white rounded">
+          <div class="dropdown-content rounded">
             <div class="row">
               <div class="column ">
                 <a href="#">Hành Động</a>
@@ -38,7 +40,7 @@
                 <a href="#">Lịch Sử</a>
                 <a href="#">Kiếm Hiệp</a>
                 <a href="#">Tiểu Sử</a>
-              </div>
+              </div>
               <div class="column">
                 <a href="#">Phiêu Lưu</a>
                 <a href="#">Hoạt Hình</a>
@@ -66,7 +68,7 @@
       <li class="nav-item dropdown">
         <div class="dropdown">
           <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">QUỐC GIA</a>
-          <div class="dropdown-content bg-white rounded">
+          <div class="dropdown-content rounded">
             <div class="row">
               <div class="column">
                 <a href="#">Mỹ</a>
@@ -97,7 +99,7 @@
       <li class="nav-item dropdown">
         <div class="dropdown">
           <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM LẺ</a>
-          <div class="dropdown-content bg-white rounded">
+          <div class="dropdown-content rounded">
             <div class="row">
               <div class="column">
                 <a href="#">Mới Nhất</a>
@@ -123,27 +125,27 @@
       <li class="nav-item dropdown">
         <div class="dropdown">
           <a class="nav-link active dropdown-toggle waves-light" data-toggle="dropdown" href="#">PHIM BỘ</a>
-          <div class="dropdown-content bg-white rounded">
-              <div class="row">
-                  <div class="column">
-                    <a href="#">Mới Cập Nhật</a>
-                    <a href="#">Đài Loan</a>
-                    <a href="#">Hồng Kông</a>
+          <div class="dropdown-content rounded">
+            <div class="row">
+              <div class="column">
+                <a href="#">Mới Cập Nhật</a>
+                <a href="#">Đài Loan</a>
+                <a href="#">Hồng Kông</a>
 
-                  </div>
-                  <div class="column">
-                    <a href="#">Trung Quốc</a>
-                    <a href="#">Mỹ</a>
-                    <a href="#">Thái Lan</a>
+              </div>
+              <div class="column">
+                <a href="#">Trung Quốc</a>
+                <a href="#">Mỹ</a>
+                <a href="#">Thái Lan</a>
 
-                  </div>
-                  <div class="column">
-                    <a href="#">Hàn Quốc</a>
-                    <a href="#">Nhật Bản</a>
-                    <a href="#">Ấn Độ</a>
+              </div>
+              <div class="column">
+                <a href="#">Hàn Quốc</a>
+                <a href="#">Nhật Bản</a>
+                <a href="#">Ấn Độ</a>
 
-                  </div>
-                </div>
+              </div>
+            </div>
           </div>
         </div>
       <li class="nav-item">
@@ -153,12 +155,8 @@
         <a class="nav-link active" href="#">BXH</a>
       </li>
     </ul>
-    <form class="form-inline">
-      <div class="search-box">
-        <input type="text" class="rounded" placeholder="Tìm kiếm" aria-label="Tim phim">
-        <i class="fa fa-search"></i>
-      </div>
-    </form>
+
+    <search-bar class="form-inline"></search-bar>
 
   </div>
 </nav>

@@ -54,7 +54,7 @@ nav {
   background-color: #f1f1f1;
   min-width: 470px;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Links inside the dropdown */
@@ -67,36 +67,37 @@ nav {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  color: red;
+  color: #0396ff;
 
 }
 
 .nav-item a:hover {
-  color: red;
+  color: #0396ff;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
+// .dropdown:hover .dropbtn {
+//   background-color: #3e8e41;
+// }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33%;
-  padding-left: 20px;
+  width: 32%;
+  padding-left: 30px;
   height: max-content;
 }
 
 /* Style links inside the columns */
 .column a {
   float: none;
-  color: black;
+  color: white;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -110,8 +111,6 @@ nav {
 
   background-size: 1000% 1000%;
   border: 0;
-  padding: 25px;
-  font-size: 40px;
   color: #fff;
   font-size: 200%;
   &:hover {
@@ -150,4 +149,24 @@ nav {
 
 .navbar-brand span {
   background: black;
+  padding: 4px 5px 5px 4px;
+}
+
+nav {
+  img {
+    padding-bottom: 7px;
+    width: 130px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  z-index: 999;
+}
+
+.fixednav {
+  position: fixed !important;
+  top: 0px !important;
+  transition-duration: .5s;
+  left: 0;
+  right: 0;
 }

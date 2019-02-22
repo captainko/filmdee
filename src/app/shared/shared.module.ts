@@ -15,12 +15,6 @@ import { VideoBackgroundComponent } from './components/video-background/video-ba
   declarations: [
     SlideShowComponent,
     SlideListComponent,
-<<<<<<< HEAD
-    BoxCardComponent,
-    SearchBarComponent,
-    MovieDetailComponent
-=======
->>>>>>> c93e45fb248c47d917a993fb32c293533ec780ce
   ],
   imports: [
     CommonModule,

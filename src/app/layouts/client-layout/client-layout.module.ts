@@ -8,7 +8,7 @@ import { ClientLayoutRoutingModule } from './client-layout-routing.module';
 
 import { SearchService } from '@services/search/search.service';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from '@shared/shared.module';
+import { SearchModule } from '@shared/components/search/search.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { SharedModule } from '@shared/shared.module';
     CommonModule,
     ClientLayoutRoutingModule,
     FormsModule,
-    SharedModule
+    SearchModule
   ],
   providers: [SearchService]
 })

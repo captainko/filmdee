@@ -64,10 +64,6 @@ export class SlideListComponent implements OnInit {
   activeDot: number = 1;
   total_dots = new Array<any>();
 
-  show(vl) {
-    alert(vl);
-  }
-
   active(data: any) {
     this.activeDot = Math.floor((data.startPosition + 1)/data.slides.length) + 1;
   }

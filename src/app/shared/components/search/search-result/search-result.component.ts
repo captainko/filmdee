@@ -21,6 +21,7 @@ export class SearchResultComponent implements OnInit, OnDestroy {
   constructor(private searchService: SearchService) {
     this.searchService.movieStream.subscribe(data => {
       this.boxCards = data;
+      console.log(data);
     })
   }
 

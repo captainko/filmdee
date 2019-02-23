@@ -6,6 +6,14 @@ header {
 
 nav {
   background: transparent;
+
+  img {
+    cursor: pointer;
+
+    &:focus {
+      outline: unset !important;
+    }
+  }
 }
 
 .btn {

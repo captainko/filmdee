@@ -29,6 +29,6 @@ export class SearchResultComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.searchService.movieStream.unsubscribe();
+    // this.searchService.movieStream.unsubscribe();
   }
 }

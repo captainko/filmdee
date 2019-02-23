@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable, Subject, of } from 'rxjs';
-import { environment } from '@env/environment';
+import { Observable, Subject, of, BehaviorSubject } from 'rxjs';
+// import { environment } from '@env/environment';
 import { BoxCard } from '@shared/components/cards/box-card/box-card';
 
 const listFilms = [
@@ -57,11 +57,11 @@ const listFilms = [
   providedIn: 'root'
 })
 export class SearchService {
-  private env = environment;
-  movieStream: Subject<BoxCard[]>;
+  // private env = environment;
+  movieStream: BehaviorSubject<BoxCard[]>;
 
   constructor(private http: HttpClient) {
-    this.movieStream = new Subject();
+    this.movieStream = new BehaviorSubject([]);
     this.movieStream.next(listFilms);
   }
   getMovies(query: string): Observable<BoxCard[]> {
@@ -84,9 +84,9 @@ export class SearchService {
     //     })
     //   );
   }
-  getPoster(title: string): Observable<string> {
-    return this.http.get<string>(this.env.posterApiUrl + '');
-  }
+  // getPoster(title: string): Observable<string> {
+  //   return this.http.get<string>(this.env.posterApiUrl + '');
+  // }
 
   addLinks() {
     listFilms.forEach((x: any)=> {

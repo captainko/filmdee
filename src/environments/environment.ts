@@ -4,9 +4,9 @@
 const movieApiKey = '260545a0';
 export const environment = {
   production: false,
-  movieApiKey: movieApiKey,
-  movieApiUrl: `http://www.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
-  posterApiUrl: `http://img.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
+  // movieApiKey: movieApiKey,
+  // movieApiUrl: `http://www.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
+  // posterApiUrl: `http://img.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
 };
 
 /*

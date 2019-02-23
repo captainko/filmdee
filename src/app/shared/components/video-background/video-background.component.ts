@@ -7,8 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class VideoBackgroundComponent implements OnInit {
 
-  title = 'Anh Da Đen Hai Súng: Đức Nhọ (2019)';
-  content = 'Ngày xửa ngày xưa có mụ bán dưa, mụ ngồi mụ địt, có mụ bán bịch mụ ngồi mụ ngửi, có mụ bán bưởi mụ ngồi mụ chửi.';
+  title = 'A New Devil’s In Town (2019)';
+  content = 'Be grateful. By slaying you now, I spare you an eternity of torment.';
 
   @ViewChild("video") video: ElementRef;
   constructor() {
@@ -26,6 +26,7 @@ export class VideoBackgroundComponent implements OnInit {
   vidEnd() {
     this.checkEnd = true;
     this.check_index = true;
+    this.video.nativeElement.load();
   }
 
   muted() {
@@ -47,6 +48,6 @@ export class VideoBackgroundComponent implements OnInit {
       this.video.nativeElement.play();
       clearTimeout(this.setTime);
       this.check_index = false;
-    }, 5000);
+    }, 3000);
   }
 }

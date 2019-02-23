@@ -8,9 +8,22 @@ import { BoxCard } from './box-card.d';
 })
 export class BoxCardComponent implements OnInit {
   @Input('card') boxCard: BoxCard;
-  constructor() { }
-
-  ngOnInit() {
+  loading: boolean = true;
+  timer = false;
+  constructor() {
+    // setTimeout(() => {
+    //   this.timer = true;
+    // }, 6000);
   }
 
+  ngOnInit() {
+
+  }
+
+  update() {
+    setTimeout(() => {
+
+      this.loading =!this.loading
+    }, 2);
+  }
 }

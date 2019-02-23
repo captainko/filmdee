@@ -1,6 +1,6 @@
-<form>
-  <div class="search-box">
-    <input [formControl]="search" type="text" class="rounded" placeholder="Tìm kiếm" aria-label="Tim phim">
-    <i class="fa fa-search"></i>
-  </div>
+<form id="content">
+  <input type="text" name="input" class="input" [formControl]="search">
+  <button (click)="expand()" type="reset" class="search">
+    <i class="fal fa-search d-flex align-items-center justify-content-center"></i>
+  </button>
 </form>

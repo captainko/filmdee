@@ -28,11 +28,15 @@ export class SearchBarComponent implements OnInit {
       )
       .subscribe(value => {
         if (this.search.valid) {
-          this.searchService.getMovies(value)
+          if(value !== '') {
+            this.searchService.getMovies(value)
             .subscribe(data => {
               this.searchService.movieStream.next(data);
               console.log(data);
             });
+          } else {
+            this.searchService.movieStream.next(undefined);
+          }
         } else {
           console.log('ko tim thay');
           this.searchService.movieStream.next([]);

@@ -13,6 +13,8 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
 .footer {
   font-family: OpenSans-Regular;
   background-color: #0f1619;
+  padding-left: 3%;
+  padding-right: 3%;
   //   background-color: aquamarine;
 
   img {
@@ -24,10 +26,10 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
     list-style: none;
 
     li {
-        &:hover {
-            color: color(filmdee);
-            transition-duration: .5s;
-        }
+      &:hover {
+        color: color(filmdee);
+        transition-duration: .5s;
+      }
     }
   }
 
@@ -44,6 +46,10 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
   .cl-2,
   .cl-3 {
     color: white;
+  }
+
+  .type {
+    padding-left: 7%;
   }
 
   .contact {
@@ -157,7 +163,7 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
         border: 2px solid rgba(255, 255, 255, 0.15);
 
         &:focus {
-          border: 2px solid rgba(255, 255, 255, 0.15) !important; 
+          border: 2px solid rgba(255, 255, 255, 0.15) !important;
         }
       }
 
@@ -180,5 +186,8 @@ instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%));
 .copyright {
   border-top: solid 1px gray;
   color: #b4b4b4;
-}
 
+  p {
+    cursor: pointer;
+  }
+}

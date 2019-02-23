@@ -23,14 +23,14 @@ app-slide-show {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
   background-color: #141414;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1px;
-  background-color: #0396ff4a;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #0396ff;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .7);
 }
 
 ::-webkit-scrollbar-track {

@@ -84,22 +84,57 @@ video#background {
 // Extra small < 576px (.col-)
 
 @media only screen and (max-width: 575px) {
-
-  
-
   .content {
-    height: 215% !important;
-    width: 60% !important;
-    padding-top: 50%;
-    
+    padding-top: 200px;
+
 
     img {
       display: none !important;
     }
   }
+}
+
+@media only screen and (max-width: 575px) {
+  .content {
+    height: 200% !important;
+    width: 60% !important;
+  }
 
   #background {
-    height: 215% !important;
+    height: 200% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    height: 220% !important;
+    width: 60% !important;
+  }
+
+  #background {
+    height: 220% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    height: 230% !important;
+    width: 60% !important;
+  }
+
+  #background {
+    height: 230% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .content {
+    height: 250% !important;
+    width: 60% !important;
+  }
+
+  #background {
+    height: 250% !important;
   }
 }
 

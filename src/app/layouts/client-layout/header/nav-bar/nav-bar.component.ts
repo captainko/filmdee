@@ -8,20 +8,25 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class NavBarComponent implements OnInit {
   logo = 'assets/images/logo-filmdee.png';
 
-  isFixed = true;
+  isFixed = false;
   currentFixed: any;
-
+  checkNav: boolean = false;
   @HostListener('window:scroll', ['$event'])
 
-  scrollHandler(event) { // hieu ung day navbar
-
-    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
-      this.currentFixed = { fixednav: this.isFixed }
-    } else
-      this.currentFixed = { fixednav: !this.isFixed }
+  onScroll(event) {
+    if (document.documentElement.scrollTop > 55) {
+      this.isFixed = true;
+    }else{
+      this.isFixed = false;
+    }
   }
 
-  constructor() { }
+  constructor() {
+  }
+
+  showNav() {
+    this.checkNav = !this.checkNav;
+  }
 
   ngOnInit() {
   }

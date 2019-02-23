@@ -2,32 +2,6 @@
   height: 100%;
 }
 
-// input {
-//   width: 90%;
-// }
-
-// .search-box {
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   background: white;
-//   border-radius: 5px;
-//   height: 100%;
-// }
-
-// .search input {
-//   text-indent: 30px;
-// }
-
-// .search .fa-search {
-//   position: absolute;
-//   top: 30%;
-//   left: 85%;
-//   font-size: 15px;
-// }
-
-
-// Search
-
 #content {
   position: absolute;
     right: 0;
@@ -44,6 +18,10 @@
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+// input:focus-within{
+//   background: #838e96;
+// }
 
 input {
   position: absolute;
@@ -88,56 +66,13 @@ input {
   transform: translate(-100%, -50%);
 }
 
-// .search:before {
-//   content: "";
-//   position: absolute;
-//   width: 18px;
-//   height: 2px;
-//   background-color: #fff;
-//   -webkit-transform: rotate(45deg);
-//   -ms-transform: rotate(45deg);
-//   transform: rotate(45deg);
-//   margin-top: 19px;
-//   margin-left: 19px;
-//   -webkit-transition: 0.2s ease-in-out;
-//   transition: 0.2s ease-in-out;
-// }
-
 .close {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
+  z-index: 201;
 }
-
-// .close:before {
-//   content: "";
-//   position: absolute;
-//   width: 27px;
-//   height: 4px;
-//   margin-top: -1px;
-//   margin-left: -13px;
-//   background-color: #fff;
-//   -webkit-transform: rotate(45deg);
-//   -ms-transform: rotate(45deg);
-//   transform: rotate(45deg);
-//   -webkit-transition: 0.2s ease-in-out;
-//   transition: 0.2s ease-in-out;
-// }
-
-// .close:after {
-//   content: "";
-//   position: absolute;
-//   width: 27px;
-//   height: 4px;
-//   background-color: #fff;
-//   margin-top: -1px;
-//   margin-left: -13px;
-//   cursor: pointer;
-//   -webkit-transform: rotate(-45deg);
-//   -ms-transform: rotate(-45deg);
-//   transform: rotate(-45deg);
-// }
 
 .square {
   position: absolute;
@@ -147,19 +82,20 @@ input {
   height: 35px;
   border: 2px solid #FFFFFF;
   border-radius: 35px;
-  background: none;
+  background-color: #838e96;
   color: #fff;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   outline: 0;
-  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
-  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
-  -webkit-transition-delay: 0.4s, 0s, 0.4s;
-  transition-delay: 0.4s, 0s, 0.4s;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s, background-size 2s ease-in;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s, background-size 2s ease-in;
+  -webkit-transition-delay: 0s, 0s, 0s;
+  transition-delay: 0s, 0s, 0s;
   -webkit-transform: translate(-100%, -50%);
   -ms-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
+  z-index: 200;
 }
 
 input:focus {

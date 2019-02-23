@@ -19,6 +19,10 @@
   animation-iteration-count: 1;
 }
 
+// input:focus-within{
+//   background: #838e96;
+// }
+
 input {
   position: absolute;
   box-sizing: border-box;
@@ -67,6 +71,7 @@ input {
   transition: 0.4s ease-in-out;
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
+  z-index: 201;
 }
 
 .square {
@@ -77,19 +82,20 @@ input {
   height: 35px;
   border: 2px solid #FFFFFF;
   border-radius: 35px;
-  background: #838e96;
+  background-color: #838e96;
   color: #fff;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   outline: 0;
-  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
-  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
-  -webkit-transition-delay: 0.4s, 0s, 0.4s;
-  transition-delay: 0.4s, 0s, 0.4s;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s, background-size 2s ease-in;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s, background-size 2s ease-in;
+  -webkit-transition-delay: 0s, 0s, 0s;
+  transition-delay: 0s, 0s, 0s;
   -webkit-transform: translate(-100%, -50%);
   -ms-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
+  z-index: 200;
 }
 
 input:focus {

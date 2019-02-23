@@ -1,53 +1,90 @@
 .video-background {
-  position: relative;
-  bottom: 65px;
-  height: calc(100vh - 61px);
+    position: relative;
+    bottom: 100px;
+    height: calc(100vw / 16 * 9);
+}
 
   video#background {
     width: 100%;
-    position: relative;
+    height: 100%;
+    position: absolute;
+    z-index: 11;
+    object-fit: cover;
   }
 
-  .fa-volume-up:before {
+  .fa-volume-up:before, .fa-volume-mute:before, .fa-redo:before {
     color: white;
     position: absolute;
-    bottom: 0px;
+    bottom: 190px;
     right: 50px;
+    border: 2px solid white;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 50%;
+    background: #595d6187;
   }
 
-  .fa-volume-mute:before {
-    color: white;
+.backgrourd-video {
+  background: url(../../../../assets/images/background.jpg);
+    background-size: cover;
     position: absolute;
-    bottom: 0px;
-    right: 50px;
-  }
+    z-index: 12;
+    height: calc(100vw / 16 * 9);
+    width: 100%;
+}
 
-  .fa-redo:before {
-    color: white;
+.button-control {
     position: absolute;
-    bottom: 0px;
-    right: 105px
-  }
+    z-index: 20;
+    width: 100%;
+    bottom: 0;
 }
 
 .content {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  // background: rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to right, rgba(1, 0, 0, 1), rgba(1, 0, 0, 0));
-  color: #f1f1f1;
-  width: 50%;
-  height: 100vh;
-  padding: 9%;
-  padding-top: 18%;
-
-  p {
-    font-size: 15px;
-    color: white;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    // background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, rgba(1, 0, 0, 1), rgba(1, 0, 0, 0));
+    color: #f1f1f1;
+    width: 50%;
+    height: 100%;
+    padding: 9%;
+    padding-top: 18%;
+    z-index: 40;
+  
+    p {
+      font-size: 15px;
+      color: white;
+    }
+  
+    img {
+      width: 300px;
+    }
   }
 
-  img {
-    width: 300px;
-  }
+@media only screen and (max-width: 768px) {
+    .fa-volume-up:before {
+        bottom: 20px;
+        right: 20px;
+      }
+    
+      .fa-volume-mute:before {
+        bottom: 20px;
+        right: 20px;
+      }
+    
+      .fa-redo:before {
+        bottom: 20px;
+        right: 20px
+      }
+
+      .video-background {
+        position: relative;
+        bottom: 70px;
+        height: calc(100vw / 16 * 9);
+    }
 }
+
+
+

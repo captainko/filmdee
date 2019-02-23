@@ -14,6 +14,7 @@ export class SearchBarComponent implements OnInit {
   constructor(private searchService: SearchService) {
     this.search = new FormControl('', [Validators.minLength(2)]);
     this.addOnChangeToSearch();
+    // document.querySelector("button").addEventListener('click', expand);
   }
 
   ngOnInit() {
@@ -42,5 +43,16 @@ export class SearchBarComponent implements OnInit {
         };
       });
   }
+
+  expand() {
+    document.querySelector(".search").classList.toggle("close");
+    document.querySelector(".input").classList.toggle("square");
+    if (document.querySelector(".search").classList.contains("close")) {
+      document.querySelector("input").focus();
+    } else {
+      document.querySelector("input").blur();
+    }
+  }
+
 
 }

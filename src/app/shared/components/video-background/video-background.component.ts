@@ -18,12 +18,15 @@ export class VideoBackgroundComponent implements OnInit {
   checkMuted = true;
   checkEnd: boolean;
   setTime: any;
+  check_index: boolean = true;
 
   ngOnInit() {
   }
 
   vidEnd() {
     this.checkEnd = true;
+    this.check_index = true;
+    this.video.nativeElement.load();
   }
 
   muted() {
@@ -37,13 +40,14 @@ export class VideoBackgroundComponent implements OnInit {
     this.video.nativeElement.play();
     this.checkEnd = false;
     console.log(this.checkEnd);
-    
+    this.check_index = false;
   }
 
   playDelay(){
     this.setTime = setTimeout(() => {
       this.video.nativeElement.play();
       clearTimeout(this.setTime);
-    }, 5000);
+      this.check_index = false;
+    }, 3000);
   }
 }

@@ -4,17 +4,16 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CardsModule } from '../cards/cards.module';
+import { SearchBarModule } from './search-bar/search-bar.module';
+import { SearchResultModule } from './search-result/search-result.module';
 
 @NgModule({
   declarations: [
-    SearchBarComponent,
-    SearchResultComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CardsModule
+   SearchBarModule,
+   SearchResultModule
   ],
   exports: [
     FormsModule,
@@ -23,4 +22,4 @@ import { CardsModule } from '../cards/cards.module';
     SearchResultComponent
   ]
 })
-export class SearchModule { }
+export class SearchComponentModule { }

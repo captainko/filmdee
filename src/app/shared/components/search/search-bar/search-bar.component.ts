@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { SearchService } from '@services/search/search.service';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'search-bar',
@@ -11,7 +12,11 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 export class SearchBarComponent implements OnInit {
 
   search: FormControl;
-  constructor(private searchService: SearchService) {
+  constructor(
+    private searchService: SearchService,
+    private router: Router,
+    private activate: ActivatedRoute
+    ) {
     this.search = new FormControl('', [Validators.minLength(2)]);
     this.addOnChangeToSearch();
     // document.querySelector("button").addEventListener('click', expand);
@@ -29,12 +34,20 @@ export class SearchBarComponent implements OnInit {
       .subscribe(value => {
         if (this.search.valid) {
           if(value !== '') {
-            this.searchService.getMovies(value)
-            .subscribe(data => {
-              this.searchService.movieStream.next(data);
-              console.log(data);
-            });
+            this.router.navigate(['search', value]).then(
+              () => {
+                this.activate.params.subscribe(x=> {
+
+                  this.searchService.getMovies(value)
+                  .subscribe(data => {
+                    this.searchService.movieStream.next(data);
+                  });
+                  console.log('lol')
+                })
+              }
+            )
           } else {
+            this.router.navigate(['home'])
             this.searchService.movieStream.next(undefined);
           }
         } else {

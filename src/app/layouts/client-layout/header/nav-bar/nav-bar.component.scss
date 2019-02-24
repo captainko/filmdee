@@ -228,6 +228,7 @@ li.item-list {
   margin-right: 10px;
   padding: 2px 6px;
   cursor: pointer;
+  list-style: none;
 }
 
 li.item-list:hover {
@@ -382,9 +383,7 @@ nav.col-auto.pl-0 {
   }
 
   .hot-m {
-    display: -webkit-inline-box;
-    padding: 0px 6px;
-    color: #fff000;
+    display: none;
   }
 
   .login {

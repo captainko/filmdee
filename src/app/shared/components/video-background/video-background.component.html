@@ -3,9 +3,9 @@
     type="video/mp4">
 </video>
 <div class="button-control">
-  <button *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
-    class="fal fa-2x" (click)="muted()"></button>
-  <button style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></button>
+  <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
+    class="fal fa-2x" (click)="muted()"></span>
+  <span style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></span>
 </div>
 <div class="content">
   <img src="assets/images/icons/logo.png" alt="">

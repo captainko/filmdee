@@ -1,15 +1,8 @@
-.video-background {
-  position: relative;
-  bottom: 100px;
-  height: calc(100vw / 16 * 9);
-}
-
 video#background {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 11;
-  object-fit: cover;
 }
 
 .fa-volume-up:before,
@@ -17,8 +10,6 @@ video#background {
 .fa-redo:before {
   color: white;
   position: absolute;
-  bottom: 190px;
-  right: 50px;
   border: 2px solid white;
   padding: 7px;
   font-size: 17px;
@@ -35,12 +26,7 @@ video#background {
   width: 100%;
 }
 
-.button-control {
-  position: absolute;
-  z-index: 20;
-  width: 100%;
-  bottom: 0;
-}
+// Content
 
 .content {
   position: relative;
@@ -54,6 +40,28 @@ video#background {
   padding: 3%;
   padding-top: 18%;
   z-index: 40;
+
+  .title {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .title-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .content-text {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .content-text-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 
   p {
     font-size: 15px;
@@ -81,120 +89,174 @@ video#background {
   }
 }
 
+.background-bot-video {
+  position: absolute;
+  z-index: 41;
+  height: 55px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to top, #141414, rgba(1, 0, 0, 0));
+}
+
 // Extra small < 576px (.col-)
 
 @media only screen and (max-width: 575px) {
   .content {
-    padding-top: 200px;
+    height: 100% !important;
+    width: 60% !important;
+    padding: 100px  3%;
 
 
     img {
       display: none !important;
     }
   }
-}
-
-@media only screen and (max-width: 575px) {
-  .content {
-    height: 200% !important;
-    width: 60% !important;
-  }
 
   #background {
-    height: 200% !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .content {
-    height: 220% !important;
-    width: 60% !important;
+    height: 450px !important;
   }
 
-  #background {
-    height: 220% !important;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .content {
-    height: 230% !important;
-    width: 60% !important;
+  video#background {
+    object-fit: cover;
   }
 
-  #background {
-    height: 230% !important;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .content {
-    height: 250% !important;
-    width: 60% !important;
-  }
-
-  #background {
-    height: 250% !important;
+  .button-control {
+    position: absolute;
+    z-index: 41;
+    bottom: 160px;
+    right: 3%;
+    width: 35px;
+    height: 35px;
   }
 }
 
 // Small ≥ 576px (.col-sm-)
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  .content {
+    height: 100% !important;
+    width: 50% !important;
+    padding: 100px  3%;
 
 
-  .fa-volume-up:before {
-    bottom: 20px;
-    right: 20px;
+    img {
+      display: block !important;
+      width: 50%;
+    }
   }
 
-  .fa-volume-mute:before {
-    bottom: 20px;
-    right: 20px;
+  #background {
+    height: 507px !important;
   }
 
-  .fa-redo:before {
-    bottom: 20px;
-    right: 20px
+  video#background {
+    object-fit: cover;
   }
 
-  .video-background {
-    position: relative;
-    bottom: 70px;
-    height: calc(100vw / 16 * 9);
+  .button-control {
+    position: absolute;
+    z-index: 41;
+    bottom: 160px;
+    right: 3%;
+    width: 35px;
+    height: 35px;
   }
 }
 
 // Medium ≥ 768px (.col-md-)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .fa-volume-up:before {
-    bottom: 20px;
-    right: 20px;
+  .content {
+    height: 100% !important;
+    width: 50% !important;
+    padding: 100px  3%;
+
+
+    img {
+      display: block !important;
+      width: 80%;
+    }
   }
 
-  .fa-volume-mute:before {
-    bottom: 20px;
-    right: 20px;
+  #background {
+    height: 560px !important;
   }
 
-  .fa-redo:before {
-    bottom: 20px;
-    right: 20px
+  video#background {
+    object-fit: cover;
   }
 
-  .video-background {
-    position: relative;
-    bottom: 70px;
-    height: calc(100vw / 16 * 9);
+  .button-control {
+    position: absolute;
+    z-index: 41;
+    bottom: 160px;
+    right: 3%;
+    width: 35px;
+    height: 35px;
   }
 }
 
-
-
 // Large ≥ 992px (.col-lg-)
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .content {
+    height: 100% !important;
+    width: 50% !important;
+    padding: 100px 3%;
+
+
+    img {
+      display: block !important;
+      width: 70%;
+    }
+  }
+
+  #background {
+    height: calc(100vw / 16 * 9) !important;
+  }
+
+  video#background {
+    object-fit: cover;
+  }
+
+  .button-control {
+    position: absolute;
+    z-index: 41;
+    bottom: 160px;
+    right: 3%;
+    width: 35px;
+    height: 35px;
+  }
+}
 
 // Extra large ≥ 1200px (.col-xl-)
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .content {
+    height: 100% !important;
+    width: 50% !important;
+    padding: 10% 3%;
+
+
+    img {
+      display: block !important;
+      width: 70%;
+    }
+  }
+
+  #background {
+    height: calc(100vw / 16 * 9) !important;
+  }
+
+  video#background {
+    object-fit: cover;
+  }
+
+  .button-control {
+    position: absolute;
+    z-index: 41;
+    bottom: 326px;
+    right: 3%;
+    width: 35px;
+    height: 35px;
+  }
+}

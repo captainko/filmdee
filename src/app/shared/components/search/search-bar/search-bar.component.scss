@@ -4,8 +4,8 @@
 
 #content {
   position: absolute;
-    right: 0;
-    top: 2px;
+  right: 0;
+  top: 2px;
 }
 
 #content.on {
@@ -100,4 +100,12 @@ input {
 
 input:focus {
   border: 2px solid #FFFFFF !important;
+}
+
+@media only screen and (max-width: 575px) {
+
+  .square {
+    width: 215px;
+  }
+
 }

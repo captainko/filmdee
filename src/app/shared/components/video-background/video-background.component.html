@@ -1,19 +1,16 @@
-<div class="video-background">
-  <!-- <div [ngStyle]="{'display':check_index ? 'block' : 'none' }" class="backgrourd-video"></div> -->
-  <video id="background" (ended)="vidEnd()" #video [muted]="true"
-  poster="../../../../assets/images/background.jpg">
-    <source src="https://firebasestorage.googleapis.com/v0/b/fb-17632.appspot.com/o/A%20New%20Devil%E2%80%99s%20In%20Town%20High%20Noon%202018%20Reveal%20Traile.mp4?alt=media&token=88de6b79-48a0-4b4e-903e-89616b98b1a3"
-      type="video/mp4">
-  </video>
-  <div class="button-control">
-    <button [ngStyle]="{'display':!check_index ? 'block' : 'none' }" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
-      class="fal fa-2x" (click)="muted()"></button>
-    <button [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></button>
-  </div>
-  <div class="content">
-    <img src="assets/images/icons/logo.png" alt="">
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
-    <button class="btn btn-primary">Xem luôn</button>
-  </div>
+<video id="background" (ended)="vidEnd()" #video [muted]="true" poster="../../../../assets/images/background.jpg">
+  <source src="https://firebasestorage.googleapis.com/v0/b/haha123-aca36.appspot.com/o/A%20New%20Devil%E2%80%99s%20In%20Town%20High%20Noon%202018%20Reveal%20Traile.mp4?alt=media&token=745a3f0c-f0e0-4cbc-bc69-722200e9da41"
+    type="video/mp4">
+</video>
+<div class="button-control">
+  <button *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
+    class="fal fa-2x" (click)="muted()"></button>
+  <button style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></button>
 </div>
+<div class="content">
+  <img src="assets/images/icons/logo.png" alt="">
+  <h4 style="-webkit-box-orient: vertical" class="title title-line-clamp">{{title}}</h4>
+  <p style="-webkit-box-orient: vertical" class="content-text content-text-line-clamp">{{content}}</p>
+  <button class="btn btn-primary">Xem luôn</button>
+</div>
+<div class="background-bot-video"></div>

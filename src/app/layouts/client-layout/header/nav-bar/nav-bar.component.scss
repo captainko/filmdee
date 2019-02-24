@@ -166,10 +166,11 @@ nav {
 .header-navbar {
   img {
     padding-bottom: 7px;
-    width: 130px;
+    width: 105px;
     margin-right: 5px;
     z-index: 200;
     position: relative;
+    padding-top: 6px;
   }
 
   z-index: 999;
@@ -185,6 +186,7 @@ nav {
   background-color: rgb(20, 20, 20);
   left: 0;
   right: 0;
+  border-bottom: 1px solid #ffffff57;
 }
 
 
@@ -312,15 +314,15 @@ nav.col-auto.pl-0 {
   .menu {
     top: 0;
     position: fixed;
-    left: -80vw;
+    left: -300px;
     z-index: 2;
     color: #005c9c;
     background: rgb(39, 36, 36);
-    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
     width: 260px;
     height: 100%;
-    padding: 100px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,6 +335,12 @@ nav.col-auto.pl-0 {
 @media only screen and (max-width: 575px) {
   .hidden-mobile {
     display: none;
+  }
+
+  .hot-m {
+    display: -webkit-inline-box;
+    padding: 0px 6px;
+    color: #e74c3c;
   }
 
   .login {
@@ -351,6 +359,12 @@ nav.col-auto.pl-0 {
     display: none;
   }
 
+  .hot-m {
+    display: -webkit-inline-box;
+    padding: 0px 6px;
+    color: #fff000;
+  }
+
   .login {
     padding: 4px 9px;
   }
@@ -365,6 +379,12 @@ nav.col-auto.pl-0 {
 @media only screen and (min-width: 830px) and (max-width: 991px) {
   .hidden-mobile {
     display: none;
+  }
+
+  .hot-m {
+    display: -webkit-inline-box;
+    padding: 0px 6px;
+    color: #fff000;
   }
 
   .login {
@@ -387,6 +407,10 @@ nav.col-auto.pl-0 {
     display: none;
   }
 
+  .hot-m {
+    display: none;
+  }
+
   .login {
     padding: 4px 9px;
   }
@@ -404,6 +428,10 @@ nav.col-auto.pl-0 {
 
 @media only screen and (min-width: 1200px) {
   .hidden-pc {
+    display: none;
+  }
+
+  .hot-m {
     display: none;
   }
 

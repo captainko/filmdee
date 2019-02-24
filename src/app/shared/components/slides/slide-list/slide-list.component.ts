@@ -7,6 +7,7 @@ import { BoxCard } from '@shared/components/cards/box-card/box-card';
   styleUrls: ['./slide-list.component.scss']
 })
 export class SlideListComponent implements OnInit {
+  
 
   total: number = 40; // Số lượng item
 

@@ -7,8 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class VideoBackgroundComponent implements OnInit {
 
-  title = 'A New Devil’s In Town (2019)';
-  content = 'Be grateful. By slaying you now, I spare you an eternity of torment.';
+  title = 'A New Devil’s In Town Day To Day ZoHa (2019)';
+  content = 'Stay silent. Stay alert. Stay blindfolded. As a terrifying force lies in wait, a mother leads her children on a harrowing journey.';
 
   @ViewChild("video") video: ElementRef;
   constructor() {

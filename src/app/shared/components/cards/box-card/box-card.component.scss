@@ -79,12 +79,14 @@
   color: lawngreen;
 }
 .ep {
-  background: #50535dc9;
+  background: rgba($color: #50535d, $alpha: 0.7);
   display: -webkit-inline-box;
-  padding: 3px 5px;
+  // padding: 3px 5px;
   position: absolute;
   z-index: 10;
   color: white;
+  font-size: 14px;
+  padding: 4px 6px;
 }
 
 .quality {

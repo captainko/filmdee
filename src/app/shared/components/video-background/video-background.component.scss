@@ -74,7 +74,8 @@ video#background {
 
   button {
     border: 2px solid #FFFFFF;
-    background: #FFFFFF00;
+    background: transparent;
+    // background-color: unset !important;
     color: white;
     border-radius: 35px;
 
@@ -83,8 +84,14 @@ video#background {
       box-shadow: unset !important;
     }
 
+    &:hover{
+      background: white;
+      color: black;
+    }
     &:active {
       border-color: #ffffff;
+      background-color: transparent;
+      color: white;
     }
   }
 }

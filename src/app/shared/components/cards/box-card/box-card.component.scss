@@ -80,10 +80,12 @@
 .ep {
   background: rgba(80, 83, 93, 0.8);
   display: -webkit-inline-box;
-  padding: 3px 5px;
+  // padding: 3px 5px;
   position: absolute;
   z-index: 10;
   color: white;
+  font-size: 14px;
+  padding: 4px 6px;
 }
 
 .quality {

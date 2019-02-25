@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event) {
-    if (document.documentElement.scrollTop > 55) {
+    if (document.documentElement.scrollTop > 55 || document.body.scrollTop > 55) {
       this.isFixed = true;
     }else{
       this.isFixed = false;

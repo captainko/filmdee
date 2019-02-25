@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MovieDetailComponent } from './movie-detail.component';
 
 @NgModule({
-  declarations: [
-    MovieDetailComponent
-  ],
+  declarations: [MovieDetailComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     MovieDetailComponent

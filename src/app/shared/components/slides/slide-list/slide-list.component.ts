@@ -18,20 +18,20 @@ export class SlideListComponent implements OnInit {
     center: false,
     responsive: {
       0: {
-        items: 1,
-        slideBy: 1
-      },
-      322: {
         items: 2,
         slideBy: 2
       },
-      483: {
+      322: {
         items: 3,
         slideBy: 3
       },
-      644: {
+      483: {
         items: 4,
         slideBy: 4
+      },
+      644: {
+        items: 5,
+        slideBy: 5
       },
       805: {
         items: 5,

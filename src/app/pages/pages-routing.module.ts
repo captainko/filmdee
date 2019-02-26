@@ -9,8 +9,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', loadChildren: './home/home.module#HomeModule'},
   { path: 'chart', loadChildren: './chart/chart.module#ChartModule' },
-  { path: 'search/:query', loadChildren: './search/search.module#SearchModule' },
-  { path: 'search', loadChildren: './search/search.module#SearchModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchModule', data: {state: 'search'} },
   { path: 'play', loadChildren: './play/play.module#PlayModule' },
 ];
 

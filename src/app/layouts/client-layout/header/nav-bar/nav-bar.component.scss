@@ -171,6 +171,10 @@ nav {
     z-index: 200;
     position: relative;
     padding-top: 6px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   z-index: 999;

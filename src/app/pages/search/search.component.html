@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="search-filter">
-    <form action="">
+    <form action="" (change)="button.click()">
       <div class="row">
         <div class="col-lg-2 pr-0 pl-2" style="border-left: solid 5px white ">
           <p class="title">
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="col-lg-12 row-reverse pt-4 pr-0">
-        <a class="font-weight-bold text-center" [routerLink]="['/search']" [queryParams]="{ order: order.value,
+        <a #button class="font-weight-bold text-center" [routerLink]="['/search']" [queryParams]="{ order: order.value,
                                                                                             kind: kind.value,
                                                                                             language: language.value,
                                                                                             type: type.value,
@@ -86,4 +86,8 @@
       </div>
     </form>
   </div>
+</div>
+
+<div class="search-result">
+  <app-search-result></app-search-result>
 </div>

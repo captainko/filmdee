@@ -36,10 +36,8 @@ input {
   font-weight: 400;
   font-family: Roboto;
   outline: 0;
-  -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
-  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+  -webkit-transition: width 0.2s ease-in-out, border-radius 0.5s ease-in-out, padding 0.2s;
+  transition: width 0.2s ease-in-out, border-radius 0.5s ease-in-out, padding 0.2s;
   -webkit-transform: translate(-100%, -50%);
   -ms-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
@@ -67,10 +65,9 @@ input {
 }
 
 .close {
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+
   z-index: 201;
 }
 

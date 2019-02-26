@@ -1,6 +1,6 @@
 <form id="content">
-  <input type="text" name="input" class="input" [formControl]="search">
-  <button (click)="expand()" type="reset" class="search">
+  <input #input type="text" class="input" [formControl]="search">
+  <button #searchButton (click)="expand()" type="reset" class="search">
     <i class="fal fa-search d-flex align-items-center justify-content-center"></i>
   </button>
 </form>

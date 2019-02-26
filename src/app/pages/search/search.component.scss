@@ -1,5 +1,67 @@
+$colors: (filmdee: #0396ff);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
 .search-filter {
-    background: red;
-    height: 500px;
-    width: 100%
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  p {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  a {
+    border: 2px solid #FFFFFF;
+    background: color(filmdee);
+    color: white;
+    border-radius: 5px;
+    width: 160px;
+    padding: 10px;
+
+    &:hover {
+      text-decoration: unset;
+    }
+
+    &:focus {
+      outline: unset !important;
+      box-shadow: unset !important;
+    }
+
+    &:active {
+      border-color: #ffffff;
+    }
+  }
+
+  select {
+    background-color: black;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: white;
+    width: 160px;
+    padding: 2px;
+
+    &:focus {
+      outline: unset!important;
+    }
+
+    option {
+      color: #fff;
+      padding: 10px;
+
+      &:hover {
+        background-color: color(filmdee);
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }

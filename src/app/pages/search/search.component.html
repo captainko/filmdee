@@ -1,27 +1,89 @@
-<app-search-result></app-search-result>
-
-<div class="search-filter">
-
-  <div class="row">
-    <div class="card">
-      <div class="col-lg-2">
-        AAA
+<div class="container-fluid">
+  <div class="search-filter">
+    <form action="">
+      <div class="row">
+        <div class="col-lg-2 pr-0 pl-2" style="border-left: solid 5px white ">
+          <p class="title">
+            {{search.prop1}}
+          </p>
+          <select #order id="">
+            <option value="up-t">Thời gian cập nhật</option>
+            <option value="post-t">Thời gian đăng</option>
+            <option value="rel-y">Năm sản xuất</option>
+          </select>
+        </div>
+        <div class="col-lg-2 pr-0 pl-2">
+          <p class="title">
+            {{search.prop2}}
+          </p>
+          <select #kind id="">
+            <option value="k-all">Tất cả</option>
+            <option value="box">Phim rạp</option>
+            <option value="series">Phim bộ</option>
+            <option value="anime">Anime</option>
+            <option value="show">TV Show</option>
+          </select>
+        </div>
+        <div class="col-lg-2 pr-0 pl-2">
+          <p class="title">
+            {{search.prop3}}
+          </p>
+          <select #language id="">
+            <option value="k-all">Tất cả</option>
+            <option value="box">Tiếng Việt</option>
+            <option value="series">Tiếng Anh</option>
+            <option value="anime">Lồng tiếng</option>
+            <option value="show">Phụ đề</option>
+          </select>
+        </div>
+        <div class="col-lg-2 pr-0 pl-2">
+          <p class="title">
+            {{search.prop4}}
+          </p>
+          <select #type id="">
+            <option value="k-all">Tất cả</option>
+            <option value="box">Hài hước</option>
+            <option value="series">Chiến tranh</option>
+            <option value="anime">Anime</option>
+            <option value="show">Phụ đề</option>
+          </select>
+        </div>
+        <div class="col-lg-2 pr-0 pl-2">
+          <p class="title">
+            {{search.prop5}}
+          </p>
+          <select #national id="">
+            <option value="k-all">Tất cả</option>
+            <option value="box">Mỹ</option>
+            <option value="series">Hàn<nav></nav>
+            </option>
+            <option value="anime">Nhật</option>
+            <option value="show">Thái</option>
+          </select>
+        </div>
+        <div class="col-lg-2 pr-0 pl-2">
+          <p class="title">
+            {{search.prop6}}
+          </p>
+          <select #release id="">
+            <option value="r-all">Tất cả</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+          </select>
+        </div>
       </div>
-      <div class="col-lg-2">
-        AAA
+      <div class="col-lg-12 row-reverse pt-4 pr-0">
+        <a class="font-weight-bold text-center" [routerLink]="['/search']" [queryParams]="{ order: order.value,
+                                                                                            kind: kind.value,
+                                                                                            language: language.value,
+                                                                                            type: type.value,
+                                                                                            national: national.value,
+                                                                                            release: release.value  }">
+          Duyệt
+        </a>
       </div>
-      <div class="col-lg-2">
-        AAA
-      </div>
-      <div class="col-lg-2">
-        AAA
-      </div>
-      <div class="col-lg-2">
-        AAA
-      </div>
-      <div class="col-lg-2">
-        AAA
-      </div>
-    </div>
+    </form>
   </div>
 </div>

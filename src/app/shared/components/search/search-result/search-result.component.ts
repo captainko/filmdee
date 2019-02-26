@@ -34,6 +34,8 @@ export class SearchResultComponent implements OnInit, OnDestroy {
           .subscribe(data => {
             if(data.length == 0) {
               this.noResult = true;
+              window.document.querySelector('div');
+              window.confirm(String(window.document.querySelectorAll('div')));
             } else {
               this.searchService.movieStream.next(data);
             }

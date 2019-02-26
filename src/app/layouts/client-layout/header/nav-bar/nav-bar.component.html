@@ -1,28 +1,26 @@
-
-
 <div class="container-fluid mx-auto navbar header-navbar" (scroll)="onScroll($event)" [ngClass]="{'fixednav': isFixed}">
   <div class="row width-100 mx-0">
     <div class="col-auto pl-0">
       <div (click)="showNav()" [ngClass]="{'active': checkNav}" class="menu__toggler"><span></span></div>
-      <img [src]="logo" alt="">
+        <img [src]="logo" routerLink="/home">
     </div>
     <div class="col">
       <div class="row justify-content-between set-width ml-0">
         <nav class="col-auto pl-0">
 
-    
-
-          
-            <ul [ngClass]="{'active': checkNav}" class="d-flex align-items-center justify-content-center m-0 menu">
-              <li class="item-list"><i class="hot-m fab fa-hotjar"></i>HOT</li>
-              <li class="item-list">PHIM RẠP</li>
-              <li class="item-list">ANIME</li>
-              <li class="item-list">PHIM BỘ</li>
-              <li class="item-list">TV SHOW</li>
-              <li class="item-list">BXH</li>
 
 
-            </ul>
+
+          <ul [ngClass]="{'active': checkNav}" class="d-flex align-items-center justify-content-center m-0 menu">
+            <li class="item-list"><i class="hot-m fab fa-hotjar"></i>HOT</li>
+            <li class="item-list">PHIM RẠP</li>
+            <li class="item-list">ANIME</li>
+            <li class="item-list">PHIM BỘ</li>
+            <li class="item-list">TV SHOW</li>
+            <li class="item-list">BXH</li>
+
+
+          </ul>
         </nav>
         <div class="col-auto pr-0">
           <div class="row justify-content-end">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { SearchService } from '@services/search/search.service';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -12,6 +12,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class SearchBarComponent implements OnInit {
 
   search: FormControl;
+  @ViewChild('input') input: ElementRef;
+  @ViewChild('searchButton') searchButton: ElementRef;
   constructor(
     private searchService: SearchService,
     private router: Router,
@@ -19,7 +21,6 @@ export class SearchBarComponent implements OnInit {
     ) {
     this.search = new FormControl('', [Validators.minLength(2)]);
     this.addOnChangeToSearch();
-    // document.querySelector("button").addEventListener('click', expand);
   }
 
   ngOnInit() {
@@ -34,36 +35,25 @@ export class SearchBarComponent implements OnInit {
       .subscribe(value => {
         if (this.search.valid) {
           if(value !== '') {
-            this.router.navigate(['search', value]).then(
-              () => {
-                this.activate.params.subscribe(x=> {
-
-                  this.searchService.getMovies(value)
-                  .subscribe(data => {
-                    this.searchService.movieStream.next(data);
-                  });
-                  console.log('lol')
-                })
-              }
-            )
+            // console.log(`?q=${value}`)
+            this.router.navigate(['search'], {queryParams: {q: value}});
           } else {
             this.router.navigate(['home'])
-            this.searchService.movieStream.next(undefined);
           }
-        } else {
-          console.log('ko tim thay');
-          this.searchService.movieStream.next([]);
-        };
+        }
       });
   }
 
   expand() {
-    document.querySelector(".search").classList.toggle("close");
-    document.querySelector(".input").classList.toggle("square");
-    if (document.querySelector(".search").classList.contains("close")) {
-      document.querySelector("input").focus();
+    let search = this.searchButton.nativeElement;
+    let input = this.input.nativeElement;
+
+    search.classList.toggle('close');
+    input.classList.toggle('square');
+    if(search.classList.contains("close")) {
+      input.focus();
     } else {
-      document.querySelector("input").blur();
+      input.blur();
     }
   }
 

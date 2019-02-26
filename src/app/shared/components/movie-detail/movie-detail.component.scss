@@ -1,5 +1,5 @@
 .container-fluid {
-  height: 80%;
+  height: 90vh;
   position: relative;
 }
 
@@ -81,6 +81,10 @@
 
 .left-info a{
   cursor: pointer;
+}
+
+.container-fluid ul{
+  list-style: none;
 }
 
 

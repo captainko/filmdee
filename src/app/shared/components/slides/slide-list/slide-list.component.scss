@@ -370,3 +370,8 @@ li.list-one-dot:hover {
     padding-right: 0px;
   }
 }
+@media only screen and (max-width: 966px){
+  h3.list-title {
+    font-size: 17px !important;
+}
+}

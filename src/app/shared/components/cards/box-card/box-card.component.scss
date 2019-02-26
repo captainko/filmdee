@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 .grid:after {
   content: '';
   display: block;
@@ -79,12 +78,14 @@
   color: lawngreen;
 }
 .ep {
-  background: #50535dc9;
+  background: rgba(80, 83, 93, 0.8);
   display: -webkit-inline-box;
-  padding: 3px 5px;
+  // padding: 3px 5px;
   position: absolute;
   z-index: 10;
   color: white;
+  font-size: 14px;
+  padding: 4px 6px;
 }
 
 .quality {
@@ -311,4 +312,10 @@
   height: 200px !important;
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+@media only screen and (max-width: 966px) {
+  .title {
+    font-size: 12px;
+  }
 }

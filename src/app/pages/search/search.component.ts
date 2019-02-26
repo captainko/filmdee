@@ -15,11 +15,10 @@ export class SearchComponent implements OnInit {
     prop5: 'Quốc gia',
     prop6: 'Năm phát hành',
   }
+  
   constructor() { }
 
   ngOnInit() {
   }
-  ngAfterViewInit() {
-    this.show = true;
-  }
+
 }

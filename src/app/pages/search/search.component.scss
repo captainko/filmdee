@@ -1,4 +1,11 @@
+$colors: (filmdee: #0396ff);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
 .search-filter {
+  padding-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
 
@@ -8,11 +15,17 @@
     font-size: 15px;
   }
 
-  button {
+  a {
     border: 2px solid #FFFFFF;
-    background: #FFFFFF00;
+    background: color(filmdee);
     color: white;
-    border-radius: px;
+    border-radius: 5px;
+    width: 160px;
+    padding: 10px;
+
+    &:hover {
+      text-decoration: unset;
+    }
 
     &:focus {
       outline: unset !important;
@@ -24,22 +37,31 @@
     }
   }
 
-  .dropdown-menu {
-    color: white;
+  select {
     background-color: black;
-    border: 2px solid #FFFFFF;
-  }
-
-  .dropdown-item {
-    color: white !important;
-    font-weight: bold;
-
-    &:hover {
-      color: black !important;
-    }
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: white;
+    width: 160px;
+    padding: 2px;
 
     &:focus {
-      color: white !important;
+      outline: unset!important;
+    }
+
+    option {
+      color: #fff;
+      padding: 10px;
+
+      &:hover {
+        background-color: color(filmdee);
+        border: 2px solid #fff;
+      }
     }
   }
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }

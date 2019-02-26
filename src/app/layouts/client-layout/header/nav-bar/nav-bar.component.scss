@@ -223,16 +223,18 @@ search-bar {
   width: 100%;
 }
 
-li.item-list {
+.item-list {
   color: white;
   margin-right: 10px;
   padding: 2px 6px;
   cursor: pointer;
   list-style: none;
-}
+  font-weight: bold;
 
-li.item-list:hover {
-  background: #0396ff;
+  &:hover {
+    color: #0396ff;
+    transition-duration: .3s
+  }
 }
 
 nav.col-auto.pl-0 {

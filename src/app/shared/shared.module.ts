@@ -1,10 +1,8 @@
-import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from "@angular/common/http";
 import { CardsModule } from './components/cards/cards.module';
 import { SlidesModule } from './components/slides/slides.module';
-
 
 @NgModule({
   declarations: [

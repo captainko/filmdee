@@ -1,5 +1,5 @@
 .container-fluid {
-  height: 80%;
+  height: 90vh;
   position: relative;
 }
 
@@ -83,9 +83,13 @@
   cursor: pointer;
 }
 
+.container-fluid ul{
+  list-style: none;
+}
+
 
 .container-fluid .right-image{
-  background: url('/assets/images/movie-detail/Lucian_Gun_1.png') no-repeat;
+  background: url('../../../../assets/images/movie-detail/Lucian_Gun_1.png') no-repeat;
   background-size: cover;
   height: 100%;
   position: relative;

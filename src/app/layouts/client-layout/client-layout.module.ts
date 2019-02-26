@@ -8,7 +8,8 @@ import { ClientLayoutRoutingModule } from './client-layout-routing.module';
 
 import { SearchService } from '@services/search/search.service';
 import { FormsModule } from '@angular/forms';
-import { SearchModule } from '@shared/components/search/search.module';
+import { SearchComponentModule } from '@shared/components/search/search.component.module';
+import { SearchBarModule } from '@shared/components/search/search-bar/search-bar.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { SearchModule } from '@shared/components/search/search.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ClientLayoutRoutingModule,
-    SearchModule
+    SearchBarModule
   ],
   providers: [SearchService]
 })

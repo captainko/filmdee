@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config=proxy.conf.json",
-    "build": "ng build",
+    "build": "ng build --aot --prod --stats-json",
+    "build-report": "webpack-bundle-analyzer dist/filmdee/stats.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -25,6 +26,7 @@
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^3.1.4",
     "ngx-owl-carousel-o": "^1.0.11",
+    "node-sass": "^4.11.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },

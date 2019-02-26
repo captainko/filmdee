@@ -34,26 +34,12 @@ export class SearchBarComponent implements OnInit {
       .subscribe(value => {
         if (this.search.valid) {
           if(value !== '') {
-            this.router.navigate(['search', value]).then(
-              () => {
-                this.activate.params.subscribe(x=> {
-
-                  this.searchService.getMovies(value)
-                  .subscribe(data => {
-                    this.searchService.movieStream.next(data);
-                  });
-                  console.log('lol')
-                })
-              }
-            )
+            // console.log(`?q=${value}`)
+            this.router.navigate(['search'], {queryParams: {q: value}});
           } else {
             this.router.navigate(['home'])
-            this.searchService.movieStream.next(undefined);
           }
-        } else {
-          console.log('ko tim thay');
-          this.searchService.movieStream.next([]);
-        };
+        }
       });
   }
 

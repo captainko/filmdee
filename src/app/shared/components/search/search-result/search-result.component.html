@@ -1,6 +1,15 @@
 <!-- <box-card></box-card> -->
-<div *ngIf="boxCards" class="container-fluid">
- <div class="row">
-    <box-card *ngFor="let item of boxCards " [card]="item" class="col-md-2 col-sm-12 mb-4"></box-card>
- </div>
-</div>
+
+<ng-container *ngIf="noResult; else result">
+  <div class="container">
+    <h2 style="color: turquoise">Không tìm thấy kết quả nào</h2>
+  </div>
+</ng-container>
+<ng-template #result>
+  <div *ngIf="boxCards" class="container-fluid">
+    <div class="row">
+      <box-card *ngFor="let item of boxCards " [card]="item" class="col-md-2 col-sm-12 mb-4"></box-card>
+    </div>
+  </div>
+
+</ng-template>

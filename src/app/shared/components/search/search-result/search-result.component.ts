@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SearchService } from '@services/search/search.service';
 import { BoxCard } from '@shared/components/cards/box-card/box-card';
 import { Observable, Subject } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search-result',
@@ -10,6 +11,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class SearchResultComponent implements OnInit, OnDestroy {
   boxCards: BoxCard[];
+  noResult: boolean = false;
   private logObj(name) {
     return {
       next: x => console.log(`${name} next:`, x),
@@ -18,17 +20,38 @@ export class SearchResultComponent implements OnInit, OnDestroy {
     }
   }
 
-  constructor(private searchService: SearchService) {
+  constructor(
+    private searchService: SearchService,
+    private  activated: ActivatedRoute
+  ) {
+  }
+
+  ngOnInit() {
+
+    this.activated.queryParams.subscribe((params)=> {
+      if(params["q"]) {
+        this.searchService.getMovies(params["q"])
+          .subscribe(data => {
+            if(data.length == 0) {
+              this.noResult = true;
+            } else {
+              this.searchService.movieStream.next(data);
+            }
+          })
+      } else {
+        console.log("please input")
+      }
+    })
+
+
     this.searchService.movieStream.subscribe(data => {
       this.boxCards = data;
       console.log(data);
     })
   }
 
-  ngOnInit() {
-  }
-
   ngOnDestroy(): void {
     // this.searchService.movieStream.unsubscribe();
   }
+
 }

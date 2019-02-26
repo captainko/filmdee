@@ -1,5 +1,45 @@
 .search-filter {
-    background: red;
-    height: 500px;
-    width: 100%
+  padding-left: 10%;
+  padding-right: 10%;
+
+  p {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  button {
+    border: 2px solid #FFFFFF;
+    background: #FFFFFF00;
+    color: white;
+    border-radius: px;
+
+    &:focus {
+      outline: unset !important;
+      box-shadow: unset !important;
+    }
+
+    &:active {
+      border-color: #ffffff;
+    }
+  }
+
+  .dropdown-menu {
+    color: white;
+    background-color: black;
+    border: 2px solid #FFFFFF;
+  }
+
+  .dropdown-item {
+    color: white !important;
+    font-weight: bold;
+
+    &:hover {
+      color: black !important;
+    }
+
+    &:focus {
+      color: white !important;
+    }
+  }
 }

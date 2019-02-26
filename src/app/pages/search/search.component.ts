@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  search = {
+    prop1: 'Sắp xếp',
+    prop2: 'Hình thức',
+    prop3: 'Ngôn ngữ',
+    prop4: 'Thể loại',
+    prop5: 'Quốc gia',
+    prop6: 'Năm phát hành',
+  }
   constructor() { }
 
   ngOnInit() {

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '@shared/shared.module';
-import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { SearchModule } from './search/search.module';
 @NgModule({
   declarations: [
   ],
@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     SharedModule,
     PagesRoutingModule,
-    FormsModule
+    FormsModule,
+    SearchModule
   ]
 })
 export class PagesModule { }

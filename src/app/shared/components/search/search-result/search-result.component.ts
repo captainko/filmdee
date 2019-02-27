@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SearchService } from '@services/search/search.service';
 import { BoxCard } from '@shared/components/cards/box-card/box-card';
-import { Observable, Subject } from 'rxjs';
+// import { Observable, Subject } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -34,9 +34,8 @@ export class SearchResultComponent implements OnInit, OnDestroy {
           .subscribe(data => {
             if(data.length == 0) {
               this.noResult = true;
-              window.document.querySelector('div');
-              window.confirm(String(window.document.querySelectorAll('div')));
             } else {
+              this.noResult = false;
               this.searchService.movieStream.next(data);
             }
           })

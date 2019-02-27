@@ -1,0 +1,122 @@
+$colors: (bronze: #cd7f32,
+filmdee: #0396fa);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+.chart {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  .chart-title {
+    color: white;
+
+    i {
+      font-size: 50px;
+    }
+  }
+
+  .top {
+
+    color: white;
+
+    li {
+      display: block;
+      padding-bottom: 150px;
+      text-align: right;
+
+      &:nth-child(1) {
+        i {
+          color: gold;
+        }
+      }
+
+      &:nth-child(2) {
+        i {
+          color: silver;
+        }
+      }
+
+      &:nth-child(3) {
+        i {
+          color: color(bronze);
+        }
+      }
+    }
+
+    ul {
+      padding: 10px;
+    }
+  }
+}
+
+.film-title {
+  color: white;
+  font-weight: bold;
+}
+
+.chart-list {
+  img {
+    width: 100px;
+    border-radius: 2px;
+  }
+}
+
+.p-p {
+
+  cursor: pointer;
+  ul {
+    padding: 10px;
+  }
+
+  li {
+    display: flex;
+    list-style: none;
+    padding-bottom: 28px;
+
+    h5 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: white;
+      font-weight: bold;
+
+      &:hover {
+        color: color(filmdee);
+        transition-duration: .2s;
+      }
+    }
+
+    i {
+      font-size: 30px;
+    }
+
+    a {
+      font-size: 20px;
+
+      &:hover {
+        color: gold;
+        transition-duration: .2s;
+      }
+    }
+
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      font-size: 12px;
+    }
+  }
+}
+
+.card {
+  width: 300px;
+  color: white;
+  background: transparent;
+  border: 1px solid #ffffff;
+}

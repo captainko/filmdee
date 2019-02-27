@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -16,7 +15,6 @@ import { CardComponent } from './modals/card/card.component';
 
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     SharedModule,
     RouterModule,

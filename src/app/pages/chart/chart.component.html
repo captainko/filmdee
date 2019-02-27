@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <div class="chart">
+
+    <div class="row chart-title">
+      <div class="col-lg-12">
+        <h3 class="text-uppercase"><i class="fas fa-chart-bar pr-4 pb-4"></i>Bảng xếp hạng</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1  d-none d-sm-block">
+        <div class="top">
+          <p>Top 10</p>
+          <ul>
+            <li *ngFor="let i of list">
+              <!-- <i class="fas fa-award" *ngIf="i < 4"></i> -->
+              <i class="fas fa-trophy-alt" *ngIf="i < 4"></i> {{i}}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-11">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="film-title pb-3">
+              <p>Anime</p>
+            </div>
+            <ul class="p-p p-0">
+              <li *ngFor="let item of topTenAnime" class="">
+                <div class="chart-list card">
+                  <!-- <p>{{item.id}}.{{item.name}}</p>
+                  <img [src]="item.img" alt=""> -->
+                  <div class="row">
+                    <div class="col-4">
+                      <img [src]="item.img" alt="">
+                    </div>
+                    <div class="col-6 ml-2">
+                      <h5 class="m-0 pt-2">{{item.name}}</h5>
+                      <i class="fab fa-imdb"></i><a class="pl-2">9.6</a>
+                      <p>{{item.content}}</p>
+                      <p>R | 142 min | Drama</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-lg-4">
+            <div class="film-title pb-3">
+              <p>Phim lẻ</p>
+            </div>
+            <ul class="p-p pl-0">
+              <li *ngFor="let item of topTenAnime" class="">
+                <div class="chart-list card">
+                  <!-- <p>{{item.id}}.{{item.name}}</p>
+                    <img [src]="item.img" alt=""> -->
+                  <div class="row">
+                    <div class="col-4">
+                      <img [src]="item.img" alt="">
+                    </div>
+                    <div class="col-6 ml-2">
+                      <h5 class="m-0 pt-2">{{item.name}}</h5>
+                      <i class="fab fa-imdb"></i><a class="pl-2">9.6</a>
+                      <p>{{item.content}}</p>
+                      <p>R | 142 min | Drama</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="film-title pb-3">
+              <p>Phim bộ</p>
+            </div>
+            <ul class="p-p pl-0">
+              <li *ngFor="let item of topTenAnime" class="">
+                <div class="chart-list card">
+                  <!-- <p>{{item.id}}.{{item.name}}</p>
+                    <img [src]="item.img" alt=""> -->
+                  <div class="row">
+                    <div class="col-4">
+                      <img [src]="item.img" alt="">
+                    </div>
+                    <div class="col-6 ml-2">
+                      <h5 class="m-0 pt-2">{{item.name}}</h5>
+                      <i class="fab fa-imdb"></i><a class="pl-2">9.6</a>
+                      <p>{{item.content}}</p>
+                      <p>R | 142 min | Drama</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

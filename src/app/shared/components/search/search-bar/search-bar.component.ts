@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { SearchService } from '@services/search/search.service';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -12,14 +12,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class SearchBarComponent implements OnInit {
 
   search: FormControl;
+  @ViewChild('input') input: ElementRef;
+  @ViewChild('searchButton') searchButton: ElementRef;
   constructor(
     private searchService: SearchService,
     private router: Router,
-    private activate: ActivatedRoute
+    private activate: ActivatedRoute,
+    private rederer2: Renderer2
     ) {
     this.search = new FormControl('', [Validators.minLength(2)]);
     this.addOnChangeToSearch();
-    // document.querySelector("button").addEventListener('click', expand);
   }
 
   ngOnInit() {
@@ -28,44 +30,39 @@ export class SearchBarComponent implements OnInit {
   private addOnChangeToSearch() {
     this.search.valueChanges
       .pipe(
-        debounceTime(1000),
+        debounceTime(750),
         distinctUntilChanged(),
       )
       .subscribe(value => {
         if (this.search.valid) {
           if(value !== '') {
-            this.router.navigate(['search', value]).then(
-              () => {
-                this.activate.params.subscribe(x=> {
-
-                  this.searchService.getMovies(value)
-                  .subscribe(data => {
-                    this.searchService.movieStream.next(data);
-                  });
-                  console.log('lol')
-                })
-              }
-            )
+            // console.log(`?q=${value}`)
+            this.router.navigate(['search'], {queryParams: {q: value}});
           } else {
             this.router.navigate(['home'])
-            this.searchService.movieStream.next(undefined);
           }
-        } else {
-          console.log('ko tim thay');
-          this.searchService.movieStream.next([]);
-        };
+        }
       });
   }
 
   expand() {
-    document.querySelector(".search").classList.toggle("close");
-    document.querySelector(".input").classList.toggle("square");
-    if (document.querySelector(".search").classList.contains("close")) {
-      document.querySelector("input").focus();
+    let search = this.searchButton.nativeElement;
+    let input = this.input.nativeElement;
+
+    this.toggle(this.searchButton, 'close');
+    this.toggle(this.input, 'square');
+    if(search.classList.contains("close")) {
+      input.focus();
     } else {
-      document.querySelector("input").blur();
+      input.blur();
     }
   }
-
+  private toggle(ele: ElementRef, cl: string) {
+    if (ele.nativeElement.classList.contains(cl)) {
+      this.rederer2.removeClass(ele.nativeElement, cl);
+    } else {
+      this.rederer2.addClass(ele.nativeElement, cl);
+    }
+  }
 
 }

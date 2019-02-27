@@ -1,16 +1,7 @@
-<video id="background" (ended)="vidEnd()" #video [muted]="true" poster="../../../../assets/images/background.jpg">
-  <source src="../../../../assets/images/demo.mp4"
-    type="video/mp4">
-</video>
-<div class="button-control">
-  <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
-    class="fal fa-2x" (click)="muted()"></span>
-  <span style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></span>
-</div>
+<app-videos [video]="Video"></app-videos>
 <div class="content">
   <img src="assets/images/logo-film.png" alt="">
   <h4 style="-webkit-box-orient: vertical" class="title title-line-clamp">{{title}}</h4>
   <p style="-webkit-box-orient: vertical" class="content-text content-text-line-clamp">{{content}}</p>
   <button class="btn btn-primary">Xem luôn</button>
 </div>
-<div class="background-bot-video"></div>

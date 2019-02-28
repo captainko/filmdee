@@ -1,0 +1,136 @@
+video#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 11;
+  }
+  
+  .fa-volume-up:before,
+  .fa-volume-mute:before,
+  .fa-redo:before {
+    color: white;
+    position: absolute;
+    border: 2px solid white;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 50%;
+    background: #595d6187;
+  }
+
+.background-bot-video {
+    position: absolute;
+    z-index: 41;
+    height: 55px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to top, #141414, rgba(1, 0, 0, 0));
+  }
+
+
+
+// Extra small < 576px (.col-)
+
+@media only screen and (max-width: 575px) {
+  
+    #background {
+      height: 450px !important;
+    }
+  
+    video#background {
+      object-fit: cover;
+    }
+  
+    .button-control {
+      position: absolute;
+      z-index: 50;
+      bottom: 160px;
+      right: 3%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  // Small ≥ 576px (.col-sm-)
+  
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+  
+    #background {
+      height: 507px !important;
+    }
+  
+    video#background {
+      object-fit: cover;
+    }
+  
+    .button-control {
+      position: absolute;
+      z-index: 50;
+      bottom: 160px;
+      right: 3%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  // Medium ≥ 768px (.col-md-)
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+    #background {
+      height: 560px !important;
+    }
+  
+    video#background {
+      object-fit: cover;
+    }
+  
+    .button-control {
+      position: absolute;
+      z-index: 50;
+      bottom: 160px;
+      right: 3%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  // Large ≥ 992px (.col-lg-)
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #background {
+      height: calc(100vw / 16 * 9) !important;
+    }
+  
+    video#background {
+      object-fit: cover;
+    }
+  
+    .button-control {
+      position: absolute;
+      z-index: 50;
+      bottom: 160px;
+      right: 3%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  // Extra large ≥ 1200px (.col-xl-)
+  
+  @media only screen and (min-width: 1200px) {
+    #background {
+      height: calc(100vw / 16 * 9) !important;
+    }
+  
+    video#background {
+      object-fit: cover;
+    }
+  
+    .button-control {
+      position: absolute;
+      z-index: 50;
+      bottom: 326px;
+      right: 3%;
+      width: 35px;
+      height: 35px;
+    }
+  }

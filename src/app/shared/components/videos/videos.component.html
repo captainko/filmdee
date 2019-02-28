@@ -1,0 +1,10 @@
+<video id="background" (ended)="vidEnd()" #video [muted]="true" [poster]="videolist[0].picture">
+  <source [src]="videolist[0].link"
+    type="video/mp4">
+</video>
+<div class="button-control">
+  <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
+    class="fal fa-2x" (click)="muted()"></span>
+  <span style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></span>
+</div>
+<div class="background-bot-video"></div>

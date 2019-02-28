@@ -30,7 +30,7 @@ export class SearchBarComponent implements OnInit {
   private addOnChangeToSearch() {
     this.search.valueChanges
       .pipe(
-        debounceTime(1000),
+        debounceTime(750),
         distinctUntilChanged(),
       )
       .subscribe(value => {

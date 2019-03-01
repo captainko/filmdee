@@ -1,24 +1,22 @@
-<div class="item grid" (deferLoad)="show=true">
-  <div class="cell cell-g">
-    <div class="show">
-      <div *ngIf="boxCard.total > 1" class="ep">{{boxCard.now + '/' + boxCard.total}}</div>
-      <div class="quality">{{boxCard.quality}}</div>
-      <!-- <div *ngIf="loading" class="loading">
+<div class="cell cell-g">
+  <div class="show">
+    <div class="ep">{{boxCard.now + '/' + boxCard.total}}</div>
+    <div class="quality">{{boxCard.quality}}</div>
+    <!-- <div *ngIf="loading" class="loading">
         <div style="width:100%;height:100%" class="lds-rolling">
           <div></div>
         </div>
       </div> -->
 
-      <!-- <img *ngIf="show" [src]="boxCard.link" (load)="update()"> -->
-      <img [lazySrc]="boxCard.link" lazySrcVisible="visible" (load)="update()">
+    <!-- <img *ngIf="show" [src]="boxCard.link" (load)="update()"> -->
+    <img [lazySrc]="boxCard.link" lazySrcVisible="visible" (load)="update()">
 
 
-      <div class="play">
-        <a class="video-play-button" href="#">
-          <span class="icon-play"></span>
-        </a>
-      </div>
-      <div class="title">{{boxCard.name}}</div>
+    <div class="play">
+      <a class="video-play-button" href="#">
+        <span class="icon-play"></span>
+      </a>
     </div>
+    <div class="title">{{boxCard.name}}</div>
   </div>
 </div>

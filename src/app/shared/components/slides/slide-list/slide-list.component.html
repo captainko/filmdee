@@ -13,10 +13,12 @@
       </div>
     </div>
   </div>
-  <owl-carousel-o [options]="customOptions" (translated)="active($event)" (initialized)="getData($event)" #owlCar>
-    <ng-container *ngFor="let listFilm of listFilms; let i = index">
-      <ng-template carouselSlide [id]="i">
-          <box-card [card]="listFilm"></box-card>
-      </ng-template>
-    </ng-container>
-  </owl-carousel-o>
+  <div lazyViewport>
+    <owl-carousel-o  [options]="customOptions" (translated)="active($event)" (initialized)="getData($event)" #owlCar>
+      <ng-container  *ngFor="let listFilm of listFilms; let i = index">
+        <ng-template carouselSlide [id]="i">
+            <box-card [card]="listFilm"></box-card>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>

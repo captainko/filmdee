@@ -5,8 +5,10 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '@shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { SearchModule } from './search/search.module';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
+    SearchComponent
   ],
   imports: [
     CommonModule,

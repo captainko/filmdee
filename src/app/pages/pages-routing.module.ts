@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChartModule } from './chart/chart.module'
 import { SearchModule } from './search/search.module';
 import { PlayModule } from "./play/play.module";
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },

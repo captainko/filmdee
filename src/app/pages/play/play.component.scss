@@ -13,17 +13,17 @@
 
 .film-title {
   color: white;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 42px;
-    margin-top: 12px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 42px;
+  margin-top: 12px;
 }
 
 .content-fill {
   width: 40%;
-    padding: 150px 3% 0px;
-    color: white;
-    height: 100%;
+  padding: 150px 3% 0px;
+  color: white;
+  height: 100%;
 }
 
 img.film-logo {
@@ -44,20 +44,20 @@ img.film-logo {
 
 .info-year {
   display: -webkit-inline-box;
-    color: #007bff;
-    font-weight: 800;
-    padding: 2px 10px 2px 10px;
-    position: relative;
+  color: #007bff;
+  font-weight: 800;
+  padding: 2px 10px 2px 10px;
+  position: relative;
 }
 
 .info-year::before {
   content: "";
-    width: 2px;
-    height: 2px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 .info-time {
@@ -68,12 +68,12 @@ img.film-logo {
 
 .info-time::before {
   content: "";
-    width: 2px;
-    height: 2px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 i.far.fa-clock {
@@ -98,12 +98,12 @@ span.quality-value {
 
 .info-quality::before {
   content: "";
-    width: 2px;
-    height: 2px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 .info-old {
@@ -123,12 +123,12 @@ span.old-value {
 
 .info-old::before {
   content: "";
-    width: 2px;
-    height: 2px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 .film-info {
@@ -140,8 +140,8 @@ span.old-value {
   background: #0396ff;
   padding: 6px 15px;
   border-radius: 35px;
-    border: 2px solid #0396ff;
-    cursor: pointer;
+  border: 2px solid #0396ff;
+  cursor: pointer;
 }
 
 .control-play:hover {
@@ -160,12 +160,12 @@ i.far.fa-plus {
 
 .control-add {
   display: -webkit-inline-box;
-    background: #0396ff00;
-    padding: 6px 15px;
-    border-radius: 35px;
-    border: 2px solid;
-    margin-left: 15px;
-    cursor: pointer;
+  background: #0396ff00;
+  padding: 6px 15px;
+  border-radius: 35px;
+  border: 2px solid;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 .control-add:hover {
@@ -266,47 +266,113 @@ a.tag:hover {
   background: #0396ff;
 }
 
+.content-detail {
+  width: 40%;
+  padding: 100px 3% 0px;
+  color: white;
+  height: 100%;
+}
+
+.detail-col {
+  font-size: 15px;
+}
+
+.detail-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin: 15px 0px;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.detail-scrollbar {
+  height: calc(100vh - 180px) !important;
+}
+
+.ng-scroll-view {
+  overflow-x: hidden !important;
+  width: calc(100% + 8px) !important;
+}
+
+.detail-text {
+  padding-right: 10px;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+// Detail
+
+.content-actor {
+  width: 40%;
+  padding: 100px 3% 0px;
+  color: white;
+  height: 100%;
+}
+
+.actor-image {
+  width: 100%;
+}
+
+.actor-name {
+  background: #42615b;
+  font-size: 13px;
+  padding: 5px 5px;
+  position: relative;
+  top: -29px;
+  text-align: center;
+}
+
+.actor-vai {
+  background: #9a8868;
+  font-size: 13px;
+  padding: 5px 5px;
+  position: relative;
+  top: -29px;
+  text-align: center;
+}
+
 
 @media only screen and (max-width: 575px) {
-    .video-index {
-      height: 450px;
-      position: relative;
-    }
+  .video-index {
+    height: 450px;
+    position: relative;
   }
-  
-  // Small ≥ 576px (.col-sm-)
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .video-index {
-      height: 507px;
-      position: relative;
-    }
+}
+
+// Small ≥ 576px (.col-sm-)
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .video-index {
+    height: 507px;
+    position: relative;
   }
-  
-  // Medium ≥ 768px (.col-md-)
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .video-index {
-      height: 560px;
-      position: relative;
-    }
+}
+
+// Medium ≥ 768px (.col-md-)
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .video-index {
+    height: 560px;
+    position: relative;
   }
-  
-  // Large ≥ 992px (.col-lg-)
-  
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .video-index {
-      height: calc(100vw / 16 * 9);
-      position: relative;
-    }
+}
+
+// Large ≥ 992px (.col-lg-)
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .video-index {
+    height: calc(100vw / 16 * 9);
+    position: relative;
   }
-  
-  // Extra large ≥ 1200px (.col-xl-)
-  
-  @media only screen and (min-width: 1200px) {
-    .video-index {
-      height: calc(100vw / 16 * 9);
-      position: relative;
-      margin-bottom: 60px;
-    }
+}
+
+// Extra large ≥ 1200px (.col-xl-)
+
+@media only screen and (min-width: 1200px) {
+  .video-index {
+    height: calc(100vw / 16 * 9);
+    position: relative;
+    margin-bottom: 60px;
   }
-  
+}

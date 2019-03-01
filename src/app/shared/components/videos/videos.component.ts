@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Videos } from './videos';
 
 @Component({
@@ -7,9 +7,38 @@ import { Videos } from './videos';
   styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent implements OnInit {
+
+  isVisible: any;
   @Input('video') videolist: Videos;
 
   @ViewChild("video") video: ElementRef;
+  @ViewChild("botvideo") botvideo: ElementRef;
+
+  @HostListener("document:visibilitychange", ["$event"])
+  handleVisibilityChange(event: any): void {
+
+    if (document.hidden) {
+          this.video.nativeElement.pause();
+    
+        } else {
+          if(!this.checkEnd){
+            this.video.nativeElement.play();
+          }
+        }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+
+  onScroll(event) {
+    console.log(this.video.nativeElement.scrollTop);
+    
+    // if (document.documentElement.scrollTop > 55 || document.body.scrollTop > 55) {
+    //   console.log('PAUSE');
+    // }else{
+    //   console.log('PLAY');
+    // }
+  }
+
   constructor() {
     this.playDelay();
   }
@@ -20,6 +49,7 @@ export class VideosComponent implements OnInit {
   check_index: boolean = true;
 
   ngOnInit() {
+
   }
 
   vidEnd() {
@@ -32,9 +62,12 @@ export class VideosComponent implements OnInit {
     this.video.nativeElement.muted = !this.video.nativeElement.muted;
     this.checkMuted = this.video.nativeElement.muted;
     console.log(this.checkMuted);
-    // alert(this.video.nativeElement.muted);
-    // return this.video.nativeElement.muted;
   }
+
+  Pause() {
+    this.video.nativeElement.pause();
+  }
+
   replay() {
     this.video.nativeElement.play();
     this.checkEnd = false;
@@ -42,7 +75,7 @@ export class VideosComponent implements OnInit {
     this.check_index = false;
   }
 
-  playDelay(){
+  playDelay() {
     this.setTime = setTimeout(() => {
       this.video.nativeElement.play();
       clearTimeout(this.setTime);

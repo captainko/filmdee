@@ -4,7 +4,6 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { VideoBackgroundModule } from '@shared/components/video-background/video-background.module';
 import { SlidesModule } from '@shared/components/slides/slides.module';
-import { FbCommentModule } from '@shared/components/fb-comment/fb-comment.module';
 @NgModule({
   declarations: [HomeComponent],
   imports: [
@@ -12,7 +11,6 @@ import { FbCommentModule } from '@shared/components/fb-comment/fb-comment.module
     HomeRoutingModule,
     SlidesModule,
     VideoBackgroundModule,
-    FbCommentModule
   ]
 })
 export class HomeModule { }

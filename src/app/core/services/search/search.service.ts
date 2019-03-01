@@ -58,7 +58,7 @@ const listFilms = [
 })
 export class SearchService {
   // private env = environment;
-  movieStream: BehaviorSubject<BoxCard[]>;
+  movieStream: Subject<BoxCard[]>;
 
   constructor(private http: HttpClient) {
     this.movieStream = new BehaviorSubject([]);

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { LazyModule } from './directives/lazy/lazy.module';
+
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    FormsModule
+    LazyModule
   ],
   exports: [
+    LazyModule
   ]
 })
 export class CoreModule { }

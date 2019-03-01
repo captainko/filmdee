@@ -1,7 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SearchService } from '@services/search/search.service';
 import { BoxCard } from '@shared/components/cards/box-card/box-card';
-// import { Observable, Subject } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './search-result.component.html',
   styleUrls: ['./search-result.component.scss']
 })
-export class SearchResultComponent implements OnInit, OnDestroy {
+export class SearchResultComponent implements OnInit {
   boxCards: BoxCard[];
   noResult: boolean = false;
   private logObj(name) {
@@ -31,28 +30,21 @@ export class SearchResultComponent implements OnInit, OnDestroy {
     this.activated.queryParams.subscribe((params)=> {
       if(params["q"]) {
         this.searchService.getMovies(params["q"])
-          .subscribe(data => {
+          .subscribe((data: BoxCard[]) => {
             if(data.length == 0) {
               this.noResult = true;
             } else {
               this.noResult = false;
-              this.searchService.movieStream.next(data);
+              // this.searchService.movieStream.next(data);
+              this.boxCards = data;
+              console.log(data);
+
             }
           })
-      } else {
-        console.log("please input")
       }
     })
 
 
-    this.searchService.movieStream.subscribe(data => {
-      this.boxCards = data;
-      console.log(data);
-    })
-  }
-
-  ngOnDestroy(): void {
-    // this.searchService.movieStream.unsubscribe();
   }
 
 }

@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomeModule', data: {animation: 'HomePage'}},
   { path: 'chart', loadChildren: './chart/chart.module#ChartModule' },
   { path: 'search', loadChildren: './search/search.module#SearchModule', data: {animation: 'SearchPage'} },
-  { path: 'play', loadChildren: './play/play.module#PlayModule' },
+  { path: 'xem', loadChildren: './play/play.module#PlayModule' },
 ];
 
 @NgModule({

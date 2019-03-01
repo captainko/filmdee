@@ -165,12 +165,12 @@ nav {
 
 .header-navbar {
   img {
-    padding-bottom: 7px;
-    width: 105px;
+    padding-bottom: 13px;
+    width: 104px;
     margin-right: 5px;
     z-index: 200;
     position: relative;
-    padding-top: 6px;
+    padding-top: 10px;
 
     &:focus {
       outline: none;
@@ -243,6 +243,10 @@ search-bar {
 
 nav.col-auto.pl-0 {
   display: flex;
+}
+
+.fix-margin {
+  margin-top: 3px;
 }
 
 

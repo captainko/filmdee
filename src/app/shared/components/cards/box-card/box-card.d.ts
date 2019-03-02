@@ -4,7 +4,7 @@ export interface BoxCard {
   now: number | string,
   quality: string,
   name: string,
-  link?: string,
+  image?: string,
 }
 
 

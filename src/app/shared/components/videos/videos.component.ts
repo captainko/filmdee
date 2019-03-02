@@ -9,30 +9,32 @@ import { Videos } from './videos';
 })
 export class VideosComponent implements OnInit {
 
-  check_poster: boolean = false;
-  check_video: boolean = true;
+  // check_poster: boolean = false;
+  // check_video: boolean = true;
   isVisible: any;
   @Input('video') videolist: Videos;
+  @Input('Check_Poster') check_poster: boolean;
+  @Input('Check_Video') check_video: boolean;
 
   @ViewChild("video") video: ElementRef;
   @ViewChild("botvideo") botvideo: ElementRef;
 
-  @HostListener('window:resize', ['$event'])
-  getScreenSize(event?) {
-    if (window.innerWidth >= 992) {
-      this.check_poster = false;
-      this.check_video = true;
-      console.log('PC');
+  // @HostListener('window:resize', ['$event'])
+  // getScreenSize(event?) {
+  //   if (window.innerWidth >= 992) {
+  //     this.check_poster = false;
+  //     this.check_video = true;
+  //     console.log('PC');
 
-    } else {
-      this.check_poster = true;
-      this.check_video = false;
-      console.log('Mobile');
-    }
-    console.log('p: ' + this.check_poster);
-    console.log('v: ' + this.check_video);
+  //   } else {
+  //     this.check_poster = true;
+  //     this.check_video = false;
+  //     console.log('Mobile');
+  //   }
+  //   console.log('p: ' + this.check_poster);
+  //   console.log('v: ' + this.check_video);
 
-  }
+  // }
 
   @HostListener("document:visibilitychange", ["$event"])
   handleVisibilityChange(event: any): void {
@@ -62,8 +64,6 @@ export class VideosComponent implements OnInit {
   constructor() {
 
     this.playDelay();
-
-    this.getScreenSize();
   }
 
   checkMuted = true;

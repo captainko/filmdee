@@ -1,13 +1,11 @@
 <vg-player *ngIf="check_video" style="position: absolute;">
-  <video [vgHls]="'https://firebasestorage.googleapis.com/v0/b/phimdee-video.appspot.com/o/demo%20(2).m3u8?alt=media&token=89e4ab41-f094-416b-92de-4860a955ad98'" (onGetBitrates)="hlsBitrates = $event" id="background" (ended)="vidEnd()" #video [muted]="true" [poster]="videolist[0].picture">
-    <!-- <source src="" type="application/x-mpegURL"> -->
+  <video [vgHls]="videolist[0].link" (onGetBitrates)="hlsBitrates = $event" id="background" (ended)="vidEnd()" #video
+    [muted]="true" [poster]="videolist[0].picture">
   </video>
 </vg-player>
+
 <img *ngIf="check_poster" class="imgp" src="{{videolist[0].picture}}">
-<!-- <video id="background" (ended)="vidEnd()" #video [muted]="true" [poster]="videolist[0].picture">
-  <source [src]="videolist[0].link"
-    type="video/mp4">
-</video> -->
+
 <div *ngIf="check_video" class="button-control">
   <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
     class="fal fa-2x" (click)="muted()"></span>

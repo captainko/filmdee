@@ -160,7 +160,7 @@ video#background {
   .button-control {
     position: absolute;
     z-index: 50;
-    bottom: 326px;
+    top: calc(100vh - 266px);
     right: 3%;
     width: 35px;
     height: 35px;

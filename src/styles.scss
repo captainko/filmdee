@@ -4,9 +4,15 @@
 // @import "~font-awesome/css/font-awesome.css";
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
+<<<<<<< HEAD
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=vietnamese');
+=======
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=vietnamese');
+>>>>>>> 9b6f5cb255d882ae96444bb91e08068f5fe5b327
 
 
 body {
@@ -27,10 +33,11 @@ app-slide-show {
   background-color: #141414;
 }
 
+// màu thanh cuộn dịu thế này được rồi, màu kia xanh quá, đừng đổi lại nhé!
+
 ::-webkit-scrollbar-thumb {
   border-radius: 1px;
-  background-color: #0396ff;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .7);
+    background-color: #2584c787;
 }
 
 ::-webkit-scrollbar-track {

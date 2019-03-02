@@ -25,11 +25,13 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "hls.js": "^0.12.2",
     "ngx-bootstrap": "^3.1.4",
-    "ngx-owl-carousel-o": "^1.0.11",
+    "ngx-owl-carousel": "^2.0.7",
     "ngx-scrollbar": "^4.1.1",
     "node-sass": "^4.11.0",
     "rxjs": "~6.3.3",
+    "videogular2": "^6.4.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

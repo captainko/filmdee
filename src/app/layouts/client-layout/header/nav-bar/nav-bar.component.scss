@@ -165,12 +165,12 @@ nav {
 
 .header-navbar {
   img {
-    padding-bottom: 7px;
-    width: 105px;
+    padding-bottom: 13px;
+    width: 104px;
     margin-right: 5px;
     z-index: 200;
     position: relative;
-    padding-top: 6px;
+    padding-top: 10px;
 
     &:focus {
       outline: none;
@@ -190,7 +190,6 @@ nav {
   background-color: rgb(20, 20, 20);
   left: 0;
   right: 0;
-  border-bottom: 1px solid #ffffff57;
 }
 
 
@@ -243,6 +242,10 @@ search-bar {
 
 nav.col-auto.pl-0 {
   display: flex;
+}
+
+.fix-margin {
+  margin-top: 3px;
 }
 
 

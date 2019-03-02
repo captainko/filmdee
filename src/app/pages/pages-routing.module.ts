@@ -10,9 +10,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', loadChildren: './home/home.module#HomeModule', data: {animation: 'HomePage'}},
   { path: 'chart', loadChildren: './chart/chart.module#ChartModule' },
-  // { path: 'search', loadChildren: './search/search.module#SearchModule', data: {animation: 'SearchPage'} },
-  { path: 'search', component: SearchComponent, data: {animation: 'SearchPage'} },
-  { path: 'play', loadChildren: './play/play.module#PlayModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchModule', data: {animation: 'SearchPage'} },
+  { path: 'xem', loadChildren: './play/play.module#PlayModule' },
 ];
 
 @NgModule({

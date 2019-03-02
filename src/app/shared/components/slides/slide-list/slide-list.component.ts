@@ -14,7 +14,7 @@ export class SlideListComponent implements OnInit {
 
   customOptions: any = {
     margin: 10,
-    loop: true,
+    loop: false,
     dots: false,
     center: false,
     responsive: {

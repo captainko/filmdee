@@ -3,7 +3,7 @@
     <div class="show">
       <div *ngIf="boxCard.total > 1" class="ep">{{boxCard.now + '/' + boxCard.total}}</div>
       <div class="quality">{{boxCard.quality}}</div>
-      <img [src]="boxCard.image" lazySrcVisible="visible" (load)="update()">
+      <img [lazySrc]="boxCard.image" lazySrcVisible="visible" (load)="update()">
 
 
     <div class="play">

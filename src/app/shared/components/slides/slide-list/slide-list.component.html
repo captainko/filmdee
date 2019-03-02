@@ -4,13 +4,15 @@
       <h3 class="list-title">Mới Cập Nhật</h3>
     </div>
   </div>
-  <div class="lazy" lazyViewport>
+  <div class="lazy" >
     <div (click)="prev()" class="button-prev"><i class="fal fa-chevron-left icon-prev"></i></div>
     <div (click)="next()" class="button-next"><i class="fal fa-chevron-right icon-next"></i></div>
 
-    <owl-carousel #owlElement [options]="customOptions">
-      <div class="item" *ngFor="let listFilm of listFilms; let i = index">
-        <box-card [card]="listFilm"></box-card>
-      </div>
-    </owl-carousel>
+   <div lazyViewport>
+      <owl-carousel #owlElement [options]="customOptions" >
+        <div class="item" *ngFor="let listFilm of listFilms; let i = index">
+          <box-card [card]="listFilm"></box-card>
+        </div>
+      </owl-carousel>
+   </div>
   </div>

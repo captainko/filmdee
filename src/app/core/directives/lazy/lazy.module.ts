@@ -13,7 +13,7 @@ import { LazyViewport } from './lazy-viewport';
     LazySrcDirective
   ],
   providers: [
-    // Setup teh default LazyViewport instance without an associated element.
+    // Setup the default LazyViewport instance without an associated element.
     // This will create a IntersectionObserver that uses the browser's viewport as the
     // observer root. This way, an instance of LazyViewport is always available for
     // injection into other directives and services

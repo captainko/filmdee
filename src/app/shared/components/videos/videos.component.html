@@ -1,10 +1,14 @@
-<video id="background" (ended)="vidEnd()" #video [muted]="true" [poster]="videolist[0].picture">
-  <source [src]="videolist[0].link"
-    type="video/mp4">
-</video>
-<div class="button-control">
+<vg-player *ngIf="check_video" style="position: absolute;">
+  <video [vgHls]="videolist[0].link" (onGetBitrates)="hlsBitrates = $event" id="background" (ended)="vidEnd()" #video
+    [muted]="true" [poster]="videolist[0].picture">
+  </video>
+</vg-player>
+
+<img *ngIf="check_poster" class="imgp" src="{{videolist[0].picture}}">
+
+<div *ngIf="check_video" class="button-control">
   <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"
     class="fal fa-2x" (click)="muted()"></span>
   <span style="display: block" [ngClass]="{'fa-redo':checkEnd==true, '':checkEnd==false}" class="fal fa-2x" (click)="replay()"></span>
 </div>
-<div #botvideo class="background-bot-video"></div>
+<div class="background-bot-video"></div>

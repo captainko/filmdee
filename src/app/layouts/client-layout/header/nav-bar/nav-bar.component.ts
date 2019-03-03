@@ -14,11 +14,17 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event) {
-    if (document.documentElement.scrollTop > 55 || document.body.scrollTop > 55) {
-      this.isFixed = true;
-    }else{
-      this.isFixed = false;
-    }
+
+    let timeout = setTimeout(() => {
+      if (window.scrollY > 55) {
+        this.isFixed = true;
+      }else{
+        this.isFixed = false;
+      }
+      clearTimeout(timeout);
+    }, 0);
+
+
   }
 
   constructor() {

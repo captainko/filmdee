@@ -31,7 +31,7 @@ img.film-logo {
 }
 
 .info-like {
-  display: -webkit-inline-box;
+  display: inline;
   padding: 2px 10px 2px 0px;
 }
 
@@ -43,7 +43,7 @@ img.film-logo {
 }
 
 .info-year {
-  display: -webkit-inline-box;
+  display: inline;
   color: #007bff;
   font-weight: 800;
   padding: 2px 10px 2px 10px;
@@ -61,7 +61,7 @@ img.film-logo {
 }
 
 .info-time {
-  display: -webkit-inline-box;
+  display: inline;
   padding: 2px 10px 2px 10px;
   position: relative;
 }
@@ -83,7 +83,7 @@ i.far.fa-clock {
 }
 
 .info-quality {
-  display: -webkit-inline-box;
+  display: inline;
   padding: 2px 10px 2px 10px;
   position: relative;
 }
@@ -107,7 +107,7 @@ span.quality-value {
 }
 
 .info-old {
-  display: -webkit-inline-box;
+  display: inline;
   padding: 2px 10px 2px 10px;
   position: relative;
 }
@@ -136,7 +136,7 @@ span.old-value {
 }
 
 .control-play {
-  display: -webkit-inline-box;
+  display: inline;
   background: #0396ff;
   padding: 6px 15px;
   border-radius: 35px;
@@ -159,7 +159,7 @@ i.far.fa-plus {
 }
 
 .control-add {
-  display: -webkit-inline-box;
+  display: inline;
   background: #0396ff00;
   padding: 6px 15px;
   border-radius: 35px;
@@ -179,7 +179,7 @@ i.far.fa-plus {
 }
 
 .control-like {
-  display: -webkit-inline-box;
+  display: inline;
   border: 2px solid;
   padding: 3px 9px;
   font-size: 20px;
@@ -217,6 +217,7 @@ div.tags {
   border-left: 2px solid #656d73;
   background: linear-gradient(to right, #0396ff, #3d844d);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -229,7 +230,7 @@ div.tags {
 }
 
 a.tag {
-  display: -webkit-inline-box;
+  display: inline;
   padding: 4px 10px;
   margin: 0.5em;
   text-transform: uppercase;
@@ -243,16 +244,17 @@ a.tag:hover {
   transform: scale(1.2);
   background: linear-gradient(to right, #0396ff, #3d844d);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 // Menu
 
 .menul {
-  display: -webkit-inline-box;
-  position: absolute;
+  display: flex;
   bottom: 75px;
   padding: 0px 3%;
+  position: absolute;
 }
 
 .menu-list {

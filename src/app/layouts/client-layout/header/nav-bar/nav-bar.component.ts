@@ -11,6 +11,7 @@ export class NavBarComponent implements OnInit {
   isFixed = false;
   currentFixed: any;
   checkNav: boolean = false;
+  scrollPos = 0;
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event) {
@@ -18,13 +19,23 @@ export class NavBarComponent implements OnInit {
     let timeout = setTimeout(() => {
       if (window.scrollY > 55) {
         this.isFixed = true;
-      }else{
+      } else {
         this.isFixed = false;
       }
       clearTimeout(timeout);
     }, 0);
-
-
+    if (window.innerWidth < 992) {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY < this.scrollPos) {
+        nav.classList.add("is-visible");
+        nav.classList.remove("is-hidden");
+      }
+      else {
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
+      }
+      this.scrollPos = window.scrollY;
+    }
   }
 
   constructor() {

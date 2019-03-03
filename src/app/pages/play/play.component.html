@@ -1,13 +1,13 @@
 <div class="home-play">
   <!-- <app-movie-detail></app-movie-detail> -->
   <div class="video-index">
-    <app-videos [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
+    <app-videos class="film-video" [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
     <div class="film-content">
       <div class="content-menu">
 
         <!-- Content Info -->
-        <div *ngIf="menus[0].active" class="content-fill">
-          <img class="film-logo" src="../../../assets/images/logo-film.png">
+        <div [ngStyle]="styleObject0()" #info class="content-fill">
+          <div class="logof"><img class="film-logo" src="../../../assets/images/logo-film.png"></div>
           <div class="film-title">Chiến Binh Báo Đen</div>
           <div class="film-info">
             <div class="info-like"><i class="fas fa-heart"></i> 347</div>
@@ -22,6 +22,7 @@
             <div class="control-play"><i class="fas fa-play"></i> Xem Ngay</div>
             <div class="control-add"><i class="far fa-plus"></i> Lưu List</div>
             <div class="control-like"><i class="fas fa-heart"></i></div>
+            <div class="control-share"><i class="fas fa-share"></i></div>
           </div>
           <div class="film-tags">
             <div class="tags">
@@ -38,8 +39,8 @@
         </div>
 
         <!-- Chi Tiết -->
-        <div *ngIf="menus[1].active" class="content-detail">
-          <ng-scrollbar class="detail-scrollbar" [trackX]="false" [invertX]="false">
+        <div #detail [ngStyle]="styleObject1()" class="content-detail">
+          <ng-scrollbar class="detail-scrollbar" [shown]='always'>
             <div class="row">
               <div class="detail-col col-6">Phát Hành: 12/10/2018</div>
               <div class="detail-col col-6">Quốc Gia: Mỹ</div>
@@ -63,18 +64,25 @@
         </div>
 
         <!-- Chi Tiết -->
-        <div *ngIf="menus[2].active" class="content-actor">
-          <div class="row ml-0">
-            <div *ngFor="let actor of actors" class="actor-col col-4 pl-0">
-              <img class="actor-image" src="{{actor.id}}">
-              <div class="actor-name">{{actor.name}}</div>
-              <div class="actor-vai">Vai: {{actor.vai}}</div>
+        <div [ngStyle]="styleObject2()" class="content-actor">
+          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
+            <div class="row ml-0">
+              <div *ngFor="let actor of actors" class="actor-col col-4 col-sm-3 col-md-2 col-lg-4 col-xl-4 pl-0">
+                <img class="actor-image" src="{{actor.id}}">
+                <div class="actor-name">{{actor.name}}</div>
+                <div class="actor-vai">Vai: {{actor.vai}}</div>
+              </div>
             </div>
-          </div>
+          </ng-scrollbar>
         </div>
 
         <!-- Chi Tiết -->
-        <div *ngIf="menus[3].active" class="content-comment">Thảo Luận</div>
+        <div [ngStyle]="styleObject3()" class="content-comment">
+          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
+            <fb-comments numposts="3" href="https://phimdee.com/xem/black-panther-0934" width="100%" colorscheme="dark"
+              orderBy="reverse_time" mobile="true"></fb-comments>
+          </ng-scrollbar>
+        </div>
 
         <!-- Menu -->
         <div class="menul">
@@ -82,5 +90,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="list-video-play">
+    <app-slide-list></app-slide-list>
   </div>
 </div>

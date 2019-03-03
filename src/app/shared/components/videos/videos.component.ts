@@ -68,7 +68,6 @@ export class VideosComponent implements OnInit {
 
   checkMuted = true;
   checkEnd: boolean;
-  setTime: any;
   check_index: boolean = true;
 
   ngOnInit() {
@@ -102,15 +101,15 @@ export class VideosComponent implements OnInit {
   }
 
   playDelay() {
-    
-      this.setTime = setTimeout(() => {
+
+      let setTime = setTimeout(() => {
         if (this.check_video) {
         this.video.nativeElement.play();
         this.check_index = false;
-        clearTimeout(this.setTime);
+        clearTimeout(setTime);
         }
       }, 3000);
     }
-  
+
 
 }

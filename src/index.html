@@ -8,6 +8,11 @@
   <base href="/">
   <!--===============================================================================================-->
   <link rel="icon" type="image/png" href="assets/images/icons/icon.png" />
+  <!-- <link rel=preload href="assets/fontawesome/css/all.css" as="style">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fontawesome/webfonts/min/300.woff"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fontawesome/webfonts/min/400b.woff"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fontawesome/webfonts/min/400r.woff"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fontawesome/webfonts/min/900.woff"/> -->
   <!--===============================================================================================-->
   <!--===============================================================================================-->
   <!--===============================================================================================-->
@@ -20,8 +25,11 @@
 </head>
 
 <body>
+  <!-- fb sdk to use comment -->
+  <div id="fb-root"></div>
+  <script async defer src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>
 
   <app-root></app-root>
 </body>
-
+<script type="text/javascript" src="https://connect.facebook.net/vi_VN/sdk.js"></script>
 </html>

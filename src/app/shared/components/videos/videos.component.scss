@@ -14,16 +14,17 @@ video#background {
   padding: 7px;
   font-size: 17px;
   border-radius: 50%;
-  background: #595d6187;
+  // background: #595d6187;
+  background-color: rgba(89,93,97,0.529);
 }
 
 .background-bot-video {
   position: absolute;
-  z-index: 41;
-  height: 55px;
-  width: 100%;
-  bottom: 0;
-  background: linear-gradient(to top, #141414, rgba(1, 0, 0, 0));
+    z-index: 41;
+    height: 70px;
+    width: 100%;
+    bottom: -3px;
+    background: linear-gradient(to top, #141414, rgba(1, 0, 0, 0));
 }
 
 
@@ -52,7 +53,7 @@ video#background {
   img.imgp {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover;
     z-index: 30;
   }
@@ -82,7 +83,7 @@ video#background {
   img.imgp {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover;
     z-index: 30;
   }
@@ -111,13 +112,17 @@ video#background {
   img.imgp {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover;
     z-index: 30;
   }
 }
 
 // Large ≥ 992px (.col-lg-)
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #background {

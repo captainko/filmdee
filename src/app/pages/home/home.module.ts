@@ -10,7 +10,7 @@ import { SlidesModule } from '@shared/components/slides/slides.module';
     CommonModule,
     HomeRoutingModule,
     SlidesModule,
-    VideoBackgroundModule
+    VideoBackgroundModule,
   ]
 })
 export class HomeModule { }

@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "hls.js": "^0.12.2",
+    "intersection-observer": "^0.5.1",
     "ngx-bootstrap": "^3.1.4",
     "ngx-facebook": "^2.4.0",
     "ngx-owl-carousel": "^2.0.7",

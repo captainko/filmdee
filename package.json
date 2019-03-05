@@ -31,6 +31,7 @@
     "ngx-facebook": "^2.4.0",
     "ngx-owl-carousel": "^2.0.7",
     "ngx-scrollbar": "^4.1.1",
+    "ngx-social-login": "^6.0.1",
     "node-sass": "^4.11.0",
     "rxjs": "~6.3.3",
     "videogular2": "^6.4.0",

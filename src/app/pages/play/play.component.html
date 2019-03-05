@@ -40,7 +40,7 @@
 
         <!-- Chi Tiết -->
         <div #detail [ngStyle]="styleObject1()" class="content-detail">
-          <ng-scrollbar class="detail-scrollbar" [shown]='always'>
+          <ng-scrollbar class="detail-scrollbar" >
             <div class="row">
               <div class="detail-col col-6">Phát Hành: 12/10/2018</div>
               <div class="detail-col col-6">Quốc Gia: Mỹ</div>
@@ -65,7 +65,7 @@
 
         <!-- Chi Tiết -->
         <div [ngStyle]="styleObject2()" class="content-actor">
-          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
+          <ng-scrollbar class="actor-scrollbar" >
             <div class="row ml-0">
               <div *ngFor="let actor of actors" class="actor-col col-4 col-sm-3 col-md-2 col-lg-4 col-xl-4 pl-0">
                 <img class="actor-image" src="{{actor.id}}">
@@ -78,7 +78,7 @@
 
         <!-- Chi Tiết -->
         <div [ngStyle]="styleObject3()" class="content-comment">
-          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
+          <ng-scrollbar class="actor-scrollbar" >
             <fb-comments numposts="3" href="https://phimdee.com/xem/black-panther-0934" width="100%" colorscheme="dark"
               orderBy="reverse_time" mobile="true"></fb-comments>
           </ng-scrollbar>

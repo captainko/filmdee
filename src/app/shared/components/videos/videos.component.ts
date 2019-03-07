@@ -15,6 +15,7 @@ export class VideosComponent implements OnInit {
   @Input('video') videolist: Videos;
   @Input('Check_Poster') check_poster: boolean;
   @Input('Check_Video') check_video: boolean;
+  @Input('play') play: boolean;
 
   @ViewChild("video") video: ElementRef;
   @ViewChild("botvideo") botvideo: ElementRef;

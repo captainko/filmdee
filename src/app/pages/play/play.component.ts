@@ -12,12 +12,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
   check_poster: boolean = false;
   check_video: boolean = true;
-  height: string = '0px';
-  height_detail: string = '0px';
-  height_s: number = 0;
-  shown: 'native' | 'hover' | 'always' = 'hover';
-  @ViewChild("info") info: ElementRef;
-  @ViewChild("detail") detail: ElementRef;
+  play: boolean = false;
 
   Video: Videos[] = [
     {
@@ -31,54 +26,49 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
-    if (window.innerWidth >= 992) {
+    if (window.innerWidth >= 992 && !this.play) {
       this.check_poster = false;
       this.check_video = true;
       this.Video[0].picture = this.link_image_pc;
 
-    } else {
+    } else if(window.innerWidth < 992 && !this.play) {
       this.check_poster = true;
       this.check_video = false;
       this.Video[0].picture = this.link_image_m;
     }
 
-    this.height_s = window.innerHeight;
-    // console.log(this.height_s);
+  }
 
+  kl() {
+    alert(this.play);
+  }
+
+  onVoted() {
+    this.play = true;
+    this.check_poster = true;
+    this.check_video = false;
   }
 
   ngAfterViewInit() {
-
-    if (this.check_video) {
-      // console.log(this.info.nativeElement.offsetHeight);
-      this.height = ((this.height_s - this.info.nativeElement.offsetHeight) / 2) + 'px';
-      console.log(this.height_s);
-      // this.height_detail = ((this.height_s - this.detail.nativeElement.offsetHeight) / 2) + 'px';
-      // console.log(this.detail.nativeElement.offsetHeight);
-      this.height_detail = ((this.height_s - (this.height_s - 180)) / 2) + 'px';
-
-      // this.getPx();
-      this.cdRef.detectChanges();
-    }
   }
 
   styleObject0(): any {
     if (this.menus[0].active) {
-      return { display: 'block', top: this.height }
+      return { display: 'block' }
     }
     return { display: 'none' }
   }
 
   styleObject1(): any {
     if (this.menus[1].active) {
-      return { display: 'block', top: this.height_detail }
+      return { display: 'block' }
     }
     return { display: 'none' }
   }
 
   styleObject2(): any {
     if (this.menus[2].active) {
-      return { display: 'block', top: this.height_detail }
+      return { display: 'block' }
     }
     return { display: 'none' }
   }
@@ -96,18 +86,6 @@ export class PlayComponent implements OnInit, AfterViewInit {
     { active: false, name: 'Giới Thiệu' },
     { active: false, name: 'Diễn Viên' },
     { active: false, name: 'Thảo Luận' }
-  ]
-
-  actors = [
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/01a.jpg?alt=media&token=0c6d374b-1569-492f-ab39-0dcc071b7ec5', name: 'Chadwick Boseman', vai: 'T\'Challa' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/02a.jpg?alt=media&token=2e304451-3e81-47f9-8b48-75f32f37ee8a', name: 'Michael B. Jordan', vai: 'Erik Killmonger' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/03a.jpg?alt=media&token=88fe5e9b-4a00-41d4-a1e2-bee3d76d3afd', name: 'Lupita Nyong\'o', vai: 'Nakia' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/04a.jpg?alt=media&token=5c74967d-35be-4991-bafc-8b3c915db784', name: 'Danai Gurira', vai: 'Okoye' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/05a.jpg?alt=media&token=41685429-8281-4334-966e-914296b50cd3', name: 'Martin Freeman', vai: 'Everett Ross' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/06a.jpg?alt=media&token=193ed906-a689-447c-97d6-23931fb0819a', name: 'Letitia Wright', vai: 'Shuri' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/01a.jpg?alt=media&token=0c6d374b-1569-492f-ab39-0dcc071b7ec5', name: 'Chadwick Boseman', vai: 'T\'Challa' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/02a.jpg?alt=media&token=2e304451-3e81-47f9-8b48-75f32f37ee8a', name: 'Michael B. Jordan', vai: 'Erik Killmonger' },
-    { id: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/03a.jpg?alt=media&token=88fe5e9b-4a00-41d4-a1e2-bee3d76d3afd', name: 'Lupita Nyong\'o', vai: 'Nakia' },
   ]
 
   constructor(private cdRef: ChangeDetectorRef, private fb: FacebookService) {

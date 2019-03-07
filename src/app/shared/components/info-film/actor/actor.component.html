@@ -1,0 +1,11 @@
+<div class="content-actor">
+  <ng-scrollbar class="actor-scrollbar">
+    <div class="row ml-0">
+      <div *ngFor="let actor of actors" class="actor-col col-4 col-sm-3 col-md-2 col-lg-4 col-xl-4 pl-0">
+        <img class="actor-image" src="{{actor.id}}">
+        <div class="actor-name">{{actor.name}}</div>
+        <div class="actor-vai">Vai: {{actor.vai}}</div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

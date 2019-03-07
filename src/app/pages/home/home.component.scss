@@ -29,12 +29,12 @@
 // Medium ≥ 768px (.col-md-)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .video-index {
-    height: 560px;
+    height: 450px;
     position: relative;
   }
 
   .list-video-play {
-    margin-top: -120px;
+    margin-top: -80px;
     z-index: 45;
     position: relative;
   }

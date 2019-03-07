@@ -8,6 +8,8 @@ import { VideosModule } from '@shared/components/videos/videos.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FacebookModule } from 'ngx-facebook';
 import { SlidesModule } from '@shared/components/slides/slides.module';
+import { JwplayerModule } from '@shared/components/jwplayer/jwplayer.module';
+import { InfoFilmModule } from '@shared/components/info-film/info-film.module';
 
 @NgModule({
   declarations: [PlayComponent],
@@ -19,6 +21,8 @@ import { SlidesModule } from '@shared/components/slides/slides.module';
     NgScrollbarModule,
     FacebookModule.forRoot(),
     SlidesModule,
+    JwplayerModule,
+    InfoFilmModule,
   ]
 })
 export class PlayModule { }

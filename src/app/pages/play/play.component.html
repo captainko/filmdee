@@ -1,97 +1,42 @@
 <div class="home-play">
-  <!-- <app-movie-detail></app-movie-detail> -->
   <div class="video-index">
-    <app-videos class="film-video" [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
-    <div class="film-content">
+    <app-videos class="film-video" [play]="play" [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
+    
+    <div *ngIf="!play" class="film-content">
       <div class="content-menu">
-
-        <!-- Content Info -->
-        <div [ngStyle]="styleObject0()" #info class="content-fill">
-          <div class="logof"><img class="film-logo" src="../../../assets/images/logo-film.png"></div>
-          <div class="film-title">Chiến Binh Báo Đen</div>
-          <div class="film-info">
-            <div class="info-like"><i class="fas fa-heart"></i> 347</div>
-            <div class="info-year">2019</div>
-            <div class="info-time"><i class="far fa-clock"></i> 127 phút</div>
-            <div class="info-quality"><span class="quality-value">4K</span></div>
-            <div class="info-old"><span class="old-value">16+</span></div>
-          </div>
-          <div class="film-text">A forensics expert who wakes from a coma with amazing new powers squares off against
-            forces threatening the city in this live-action superhero romp.</div>
-          <div class="film-control">
-            <div class="control-play"><i class="fas fa-play"></i> Xem Ngay</div>
-            <div class="control-add"><i class="far fa-plus"></i> Lưu List</div>
-            <div class="control-like"><i class="fas fa-heart"></i></div>
-            <div class="control-share"><i class="fas fa-share"></i></div>
-          </div>
-          <div class="film-tags">
-            <div class="tags">
-              <span>Tags</span>
-              <div class="tags-list">
-                <a class="tag" href="#">Phim Lẻ</a>
-                <a class="tag" href="#">Hành Động</a>
-                <a class="tag" href="#">Tâm Lý</a>
-                <a class="tag" href="#">Nhiều Tập</a>
-                <a class="tag" href="#">DC Commit</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div #detail [ngStyle]="styleObject1()" class="content-detail">
-          <ng-scrollbar class="detail-scrollbar" [shown]='always'>
-            <div class="row">
-              <div class="detail-col col-6">Phát Hành: 12/10/2018</div>
-              <div class="detail-col col-6">Quốc Gia: Mỹ</div>
-              <div class="detail-col col-6">Đạo Diễn: Ryan Coogler</div>
-              <div class="detail-col col-6">Tác Giả: Stan Lee</div>
-            </div>
-            <img class="detail-img" src="https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info01.jpg?alt=media&token=886b3334-efa4-4852-b6fd-9c890323bec1">
-            <div class="detail-text">Chiến binh Báo Đen (tiếng Anh: Black Panther) là một phim của điện ảnh Hoa Kỳ dựa
-              trên nhân vật siêu anh hùng cùng tên của hãng Marvel Comics, sản xuất bởi Marvel Studios và phân phối bởi
-              Walt Disney Studios Motion Pictures. Đây là bộ phim thứ 18 trong Vũ trụ Điện ảnh Marvel (MCU), đồng thời
-              đánh dấu bộ phim siêu anh hùng da màu đầu tiên.</div>
-            <img class="detail-img" src="https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info02.jpg?alt=media&token=f2bd8aad-011d-469c-abcc-ba693256e9e8">
-            <div class="detail-text">Vương quốc Wakanda, quê hương của Black Panther / T'Challa hiện ra qua lời kể của
-              một nhân chứng sống sót trở về. Đây là quốc gia khá khép kín và sở hữu lượng Vibranium lớn nhất trên thế
-              giới. Black Panther - người cầm quyền của Wakanda sở hữu bộ áo giáp chống đạn và móng vuốt sắc nhọn, anh
-              được miêu tả là “người tốt với trái tim nhân hậu”. Nhưng cũng chính vì những đức tính tốt này mà Black
-              Panther gặp khó khăn khi kế thừa ngai vàng sau khi vua cha băng hà. Đối mặt với sự phản bội và hiểm nguy,
-              vị vua trẻ phải tập hợp các đồng minh và phát huy toàn bộ sức mạnh của Black Panther để đánh bại kẻ thù,
-              đem lại an bình cho nhân dân của mình.</div>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div [ngStyle]="styleObject2()" class="content-actor">
-          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
-            <div class="row ml-0">
-              <div *ngFor="let actor of actors" class="actor-col col-4 col-sm-3 col-md-2 col-lg-4 col-xl-4 pl-0">
-                <img class="actor-image" src="{{actor.id}}">
-                <div class="actor-name">{{actor.name}}</div>
-                <div class="actor-vai">Vai: {{actor.vai}}</div>
-              </div>
-            </div>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div [ngStyle]="styleObject3()" class="content-comment">
-          <ng-scrollbar class="actor-scrollbar" [shown]='always'>
-            <fb-comments numposts="3" href="https://phimdee.com/xem/black-panther-0934" width="100%" colorscheme="dark"
-              orderBy="reverse_time" mobile="true"></fb-comments>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Menu -->
+        <app-content (voted)="onVoted($event)" [ngStyle]="styleObject0()"></app-content>
+        <app-detail [ngStyle]="styleObject1()"></app-detail>
+        <app-actor [ngStyle]="styleObject2()"></app-actor>
+        <app-comment [ngStyle]="styleObject3()"></app-comment>
         <div class="menul">
           <div *ngFor="let menu of menus; let i = index" (click)="active(i)" [ngClass]="{'active': menu.active}" class="menu-list">{{menu.name}}</div>
         </div>
       </div>
     </div>
+
+    <div *ngIf="play" class="play-container">
+      <div class="row">
+        <div class="col-auto ads"></div>
+        <div class="col-9">
+          <app-jwplayer></app-jwplayer>
+          <div class="tools row">
+            <div class="col-7 sv-ch">
+              <div class="server">Máy chủ:</div>
+              <div class="button-mars"><span class="mars"></span> Mars</div>
+              <div class="button-earth"><span class="earth"></span> Earth</div>
+              <div class="button-moon"><span class="moon"></span> Moon</div>
+              <div class="button-mercury"><span class="active-sv mercury"></span> Mercury</div>
+            </div>
+            <div class="col-5"></div>
+          </div>
+        </div>
+        <div class="col-auto ads"></div>
+      </div>
+    </div>
+    
   </div>
   <div class="list-video-play">
     <app-slide-list></app-slide-list>
   </div>
+  <button (click)="kl()"></button>
 </div>

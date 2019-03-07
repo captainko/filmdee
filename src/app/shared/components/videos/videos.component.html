@@ -4,7 +4,14 @@
   </video>
 </vg-player>
 
-<img *ngIf="check_poster" class="imgp" src="{{videolist[0].picture}}">
+<div *ngIf="check_poster" class="poster">
+  <img [ngStyle]="{'opacity':play ? '0.1' : '1'}" class="imgp" src="{{videolist[0].picture}}">
+  <div class="play">
+    <a class="video-play-button" href="#">
+      <span class="icon-play"></span>
+    </a>
+  </div>
+</div>
 
 <div *ngIf="check_video" class="button-control">
   <span *ngIf="!check_index" style="display: block" [ngClass]="{'fa-volume-up':checkMuted==false, 'fa-volume-mute':checkMuted==true}"

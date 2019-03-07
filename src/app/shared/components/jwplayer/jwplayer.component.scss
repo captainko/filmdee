@@ -1,0 +1,21 @@
+.jw-controlbar .jw-button-image {
+    background: no-repeat 50% 50%;
+    background-size: contain;
+    max-height: 24px;
+    width: 18px;
+    height: 16px;
+}
+
+.jwplayer-container {
+    position: relative;
+}
+
+.episode {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: beige;
+    left: 0;
+}

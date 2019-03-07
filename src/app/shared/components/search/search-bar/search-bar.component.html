@@ -1,5 +1,5 @@
 <form id="content">
-  <input #input type="text" class="input" [formControl]="search" (blur)="expand()">
+  <input #input type="text" class="input" (focus)="navigate()"  [formControl]="search" (blur)="expand()">
   <button #searchButton (click)="expand()"  type="reset" class="search">
     <i class="fal fa-search d-flex align-items-center justify-content-center"></i>
   </button>

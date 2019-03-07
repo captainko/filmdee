@@ -340,6 +340,12 @@ nav.col-auto.pl-0 {
   }
 }
 
+.is-visible{
+  transform: translateY(0);
+}
+.is-hidden{
+  transform: translateY(-100%);
+}
 // Extra small < 576px (.col-)
 
 @media only screen and (max-width: 575px) {

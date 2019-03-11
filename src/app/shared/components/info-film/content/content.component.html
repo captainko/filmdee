@@ -1,15 +1,14 @@
 <div class="content-fill">
-  <div class="logof"><img class="film-logo" src="assets/images/logo-film.png"></div>
-  <div class="film-title">Chiến Binh Báo Đen</div>
+  <div class="logof"><img class="film-logo" src="{{content.logo}}"></div>
+  <div class="film-title">{{content.name}}</div>
   <div class="film-info">
-    <div class="info-like"><i class="fas fa-heart"></i> 347</div>
-    <div class="info-year">2019</div>
-    <div class="info-time"><i class="far fa-clock"></i> 127 phút</div>
-    <div class="info-quality"><span class="quality-value">4K</span></div>
-    <div class="info-old"><span class="old-value">16+</span></div>
+    <div class="info-like"><i class="fas fa-heart"></i> {{content.like}}</div>
+    <div class="info-year">{{content.launch.year}}</div>
+    <div class="info-time"><i class="far fa-clock"></i> {{content.time}} phút</div>
+    <div class="info-quality"><span class="quality-value">{{content.quality}}</span></div>
+    <div class="info-old"><span class="old-value">{{content.age}}</span></div>
   </div>
-  <div class="film-text">A forensics expert who wakes from a coma with amazing new powers squares off against
-    forces threatening the city in this live-action superhero romp.</div>
+  <div class="film-text">{{content.short_description}}</div>
   <div class="film-control">
     <div class="control-play" (click)="play_video()"><i class="fas fa-play"></i> Xem Ngay</div>
     <div class="control-add"><i class="far fa-plus"></i> Lưu List</div>
@@ -20,11 +19,11 @@
     <div class="tags">
       <span>Tags</span>
       <div class="tags-list">
-        <a class="tag" href="#">Phim Lẻ</a>
-        <a class="tag" href="#">Hành Động</a>
+        <a *ngFor="let tag of content.tags" class="tag" href="#">{{tag}}</a>
+        <!-- <a class="tag" href="#">Hành Động</a>
         <a class="tag" href="#">Tâm Lý</a>
         <a class="tag" href="#">Nhiều Tập</a>
-        <a class="tag" href="#">DC Commit</a>
+        <a class="tag" href="#">DC Commit</a> -->
       </div>
     </div>
   </div>

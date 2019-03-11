@@ -14,11 +14,13 @@ import { VgControlsModule } from 'videogular2/controls';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { VgStreamingModule } from 'videogular2/streaming';
+// import { SafePipe } from './pipe/safe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    // SafePipe,
   ],
   imports: [
     AppRoutingModule,

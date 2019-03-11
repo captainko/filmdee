@@ -241,7 +241,7 @@ video#background {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #background {
-    height: calc(100vw / 16 * 9) !important;
+    height: 100vh !important;
   }
 
   video#background {
@@ -270,7 +270,7 @@ video#background {
 
 @media only screen and (min-width: 1200px) {
   #background {
-    height: calc(100vw / 16 * 9) !important;
+    height: 100vh !important;
   }
 
   video#background {

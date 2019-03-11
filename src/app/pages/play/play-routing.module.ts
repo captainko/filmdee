@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlayComponent } from './play.component';
 
 const routes: Routes = [
-    {path: '', component: PlayComponent}
+    {path: '', component: PlayComponent},
+    {path: '**', component: PlayComponent}
 ];
 
 @NgModule({

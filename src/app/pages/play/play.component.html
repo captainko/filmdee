@@ -1,42 +1,71 @@
 <div class="home-play">
-  <div class="video-index">
-    <app-videos class="film-video" [play]="play" [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
-    
+  <div [ngClass]="{'video-index-f': !play}" class="video-index">
+    <app-videos *ngIf="!play" class="film-video" [play]="play" [video]="data.video_background" [Check_Poster]="check_poster"
+      [Check_Video]="check_video"></app-videos>
+
     <div *ngIf="!play" class="film-content">
       <div class="content-menu">
-        <app-content (voted)="onVoted($event)" [ngStyle]="styleObject0()"></app-content>
-        <app-detail [ngStyle]="styleObject1()"></app-detail>
-        <app-actor [ngStyle]="styleObject2()"></app-actor>
-        <app-comment [ngStyle]="styleObject3()"></app-comment>
+        <app-content [content]="data.content" (voted)="onVoted($event)" [ngStyle]="styleObject0()"></app-content>
+        <app-detail [detail]="data.detail" [ngStyle]="styleObject1()"></app-detail>
+        <app-actor [actor]="data.actor" [ngStyle]="styleObject2()"></app-actor>
+        <app-comment [comment]="data.link_comment" [ngStyle]="styleObject3()"></app-comment>
         <div class="menul">
           <div *ngFor="let menu of menus; let i = index" (click)="active(i)" [ngClass]="{'active': menu.active}" class="menu-list">{{menu.name}}</div>
         </div>
       </div>
     </div>
 
-    <div *ngIf="play" class="play-container">
-      <div class="row">
-        <div class="col-auto ads"></div>
-        <div class="col-9">
-          <app-jwplayer></app-jwplayer>
+    <div *ngIf="play" class="play-container" #play>
+      <div class="row justify-content-center play-view m-0">
+        <div class="col-lg-auto col-auto ads"></div>
+        <div class="col-lg-9 col-12 p-0">
+          <app-jwplayer [link]="data.server1" *ngIf="server[0].active"></app-jwplayer>
+          <app-jwplayer [link]="data.server2" *ngIf="server[1].active"></app-jwplayer>
+          <iframe *ngIf="server[2].active" width="100%" height="100%" [src]="data.server3 | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+          <iframe *ngIf="server[3].active" [src]="data.server4 | safe: 'resourceUrl'" scrolling="no" frameborder="0" width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+          <!-- <div *ngIf="server[3].active" class="hidden-logo"></div> -->
           <div class="tools row">
-            <div class="col-7 sv-ch">
+            <div class="col-md-8 col-12 sv-ch">
               <div class="server">Máy chủ:</div>
-              <div class="button-mars"><span class="mars"></span> Mars</div>
-              <div class="button-earth"><span class="earth"></span> Earth</div>
-              <div class="button-moon"><span class="moon"></span> Moon</div>
-              <div class="button-mercury"><span class="active-sv mercury"></span> Mercury</div>
+              <div (click)="choice_sv(1)" class="button-earth"><span class="earth"></span><span class="hidden-text"> Earth</span></div>
+              <div (click)="choice_sv(2)" class="button-moon"><span class="moon"></span><span class="hidden-text"> Moon</span></div>
+              <div (click)="choice_sv(3)" class="button-mars"><span class="mars"></span><span class="hidden-text"> Mars</span></div>
+              <div (click)="choice_sv(4)" class="button-sun"><span class="active-sv sun"></span><span class="hidden-text"> Sun</span></div>
             </div>
-            <div class="col-5"></div>
+            <div class="col-md-4 col-12 sv-ch2">
+              <div class="error-link"><i class="fas fa-exclamation-triangle"></i> Báo Lỗi</div>
+              <div class="share-link"><i class="fas fa-share share-mxh"></i> Chia Sẽ</div>
+            </div>
+          </div>
+
+          <div class="episodes row m-0 justify-content-between">
+            <div class="col-auto prev-tap">
+              <div (click)="prev_e()" class="prev"><i class="fal fa-chevron-left"></i></div>
+            </div>
+            <div class="col-auto list-tap row p-0">
+              <owl-carousel #owlElement [options]="customOptions" class="col-auto w-slide-tap p-0">
+                <div class="item" *ngFor="let episode of episodes; let i = index">
+                  <div [ngClass]="{'active-button': episode.id == 3}" class="animated-button">{{episode.id}}</div>
+                </div>
+              </owl-carousel>
+              <div class="input-go">
+                <form>
+                  <input [(ngModel)]="go" name="go" type="text" autofocus placeholder="go" class="go col-auto">
+                </form>
+              </div>
+            </div>
+            <div class="col-auto next-tap">
+              <div (click)="next_e()" class="next"><i class="fal fa-chevron-right"></i></div>
+            </div>
           </div>
         </div>
-        <div class="col-auto ads"></div>
+        <div class="col-lg-auto col-auto ads"></div>
       </div>
+      <div class="background-bot-video"></div>
     </div>
-    
+
   </div>
   <div class="list-video-play">
     <app-slide-list></app-slide-list>
   </div>
-  <button (click)="kl()"></button>
 </div>

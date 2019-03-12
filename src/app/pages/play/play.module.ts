@@ -10,9 +10,12 @@ import { FacebookModule } from 'ngx-facebook';
 import { SlidesModule } from '@shared/components/slides/slides.module';
 import { JwplayerModule } from '@shared/components/jwplayer/jwplayer.module';
 import { InfoFilmModule } from '@shared/components/info-film/info-film.module';
+import { OwlModule } from 'ngx-owl-carousel';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SafePipe } from './pipe/safe.pipe';
 
 @NgModule({
-  declarations: [PlayComponent],
+  declarations: [PlayComponent, SafePipe],
   imports: [
     CommonModule,
     PlayRoutingModule,
@@ -23,6 +26,8 @@ import { InfoFilmModule } from '@shared/components/info-film/info-film.module';
     SlidesModule,
     JwplayerModule,
     InfoFilmModule,
+    OwlModule,
+    FormsModule,
   ]
 })
 export class PlayModule { }

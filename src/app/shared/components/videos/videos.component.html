@@ -1,11 +1,11 @@
 <vg-player *ngIf="check_video" style="position: absolute;">
-  <video [vgHls]="videolist[0].link" (onGetBitrates)="hlsBitrates = $event" id="background" (ended)="vidEnd()" #video
-    [muted]="true" [poster]="videolist[0].picture">
+  <video [vgHls]="videolist.video" (onGetBitrates)="hlsBitrates = $event" id="background" (ended)="vidEnd()" #video
+    [muted]="true" [poster]="videolist.image">
   </video>
 </vg-player>
 
 <div *ngIf="check_poster" class="poster">
-  <img [ngStyle]="{'opacity':play ? '0.1' : '1'}" class="imgp" src="{{videolist[0].picture}}">
+  <img [ngStyle]="{'opacity':play ? '0.1' : '1'}" class="imgp" src="{{videolist.image}}">
   <div class="play">
     <a class="video-play-button" href="#">
       <span class="icon-play"></span>

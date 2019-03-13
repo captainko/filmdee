@@ -1,0 +1,111 @@
+.background {
+  // background: url('../../../assets/images/login_poster.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background::after {
+  content: "";
+  background: url('../../../assets/images/login_poster.jpg');
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 80px;
+  bottom: 0;
+  background: linear-gradient(to top, #141414, rgba(1, 0, 0, 0));
+}
+
+.login {
+  width: 400px;
+  height: 400px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 300px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 24px;
+  color: #427da9;
+  text-align: center;
+  padding: 0px 20px 10px;
+}
+
+.cap {
+  font-size: 19px;
+  color: #697f90;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.fb {
+  padding: 10px;
+  margin: 10px 20px;
+  border: 1px solid #385d8a;
+  color: #385d8a;
+  font-size: 18px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+i.fab.fa-facebook-f {
+  padding: 0px 10px 0px 0px;
+}
+
+.or {
+  text-align: center;
+  color: #8e877f;
+}
+
+.goo {
+  padding: 10px;
+  margin: 10px 20px;
+  border: 1px solid #d7503a;
+  color: #d7503a;
+  font-size: 18px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+i.fab.fa-google-plus-g {
+  padding: 0px 10px 0px 0px;
+}
+
+
+// Extra small < 450px (.col-)
+
+@media only screen and (max-width: 450px) {
+  .login {
+    width: 100%;
+    top: 55px;
+    position: absolute;
+    z-index: 12;
+    height: 100%;
+  }
+}

@@ -14,13 +14,17 @@ import { VgControlsModule } from 'videogular2/controls';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { VgStreamingModule } from 'videogular2/streaming';
-// import { SafePipe } from './pipe/safe.pipe';
-
+import { CoreModule } from '@core/core.module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.prod';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+export const firebaseConfig = environment.firebaseConfig;
 
 @NgModule({
   declarations: [
     AppComponent,
-    // SafePipe,
   ],
   imports: [
     AppRoutingModule,
@@ -34,6 +38,11 @@ import { VgStreamingModule } from 'videogular2/streaming';
     VgOverlayPlayModule,
     VgBufferingModule,
     VgStreamingModule,
+    CoreModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule,
   ],
   providers: [
     {

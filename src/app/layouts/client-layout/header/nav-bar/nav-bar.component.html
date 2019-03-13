@@ -27,15 +27,31 @@
             <div class="col-auto px-0">
               <search-bar></search-bar>
             </div>
-            <div class="col-auto pr-0">
-              <div class="login">
-                <span class="hidden-mobile">Đăng nhập</span>
-                <i class="fal fa-sign-in hidden-pc"></i>
+            <div class="col-auto pr-0 dh">
+              <div *ngIf="!login" class="login">
+                <span routerLink="/login" class="hidden-mobile">Đăng nhập</span>
+                <i routerLink="/login" class="fal fa-sign-in hidden-pc"></i>
               </div>
-              <div class="reg">
+              <div [ngStyle]="{'display':load ? 'block' : 'none' }" *ngIf="login" class="user">
+                <span (click)="logout()" class="user-center hidden-mobile">
+                  <img (load)="load_user()" class="avatar" src="{{avatar}}"> <span class="name">{{name}}</span>
+                </span>
+                <img (click)="logout()" class="hidden-pc avatar" src="{{avatar}}">
+              </div>
+
+              <div *ngIf="!load && login" class="preloader">
+                <div class="preloader_left"></div>
+                <div class="hidden-mobile preloader_right">
+                  <div class="name_load">{{name}}</div>
+                  <div class="preloader_top"></div>
+                  <div class="preloader_bot"></div>
+                </div>
+              </div>
+
+              <!-- <div class="reg">
                 <span class="hidden-mobile">Đăng ký</span>
                 <i class="fal fa-user-plus hidden-pc"></i>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './layouts/client-layout/client-layout.module#ClientLayoutModule' }
+  { path: '', loadChildren: './layouts/client-layout/client-layout.module#ClientLayoutModule' },
 ];
 
 @NgModule({
@@ -10,3 +10,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// npm 

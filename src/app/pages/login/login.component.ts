@@ -7,6 +7,13 @@ import 'rxjs/add/operator/take';
 import { Observable } from 'rxjs';
 import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
+import { UserService } from '@services/user.service';
+
+export interface User {
+  id?: string;
+  name?: string;
+  token?: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -14,6 +21,11 @@ import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  user: User = {
+    name: '',
+    token: ''
+  }
 
   public previousPath: string;
   public currentPath: string;
@@ -24,8 +36,8 @@ export class LoginComponent implements OnInit {
     public afAuth: AngularFireAuth,
     public router: Router,
     private activate: ActivatedRoute,
+    private userService: UserService,
   ) {
-    this.ooo();
   }
 
   ooo(): void{
@@ -57,11 +69,20 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.afAuth.authState.subscribe(user => {
-      if (user) {
-        this.router.navigate(['home']);        
+    this.afAuth.authState.subscribe(userlogin => {
+      if (userlogin) {
+        this.user.name = userlogin.displayName;
+        this.user.token = userlogin.uid;
+        if(this.user.name != '' && this.user.token != ''){
+          console.log('UP');
+          
+          this.userService.setUser(this.user, this.user.token);
+          this.user.name = '';
+          this.user.token = '';
+        }
+        this.router.navigate(['home']);  
       } else {
-        console.log('ER');
+        // console.log('ER');
       }
     });
   }
@@ -82,12 +103,13 @@ export class LoginComponent implements OnInit {
     //   })
     // console.log(a);
 
-    this.afAuth.authState.subscribe((auth) => {
-      if (auth) {
-        this.router.navigate(['home']);
-      } else {
-      }
-    });
+    // this.afAuth.authState.subscribe((auth) => {
+    //   if (auth) {
+        
+    //     // this.router.navigate(['home']);
+    //   } else {
+    //   }
+    // });
   }
 
   login() {

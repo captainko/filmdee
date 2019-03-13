@@ -458,6 +458,10 @@ img.avatar {
   }
 }
 
+.fix-menu {
+  top: 55px !important;
+}
+
 
 // Extra small < 576px (.col-)
 
@@ -557,6 +561,10 @@ img.avatar {
   .user {
     padding: 0px;
   }
+
+  .fix-focus {
+    display: inline-flex !important;
+  }
 }
 
 // Large ≥ 992px (.col-lg-)
@@ -589,6 +597,10 @@ img.avatar {
   .user {
     padding: 0px;
   }
+
+  .fix-focus {
+    display: inline-flex !important;
+  }
 }
 
 // Extra large ≥ 1200px (.col-xl-)
@@ -620,5 +632,9 @@ img.avatar {
 
   .menu__toggler {
     display: none;
+  }
+
+  .fix-focus {
+    display: inline-flex !important;
   }
 }

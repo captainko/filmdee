@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
@@ -17,9 +17,13 @@ export class NavBarComponent implements OnInit {
   name: string = 'XXXXXXX';
   avatar: string = '';
   load = false;
+  @ViewChild("list") list: ElementRef;
+  // @ViewChild("menul") menul: ElementRef;
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event) {
+
+    this.checkNav = false;
 
     let timeout = setTimeout(() => {
       if (window.scrollY > 55) {
@@ -31,12 +35,15 @@ export class NavBarComponent implements OnInit {
     }, 0);
     if (window.innerWidth < 992) {
       const nav = document.querySelector('.navbar');
+      const menu = document.querySelector('.menu');
       if (window.scrollY < this.scrollPos) {
         nav.classList.add("is-visible");
         nav.classList.remove("is-hidden");
+        menu.classList.remove('fix-menu');
       }
-      else {
+      else if(window.scrollY > 55) {
         nav.classList.add('is-hidden');
+        menu.classList.add('fix-menu');
         nav.classList.remove('is-visible');
       }
       this.scrollPos = window.scrollY;
@@ -76,12 +83,28 @@ export class NavBarComponent implements OnInit {
   }
 
   showNav() {
+    console.log('KKLK');
+    
     this.checkNav = !this.checkNav;
+    this.list.nativeElement.focus();
+    // alert('ER');
+    // if (this.checkNav) {
+    //   alert('ER');
+    //   this.list.nativeElement.focus();
+    // }
+  }
+
+  showNav1() {
+    this.checkNav = false;
   }
 
   load_user() {
     this.load = true;
     console.log('load');
+  }
+
+  close_menu() {
+    alert('DG');
   }
 
   ngOnInit() {

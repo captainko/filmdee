@@ -5,7 +5,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
 import { Observable } from 'rxjs';
-import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
+import { Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
 import { UserService } from '@services/user.service';
 
@@ -35,37 +35,8 @@ export class LoginComponent implements OnInit {
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
-    private activate: ActivatedRoute,
     private userService: UserService,
   ) {
-  }
-
-  ooo(): void{
-    const urlDelimitators = new RegExp(/[?//,;&:#$+=]/);
-    this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
-    this.router.events
-      .pipe(
-        filter((value) => value instanceof NavigationStart)
-      ).subscribe((event: NavigationStart) => {
-
-        this.previousPath = this.currentPath;
-        console.log(this.previousPath);
-        return this.previousPath;
-        
-        this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
-
-        // this.currentUrl = event.url;
-        if(this.previousPath == 'search' && this.previousPath == this.currentPath) {
-          this.back--;
-        }else {
-          this.back = -1;
-        }
-      })
-      console.log(this.previousPath);
-  }
-
-  get(){
-    console.log(this.ooo());
   }
 
   ngOnInit() {
@@ -80,43 +51,18 @@ export class LoginComponent implements OnInit {
           this.user.name = '';
           this.user.token = '';
         }
-        this.router.navigate(['home']);  
+        this.router.navigate(['home'])
       } else {
         // console.log('ER');
       }
     });
   }
 
-  backo() {
-    // const urlDelimitators = new RegExp(/[?//,;&:#$+=]/);
-    // this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
-    // // console.log(this.currentPath);
-
-    // this.router.events.pipe(
-    //     filter((value) => value instanceof NavigationStart)
-    //   ).subscribe((event: NavigationStart) => {
-
-    //     this.previousPath = this.currentPath;
-    //     console.log(this.previousPath);
-
-    //     this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
-    //   })
-    // console.log(a);
-
-    // this.afAuth.authState.subscribe((auth) => {
-    //   if (auth) {
-        
-    //     // this.router.navigate(['home']);
-    //   } else {
-    //   }
-    // });
-  }
-
-  login() {
+  logingoo() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 
-  login2() {
+  loginfb() {
     this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 

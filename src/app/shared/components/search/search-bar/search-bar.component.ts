@@ -31,22 +31,25 @@ export class SearchBarComponent implements OnInit {
 
   ngOnInit() {
   }
-  private async processRouting() {
+  private processRouting() {
 
     const urlDelimitators = new RegExp(/[?//,;&:#$+=]/);
-    this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
+    // this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
+    this.currentPath = this.router.routerState.snapshot.url.slice(1, 7);
     this.router.events
       .pipe(
         filter((value) => value instanceof NavigationStart)
       ).subscribe((event: NavigationStart) => {
-
+        // console.log();
         this.previousPath = this.currentPath;
-        this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
+        // this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
+        this.currentPath = event.url.slice(1, 7);
+        console.log(this.currentPath);
 
         // this.currentUrl = event.url;
-        if(this.previousPath == 'search' && this.previousPath == this.currentPath) {
+        if (this.previousPath == 'search' && this.previousPath == this.currentPath) {
           this.back--;
-        }else {
+        } else {
           this.back = -1;
         }
 
@@ -61,8 +64,8 @@ export class SearchBarComponent implements OnInit {
       .subscribe(value => {
         if (this.search.valid) {
 
-            // console.log(`?q=${value}`)
-            this.router.navigate(['search'], { queryParams: { q: value } });
+          // console.log(`?q=${value}`)
+          this.router.navigate(['search'], { queryParams: { q: value } });
 
         }
       });
@@ -70,7 +73,9 @@ export class SearchBarComponent implements OnInit {
 
   //navigate
   public navigate() {
-    this.router.navigate(['search']);
+    if(this.currentPath !== 'search') {
+      this.router.navigate(['search']);
+    }
   }
 
   public expand() {
@@ -81,11 +86,16 @@ export class SearchBarComponent implements OnInit {
     this.toggle(this.searchButton, 'close');
     this.toggle(this.input, 'square');
     if (search.classList.contains("close")) {
-      input.focus();
+      let timeout = setTimeout(() => {
+        input.focus();
+        clearTimeout(timeout);
+      }, 100);
     } else {
-
-      input.blur();
-      if( this.search.value === "" && this.back) {
+      let timeout = setTimeout(() => {
+        input.blur();
+        clearTimeout(timeout);
+      }, 100);
+      if (this.search.value === "" && this.back) {
         console.log(this.back);
         window.history.go(this.back);
       }

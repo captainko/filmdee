@@ -1,0 +1,433 @@
+.content-fill {
+  width: 40%;
+  padding: 0px 3% 0px;
+  color: white;
+}
+
+img.film-logo {
+  height: 80px;
+}
+
+.film-title {
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 42px;
+  margin-top: 12px;
+}
+
+.film-info {
+  margin: 10px 0px;
+}
+
+.info-like {
+  display: inline-block;
+  padding: 2px 10px 2px 0px;
+}
+
+.info-like i.fas.fa-heart {
+  font-size: 14px;
+  position: relative;
+  top: -1px;
+  color: #f25268;
+}
+
+.control-like i.fas.fa-heart {
+  font-size: 18px;
+  top: 1px;
+  position: relative;
+}
+
+.info-year {
+  display: inline-block;
+  color: #007bff;
+  font-weight: 800;
+  padding: 2px 10px 2px 10px;
+  position: relative;
+}
+
+.info-year::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.info-time {
+  display: inline-block;
+  padding: 2px 10px 2px 10px;
+  position: relative;
+}
+
+.info-time::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+i.far.fa-clock {
+  font-size: 13px;
+  position: relative;
+  top: -1px;
+}
+
+.info-quality {
+  display: inline-block;
+  padding: 2px 10px 2px 10px;
+  position: relative;
+}
+
+span.quality-value {
+  border: 1px solid;
+  padding: 0px 8px;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+
+.info-quality::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.info-old {
+  display: inline-block;
+  padding: 2px 0px 2px 10px;
+  position: relative;
+}
+
+span.old-value {
+  border: 1px solid;
+  padding: 0px 8px;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+  background: #141414;
+}
+
+.info-old::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.film-control {
+  margin: 20px 0px 5px;
+}
+
+.control-play {
+  display: inline-block;
+  background: #0396ff;
+  padding: 6px 15px;
+  border-radius: 35px;
+  border: 2px solid #0396ff;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control-play:hover {
+  background: white;
+  color: #0396ff;
+  border-color: white;
+}
+
+i.fas.fa-play {
+  padding-right: 5px;
+}
+
+i.far.fa-plus {
+  padding-right: 5px;
+}
+
+.control-add {
+  display: inline-block;
+  background: #0396ff00;
+  padding: 6px 15px;
+  border-radius: 35px;
+  border: 2px solid;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control-add:hover {
+  background: white;
+  color: #0396ff;
+  border-color: white;
+}
+
+.control-like {
+  display: inline-block;
+  border: 2px solid;
+  padding: 3px 9px;
+  font-size: 20px;
+  border-radius: 40px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control-like:hover {
+  background: #f25268;
+  border-color: #f25268;
+  color: white;
+}
+
+.control-share {
+  display: inline-block;
+  border: 2px solid;
+  padding: 3px 8px;
+  font-size: 20px;
+  border-radius: 40px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control-share:hover {
+  background: #37944c;
+  border-color: #37944c;
+  color: white;
+}
+
+// Tagss
+
+div.tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tags span {
+  margin-right: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 2px solid #656d73;
+  background: linear-gradient(to right, #0396ff, #3d844d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags-list a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 11px;
+  color: #a1a1af;
+  font-weight: 700;
+}
+
+a.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 0.5em;
+  text-transform: uppercase;
+  border: 2px solid #656d73;
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, -0.45);
+}
+
+a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right, #0396ff, #3d844d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Extra small < 375px (.col-)
+
+@media only screen and (max-width: 374px) {
+  .film-info {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 991px) {
+  .film-info {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 435px) and (max-width: 575px) {
+  .film-control {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+// Extra small < 576px (.col-)
+
+@media only screen and (max-width: 575px) {
+
+  .content-fill,
+  .content-detail,
+  .content-actor,
+  .content-comment {
+    width: 100% !important;
+  }
+
+  .logof {
+    display: flex;
+    justify-content: center;
+  }
+
+  .film-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .film-info {
+    justify-content: center;
+  }
+}
+
+
+// Small ≥ 576px (.col-sm-)
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+  .content-fill,
+  .content-detail,
+  .content-actor,
+  .content-comment {
+    width: 100% !important;
+  }
+
+  .logof {
+    display: flex;
+    justify-content: center;
+  }
+
+  .film-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .film-info {
+    justify-content: center;
+  }
+
+  .film-control {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Medium ≥ 768px (.col-md-)
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .content-fill,
+  .content-detail,
+  .content-actor,
+  .content-comment {
+    width: 100% !important;
+  }
+
+  .logof {
+    display: flex;
+    justify-content: center;
+  }
+
+  .film-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .film-info {
+    justify-content: center;
+  }
+
+  .film-control {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Large ≥ 992px (.col-lg-)
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .content-fill {
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .film-title {
+    font-size: 30px;
+  }
+}
+
+
+
+// Extra large ≥ 1200px (.col-xl-)
+
+@media only screen and (min-width: 1200px) {
+  .content-fill {
+    width: 40%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Extra small < 576px (.col-)
+
+// @media only screen and (max-width: 575px) {
+// }
+
+
+// Small ≥ 576px (.col-sm-)
+
+// @media only screen and (min-width: 576px) and (max-width: 767px) {
+// }
+
+// Medium ≥ 768px (.col-md-)
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+// }
+
+// Large ≥ 992px (.col-lg-)
+
+// @media only screen and (min-width: 992px) and (max-width: 1199px) {
+// }
+
+
+
+// Extra large ≥ 1200px (.col-xl-)
+
+// @media only screen and (min-width: 1200px) {
+// }

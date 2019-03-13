@@ -12,9 +12,10 @@ export class VideosComponent implements OnInit {
   // check_poster: boolean = false;
   // check_video: boolean = true;
   isVisible: any;
-  @Input('video') videolist: Videos;
+  @Input('video') videolist: any;
   @Input('Check_Poster') check_poster: boolean;
   @Input('Check_Video') check_video: boolean;
+  @Input('play') play: boolean;
 
   @ViewChild("video") video: ElementRef;
   @ViewChild("botvideo") botvideo: ElementRef;

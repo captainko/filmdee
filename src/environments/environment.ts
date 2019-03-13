@@ -1,12 +1,16 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-const movieApiKey = '260545a0';
 export const environment = {
   production: false,
-  // movieApiKey: movieApiKey,
-  // movieApiUrl: `http://www.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
-  // posterApiUrl: `http://img.omdbapi.com/?type=movie&apikey=${movieApiKey}&`,
+  firebaseConfig: {
+    apiKey: "AIzaSyDbSIo_OyrSzIFqj4KLHUkl_bm6gfQlYOc",
+    authDomain: "phimdee-0.firebaseapp.com",
+    databaseURL: "https://phimdee-0.firebaseio.com",
+    projectId: "phimdee-0",
+    storageBucket: "phimdee-0.appspot.com",
+    messagingSenderId: "939759800895"
+  }
 };
 
 /*

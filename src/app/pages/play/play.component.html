@@ -1,95 +1,69 @@
 <div class="home-play">
-  <!-- <app-movie-detail></app-movie-detail> -->
-  <div class="video-index">
-    <app-videos class="film-video" [video]="Video" [Check_Poster]="check_poster" [Check_Video]="check_video"></app-videos>
-    <div class="film-content">
+  <div [ngClass]="{'video-index-f': !play}" class="video-index">
+    <app-videos *ngIf="!play" class="film-video" [play]="play" [video]="data.video_background" [Check_Poster]="check_poster"
+      [Check_Video]="check_video"></app-videos>
+
+    <div *ngIf="!play" class="film-content">
       <div class="content-menu">
-
-        <!-- Content Info -->
-        <div [ngStyle]="styleObject0()" #info class="content-fill">
-          <div class="logof"><img class="film-logo" src="../../../assets/images/logo-film.png"></div>
-          <div class="film-title">Chiến Binh Báo Đen</div>
-          <div class="film-info">
-            <div class="info-like"><i class="fas fa-heart"></i> 347</div>
-            <div class="info-year">2019</div>
-            <div class="info-time"><i class="far fa-clock"></i> 127 phút</div>
-            <div class="info-quality"><span class="quality-value">4K</span></div>
-            <div class="info-old"><span class="old-value">16+</span></div>
-          </div>
-          <div class="film-text">A forensics expert who wakes from a coma with amazing new powers squares off against
-            forces threatening the city in this live-action superhero romp.</div>
-          <div class="film-control">
-            <div class="control-play"><i class="fas fa-play"></i> Xem Ngay</div>
-            <div class="control-add"><i class="far fa-plus"></i> Lưu List</div>
-            <div class="control-like"><i class="fas fa-heart"></i></div>
-            <div class="control-share"><i class="fas fa-share"></i></div>
-          </div>
-          <div class="film-tags">
-            <div class="tags">
-              <span>Tags</span>
-              <div class="tags-list">
-                <a class="tag" href="#">Phim Lẻ</a>
-                <a class="tag" href="#">Hành Động</a>
-                <a class="tag" href="#">Tâm Lý</a>
-                <a class="tag" href="#">Nhiều Tập</a>
-                <a class="tag" href="#">DC Commit</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div #detail [ngStyle]="styleObject1()" class="content-detail">
-          <ng-scrollbar class="detail-scrollbar" >
-            <div class="row">
-              <div class="detail-col col-6">Phát Hành: 12/10/2018</div>
-              <div class="detail-col col-6">Quốc Gia: Mỹ</div>
-              <div class="detail-col col-6">Đạo Diễn: Ryan Coogler</div>
-              <div class="detail-col col-6">Tác Giả: Stan Lee</div>
-            </div>
-            <img class="detail-img" src="https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info01.jpg?alt=media&token=886b3334-efa4-4852-b6fd-9c890323bec1">
-            <div class="detail-text">Chiến binh Báo Đen (tiếng Anh: Black Panther) là một phim của điện ảnh Hoa Kỳ dựa
-              trên nhân vật siêu anh hùng cùng tên của hãng Marvel Comics, sản xuất bởi Marvel Studios và phân phối bởi
-              Walt Disney Studios Motion Pictures. Đây là bộ phim thứ 18 trong Vũ trụ Điện ảnh Marvel (MCU), đồng thời
-              đánh dấu bộ phim siêu anh hùng da màu đầu tiên.</div>
-            <img class="detail-img" src="https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info02.jpg?alt=media&token=f2bd8aad-011d-469c-abcc-ba693256e9e8">
-            <div class="detail-text">Vương quốc Wakanda, quê hương của Black Panther / T'Challa hiện ra qua lời kể của
-              một nhân chứng sống sót trở về. Đây là quốc gia khá khép kín và sở hữu lượng Vibranium lớn nhất trên thế
-              giới. Black Panther - người cầm quyền của Wakanda sở hữu bộ áo giáp chống đạn và móng vuốt sắc nhọn, anh
-              được miêu tả là “người tốt với trái tim nhân hậu”. Nhưng cũng chính vì những đức tính tốt này mà Black
-              Panther gặp khó khăn khi kế thừa ngai vàng sau khi vua cha băng hà. Đối mặt với sự phản bội và hiểm nguy,
-              vị vua trẻ phải tập hợp các đồng minh và phát huy toàn bộ sức mạnh của Black Panther để đánh bại kẻ thù,
-              đem lại an bình cho nhân dân của mình.</div>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div [ngStyle]="styleObject2()" class="content-actor">
-          <ng-scrollbar class="actor-scrollbar" >
-            <div class="row ml-0">
-              <div *ngFor="let actor of actors" class="actor-col col-4 col-sm-3 col-md-2 col-lg-4 col-xl-4 pl-0">
-                <img class="actor-image" src="{{actor.id}}">
-                <div class="actor-name">{{actor.name}}</div>
-                <div class="actor-vai">Vai: {{actor.vai}}</div>
-              </div>
-            </div>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Chi Tiết -->
-        <div [ngStyle]="styleObject3()" class="content-comment">
-          <ng-scrollbar class="actor-scrollbar" >
-            <fb-comments numposts="3" href="https://phimdee.com/xem/black-panther-0934" width="100%" colorscheme="dark"
-              orderBy="reverse_time" mobile="true"></fb-comments>
-          </ng-scrollbar>
-        </div>
-
-        <!-- Menu -->
+        <app-content [content]="data.content" (voted)="onVoted($event)" [ngStyle]="styleObject0()"></app-content>
+        <app-detail [detail]="data.detail" [ngStyle]="styleObject1()"></app-detail>
+        <app-actor [actor]="data.actor" [ngStyle]="styleObject2()"></app-actor>
+        <app-comment [comment]="data.link_comment" [ngStyle]="styleObject3()"></app-comment>
         <div class="menul">
           <div *ngFor="let menu of menus; let i = index" (click)="active(i)" [ngClass]="{'active': menu.active}" class="menu-list">{{menu.name}}</div>
         </div>
       </div>
     </div>
+
+    <div *ngIf="play" class="play-container" #play>
+      <div class="row justify-content-center play-view m-0">
+        <div class="col-lg-auto col-auto ads"></div>
+        <div class="col-lg-9 col-12 p-0">
+          <app-jwplayer [link]="data.server1" *ngIf="server[0].active"></app-jwplayer>
+          <app-jwplayer [link]="data.server2" *ngIf="server[1].active"></app-jwplayer>
+          <iframe *ngIf="server[2].active" width="100%" height="100%" [src]="data.server3 | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+          <iframe *ngIf="server[3].active" [src]="data.server4 | safe: 'resourceUrl'" scrolling="no" frameborder="0" width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+          <!-- <div *ngIf="server[3].active" class="hidden-logo"></div> -->
+          <div class="tools row">
+            <div class="col-md-8 col-12 sv-ch">
+              <div class="server">Máy chủ:</div>
+              <div (click)="choice_sv(1)" class="button-earth"><span class="earth"></span><span class="hidden-text"> Earth</span></div>
+              <div (click)="choice_sv(2)" class="button-moon"><span class="moon"></span><span class="hidden-text"> Moon</span></div>
+              <div (click)="choice_sv(3)" class="button-mars"><span class="mars"></span><span class="hidden-text"> Mars</span></div>
+              <div (click)="choice_sv(4)" class="button-sun"><span class="active-sv sun"></span><span class="hidden-text"> Sun</span></div>
+            </div>
+            <div class="col-md-4 col-12 sv-ch2">
+              <div class="error-link"><i class="fas fa-exclamation-triangle"></i> Báo Lỗi</div>
+              <div class="share-link"><i class="fas fa-share share-mxh"></i> Chia Sẽ</div>
+            </div>
+          </div>
+
+          <div class="episodes row m-0 justify-content-between">
+            <div class="col-auto prev-tap">
+              <div (click)="prev_e()" class="prev"><i class="fal fa-chevron-left"></i></div>
+            </div>
+            <div class="col-auto list-tap row p-0">
+              <owl-carousel #owlElement [options]="customOptions" class="col-auto w-slide-tap p-0">
+                <div class="item" *ngFor="let episode of episodes; let i = index">
+                  <div [ngClass]="{'active-button': episode.id == 3}" class="animated-button">{{episode.id}}</div>
+                </div>
+              </owl-carousel>
+              <div class="input-go">
+                <form>
+                  <input [(ngModel)]="go" name="go" type="text" autofocus placeholder="go" class="go col-auto">
+                </form>
+              </div>
+            </div>
+            <div class="col-auto next-tap">
+              <div (click)="next_e()" class="next"><i class="fal fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-auto col-auto ads"></div>
+      </div>
+      <div class="background-bot-video"></div>
+    </div>
+
   </div>
   <div class="list-video-play">
     <app-slide-list></app-slide-list>

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FbCommentComponent } from "./fb-comment.component";
+import { JwplayerComponent } from './jwplayer.component';
 
 @NgModule({
-  declarations: [FbCommentComponent],
+  declarations: [JwplayerComponent],
   imports: [
     CommonModule
   ],
   exports: [
-    FbCommentComponent
+    JwplayerComponent
   ]
 })
-export class FbCommentModule { }
+export class JwplayerModule { }

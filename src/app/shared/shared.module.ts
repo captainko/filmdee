@@ -5,9 +5,7 @@ import { CardsModule } from './components/cards/cards.module';
 import { SlidesModule } from './components/slides/slides.module';
 
 @NgModule({
-  declarations: [
-
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     CardsModule,

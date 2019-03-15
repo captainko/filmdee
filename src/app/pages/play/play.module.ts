@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlayRoutingModule } from './play-routing.module';
 
 import { PlayComponent } from './play.component';
 import { VideoBackgroundModule } from '@shared/components/video-background/video-background.module';
@@ -13,6 +12,7 @@ import { InfoFilmModule } from '@shared/components/info-film/info-film.module';
 import { OwlModule } from 'ngx-owl-carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SafePipe } from './pipe/safe.pipe';
+import { PlayRoutingModule } from './play.routing';
 
 @NgModule({
   declarations: [PlayComponent, SafePipe],

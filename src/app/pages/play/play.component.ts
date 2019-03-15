@@ -62,7 +62,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
     },
 
     server1: {
-      link: 'https://hls.hydrax.net/7UsFLyKue3vLdhjfl2jYOzTjodRbnlFUotxY7UIp6luK7JupLI/0/playlist.m3u8',
+      link: 'https://hls.hydrax.net/7UsFLyKue3vLdhjfl2jYOzTjodRbnlFUotxY7UIp6luK7Jup6I/0/playlist.m3u8',
       subvi: 'https://firebasestorage.googleapis.com/v0/b/phimdee-video4.appspot.com/o/sub-vi.srt?alt=media&token=239c6df3-5596-4b52-9689-2867463df225',
       suben: 'https://firebasestorage.googleapis.com/v0/b/phimdee-video4.appspot.com/o/sub-en.srt?alt=media&token=8a1367e0-2d85-46ea-9221-f59d9c77bb53',
     },
@@ -334,6 +334,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
     var link = window.location.href.split("-");
     console.log(link[link.length - 1]);
+    
 
   }
 

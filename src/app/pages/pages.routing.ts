@@ -13,11 +13,12 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent, data: {animation: 'SearchPage'} },
   // { path: 'search', loadChildren: './search/search.module#SearchModule', data: {animation: 'SearchPage'} },
   { path: 'xem', loadChildren: './play/play.module#PlayModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginModule'},
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}

@@ -14,6 +14,7 @@ const routes: Routes = [
   // { path: 'search', loadChildren: './search/search.module#SearchModule', data: {animation: 'SearchPage'} },
   { path: 'xem', loadChildren: './play/play.module#PlayModule' },
   { path: 'login', loadChildren: './login/login.module#LoginModule' },
+  { path: 'actor', loadChildren: './actor/actor.module#ActorModule' }
 ];
 
 @NgModule({

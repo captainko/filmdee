@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FakeService } from '@services/fake.service';
+
+export interface User {
+  name?: string;
+  age?: any;
+  sex?: number;
+}
 
 @Component({
   selector: 'app-start',
@@ -7,9 +14,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  users: User[];
+
+  constructor(private fakeService: FakeService) { }
 
   ngOnInit() {
+    this.fakeService.getUser('fake', 'sex', 'Nữ').subscribe(users => {
+      //console.log(usersa);
+      this.users = users;
+    })
   }
 
 }

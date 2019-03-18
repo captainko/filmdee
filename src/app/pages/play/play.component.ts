@@ -38,7 +38,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
     detail: {
       image1: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info01.jpg?alt=media&token=886b3334-efa4-4852-b6fd-9c890323bec1',
-      image2: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info02.jpg?alt=media&token=f2bd8aad-011d-469c-abcc-ba693256e9e8',
+      image2: 'https://firebase...........storage.googleapis.com/v0/b/phimdee-image.appspot.com/o/info02.jpg?alt=media&token=f2bd8aad-011d-469c-abcc-ba693256e9e8',
       launch: {day: '02', month: '03', year: '2018'},
       nation: 'Mỹ',
       directors: 'Ryan Coogler',

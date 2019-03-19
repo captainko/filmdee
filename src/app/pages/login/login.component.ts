@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
       if (auth) {
         this.router.navigate(['home']);
       } else {
+        // console.log('ER');
       }
     });
   }

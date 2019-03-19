@@ -1,0 +1,157 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    background-color: #24344b;
+    color: #F9F9F9;
+    width: 240px;
+    padding: 0;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 70px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: Roboto,sans-serif;
+    text-align: center;
+}
+
+ul.panel {
+    list-style: none;
+    margin: 0;
+}
+
+.scroll {
+    overflow-y: auto;
+    height: calc(100vh - 260px);
+}
+
+
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 0px;
+    background: #fffaf02e;
+    visibility: hidden;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgb(31, 36, 49);
+}
+
+li.list-c1 {
+    background: #2b3c58;
+    color: #788195;
+    cursor: pointer;
+}
+
+li > a.item:hover {
+    background: #3b4f6a;
+    color: #ffffff;
+}
+
+li.list-c2 {
+    background: #222d3e;
+    color: #788195;
+    cursor: pointer;
+}
+
+li.list-c2:hover {
+    background: #3b4f6a;
+    color: #ffffff;
+}
+
+li.active {
+    background: #3b4f6a !important;
+    color: #ffffff !important;
+    position: relative;
+}
+
+li.active::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 0px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+ul.slideup::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 22px;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    z-index: 2;
+}
+
+ul.toopltip1::before {
+    border-color: #3b4f6a transparent transparent transparent;
+}
+
+ul.toopltip2::before {
+    border-color: #2b3c58 transparent transparent transparent;
+}
+
+a.item {
+    padding: 12px 15px;
+    display: block;
+}
+
+span.round {
+    padding: 4px;
+    margin: 2px 14px 1px 6px;
+    background: aquamarine;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 28px;
+    height: 14px;
+}
+
+i.circle {
+    width: 34px;
+    font-size: 8px;
+    padding-left: 5px;
+}
+
+.slideup, .slidedown {
+    //max-height: 0;            
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s ease-in-out;
+    -moz-transition: max-height 0.4s ease-in-out;
+    -o-transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out;
+    animation-delay: 0s;
+}
+
+.slideup {
+    position: relative;
+}
+
+.slidedown {
+    max-height: 100px;
+}
+
+.container {
+    width: 240px;
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow: auto;
+}
+
+a.item:hover ul.toopltip2::before {
+    border-color: #3b4f6a transparent transparent transparent;
+}

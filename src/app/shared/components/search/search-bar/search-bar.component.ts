@@ -63,7 +63,7 @@ export class SearchBarComponent implements OnInit {
 
   // navigate
   public navigate() {
-    if(this.currentPath !== 'search') {
+    if (this.currentPath !== 'search') {
       this.router.navigate(['search']);
     }
   }

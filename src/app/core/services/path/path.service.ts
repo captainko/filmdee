@@ -17,10 +17,10 @@ export class PathService {
       .pipe(
         filter((event) => event instanceof NavigationStart)
       )
-      .subscribe((event: NavigationStart)=> {
+      .subscribe((event: NavigationStart) => {
         this.previousPath = this.currentPath;
         this.currentPath = event.url;
-      })
+      });
   }
   public getPreviousPath() {
     return this.previousPath;

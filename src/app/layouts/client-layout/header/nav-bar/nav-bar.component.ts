@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,6 +18,7 @@ export class NavBarComponent implements OnInit {
   name: string = 'XXXXXXX';
   avatar: string = '';
   load = false;
+
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event) {
@@ -32,8 +34,8 @@ export class NavBarComponent implements OnInit {
     if (window.innerWidth < 992) {
       const nav = document.querySelector('.navbar');
       if (window.scrollY < this.scrollPos) {
-        nav.classList.add("is-visible");
-        nav.classList.remove("is-hidden");
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
       }
       else {
         nav.classList.add('is-hidden');
@@ -43,12 +45,18 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(private authService: AuthService) {
     // var a = parseBoolean(localStorage.login)
     // console.log(a);
-    console.log(localStorage.login);
 
-    this.afAuth.authState.subscribe((auth) => {
+  }
+  ngOnInit() {
+    this.checkIsLogged();
+  }
+
+  private checkIsLogged(): void {
+    console.log(localStorage.login);
+    this.authService.isLogged().subscribe((auth) => {
       if (auth) {
         console.log(auth);
         localStorage.login = true;
@@ -71,20 +79,19 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  logout() {
-    this.afAuth.auth.signOut();
+  public logout(): void {
+    this.authService.signOut();
   }
 
-  showNav() {
+  public showNav(): void {
     this.checkNav = !this.checkNav;
   }
 
-  load_user() {
+  public load_user(): void {
     this.load = true;
     console.log('load');
   }
 
-  ngOnInit() {
-  }
+
 
 }

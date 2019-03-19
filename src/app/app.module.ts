@@ -20,6 +20,7 @@ import { environment } from '../environments/environment.prod';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { PathService } from '@services/path/path.service';
 export const firebaseConfig = environment.firebaseConfig;
 
 @NgModule({
@@ -42,17 +43,18 @@ export const firebaseConfig = environment.firebaseConfig;
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule,
+    AngularFireStorageModule
   ],
   providers: [
     {
       provide: LazyViewport,
       useFactory: function () {
-        var viewport = new LazyViewport();
+        const viewport = new LazyViewport();
         viewport.setup(/* no root */);
         return (viewport);
       }
-    }
+    },
+    PathService
   ],
   bootstrap: [AppComponent]
 })

@@ -21,7 +21,6 @@ interface User {
 export class AuthService {
 
   user: Observable<User>;
-
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
@@ -45,7 +44,7 @@ export class AuthService {
     return this.oAuthLogin(provider);
   }
 
-  private oAuthLogin(provider) {
+  private oAuthLogin(provider): any {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
         this.updateUserData(credential.user)
@@ -53,7 +52,7 @@ export class AuthService {
   }
 
 
-  private updateUserData(user) {
+  private updateUserData(user): any {
     // Sets user data to firestore on login
 
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
@@ -63,16 +62,20 @@ export class AuthService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL
-    }
+    };
 
     return userRef.set(data, { merge: true })
 
   }
 
 
-  signOut() {
+  public signOut(): void {
     this.afAuth.auth.signOut().then(() => {
         this.router.navigate(['/']);
     });
+  }
+
+  public isLogged(): Observable<any> {
+    return this.afAuth.authState;
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PathService } from '@services/path/path.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'filmdee';
+  constructor(private pathService: PathService) {
+
+  }
 }

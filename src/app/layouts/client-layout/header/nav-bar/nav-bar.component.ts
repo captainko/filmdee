@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,6 +18,7 @@ export class NavBarComponent implements OnInit {
   name: string = 'XXXXXXX';
   avatar: string = '';
   load = false;
+
   @ViewChild("list") list: ElementRef;
   // @ViewChild("menul") menul: ElementRef;
   @HostListener('window:scroll', ['$event'])
@@ -50,12 +52,18 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(private authService: AuthService) {
     // var a = parseBoolean(localStorage.login)
     // console.log(a);
-    console.log(localStorage.login);
 
-    this.afAuth.authState.subscribe((auth) => {
+  }
+  ngOnInit() {
+    this.checkIsLogged();
+  }
+
+  private checkIsLogged(): void {
+    console.log(localStorage.login);
+    this.authService.isLogged().subscribe((auth) => {
       if (auth) {
         console.log(auth);
         localStorage.login = true;
@@ -78,13 +86,11 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  logout() {
-    this.afAuth.auth.signOut();
+  public logout(): void {
+    this.authService.signOut();
   }
 
-  showNav() {
-    console.log('KKLK');
-    
+  public showNav(): void {
     this.checkNav = !this.checkNav;
     this.list.nativeElement.focus();
     // alert('ER');
@@ -98,7 +104,7 @@ export class NavBarComponent implements OnInit {
     this.checkNav = false;
   }
 
-  load_user() {
+  public load_user(): void {
     this.load = true;
     console.log('load');
   }
@@ -107,7 +113,5 @@ export class NavBarComponent implements OnInit {
     alert('DG');
   }
 
-  ngOnInit() {
-  }
 
 }

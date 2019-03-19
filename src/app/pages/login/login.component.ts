@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/take';
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
-import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
-import { UserService } from '@services/user.service';
-
-export interface User {
-  id?: string;
-  name?: string;
-  token?: string;
-}
+import { Router} from '@angular/router';
+import { PathService } from '@services/path/path.service';
 
 @Component({
   selector: 'app-login',
@@ -22,47 +11,55 @@ export interface User {
 })
 export class LoginComponent implements OnInit {
 
-  user: User = {
-    name: '',
-    token: ''
-  }
-
-  public previousPath: string;
-  public currentPath: string;
-  public back = 0;
-  path: string
 
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
-    private userService: UserService,
+    private pathService: PathService
   ) {
   }
 
+
   ngOnInit() {
-    this.afAuth.authState.subscribe(userlogin => {
-      if (userlogin) {
-        this.user.name = userlogin.displayName;
-        this.user.token = userlogin.uid;
-        if(this.user.name != '' && this.user.token != ''){
-          console.log('UP');
-          
-          this.userService.setUser(this.user, this.user.token);
-          this.user.name = '';
-          this.user.token = '';
-        }
-        this.router.navigate(['home'])
+    this.afAuth.authState.subscribe(user => {
+      if (user) {
+       this.router.navigateByUrl(this.pathService.getPreviousPath());
+      } else {
+        console.log('ER');
+      }
+    });
+  }
+
+  backo() {
+    // const urlDelimitators = new RegExp(/[?//,;&:#$+=]/);
+    // this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
+    // // console.log(this.currentPath);
+
+    // this.router.events.pipe(
+    //     filter((value) => value instanceof NavigationStart)
+    //   ).subscribe((event: NavigationStart) => {
+
+    //     this.previousPath = this.currentPath;
+    //     console.log(this.previousPath);
+
+    //     this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
+    //   })
+    // console.log(a);
+
+    this.afAuth.authState.subscribe((auth: any) => {
+      if (auth) {
+        this.router.navigate(['home']);
       } else {
         // console.log('ER');
       }
     });
   }
 
-  logingoo() {
+  public login(): void {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 
-  loginfb() {
+  public login2(): void {
     this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 

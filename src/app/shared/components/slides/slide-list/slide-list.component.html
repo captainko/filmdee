@@ -10,7 +10,7 @@
 
    <div lazyViewport>
       <owl-carousel #owlElement [options]="customOptions" >
-        <div class="item" *ngFor="let listFilm of listFilms; let i = index">
+        <div class="item" *ngFor="let listFilm of list; let i = index">
           <box-card [card]="listFilm"></box-card>
         </div>
       </owl-carousel>

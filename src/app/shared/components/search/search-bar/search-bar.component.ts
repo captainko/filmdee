@@ -1,11 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { SearchService } from '@services/search/search.service';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
-import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
-  selector: 'search-bar',
+  selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss']
 })
@@ -18,9 +17,7 @@ export class SearchBarComponent implements OnInit {
   private currentPath: string;
   private back = 0;
   constructor(
-    private searchService: SearchService,
     private router: Router,
-    private activate: ActivatedRoute,
     private rederer2: Renderer2
   ) {
     this.search = new FormControl('', [Validators.minLength(2)]);
@@ -33,20 +30,13 @@ export class SearchBarComponent implements OnInit {
   }
   private processRouting() {
 
-    const urlDelimitators = new RegExp(/[?//,;&:#$+=]/);
-    // this.currentPath = this.router.url.slice(1).split(urlDelimitators)[0];
     this.currentPath = this.router.routerState.snapshot.url.slice(1, 7);
     this.router.events
       .pipe(
         filter((value) => value instanceof NavigationStart)
       ).subscribe((event: NavigationStart) => {
-        // console.log();
         this.previousPath = this.currentPath;
-        // this.currentPath = event.url.slice(1).split(urlDelimitators)[0];
         this.currentPath = event.url.slice(1, 7);
-        console.log(this.currentPath);
-
-        // this.currentUrl = event.url;
         if (this.previousPath == 'search' && this.previousPath == this.currentPath) {
           this.back--;
         } else {
@@ -71,7 +61,7 @@ export class SearchBarComponent implements OnInit {
       });
   }
 
-  //navigate
+  // navigate
   public navigate() {
     if(this.currentPath !== 'search') {
       this.router.navigate(['search']);

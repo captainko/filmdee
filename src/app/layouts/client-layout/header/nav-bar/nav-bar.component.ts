@@ -43,7 +43,7 @@ export class NavBarComponent implements OnInit {
         nav.classList.remove("is-hidden");
         menu.classList.remove('fix-menu');
       }
-      else if(window.scrollY > 55) {
+      else if (window.scrollY > 55) {
         nav.classList.add('is-hidden');
         menu.classList.add('fix-menu');
         nav.classList.remove('is-visible');

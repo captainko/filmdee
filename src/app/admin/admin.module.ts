@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '@shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { AdminsRoutingModule } from './admins.routing';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [],
@@ -10,7 +11,8 @@ import { AdminsRoutingModule } from './admins.routing';
     CommonModule,
     SharedModule,
     AdminsRoutingModule,
-    FormsModule,
+    FormsModule, 
+    NgbModule.forRoot()
   ]
 })
 export class AdminModule { }

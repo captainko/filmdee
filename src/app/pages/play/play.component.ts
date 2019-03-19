@@ -49,7 +49,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
     actor: [
       { id: '1', name: 'Chadwick Boseman', role: 'T\'Challa', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/01a.jpg?alt=media&token=0c6d374b-1569-492f-ab39-0dcc071b7ec5'},
-      { id: '2', name: 'Michael B. Jordan', role: 'Erik Killmonger', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/02a.jpg?alt=media&token=2e304451-3e81-47f9-8b48-75f32f37ee8a'},
+      { id: '2', name: 'Michael B. Jordan', role: 'Erik Killmonger', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/1.jpg?alt=media&token=f7199cee-cccc-4dc5-a92b-7878977ec419'},
       { id: '3', name: 'Lupita Nyong\'o', role: 'Nakia', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/03a.jpg?alt=media&token=88fe5e9b-4a00-41d4-a1e2-bee3d76d3afd'},
       { id: '4', name: 'Danai Gurira', role: 'Okoye', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/04a.jpg?alt=media&token=5c74967d-35be-4991-bafc-8b3c915db784'},
       { id: '5', name: 'Martin Freeman', role: 'Everett Ross', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/05a.jpg?alt=media&token=41685429-8281-4334-966e-914296b50cd3'},

@@ -1,0 +1,33 @@
+<div class="header">
+  <div class="title">Thêm Phim</div>
+</div>
+<div class="box">
+  <form (ngSubmit)="onSubmit()" class="container my-3">
+    <div class="row info">
+      <div class="col-repon col-12 p-0 py-2">
+        <input class="form-control" type="text" placeholder="Tên Phim" [(ngModel)]="films.name" name="name">
+      </div>
+      <div class="col-repon col-12 p-0 py-2">
+        <input class="form-control" type="text" placeholder="Chất Lượng" [(ngModel)]="films.quality" name="quality">
+      </div>
+      <div class="input-group col-12 p-0 py-2">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+            <i class="fal fa-calendar-alt"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 p-0 py-2">
+        <label for="typeahead-format">Search for a state:</label>
+        <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model2" [ngbTypeahead]="search" [resultFormatter]="formatter" />
+      </div>
+      <div class="col-repon col-sm-2 p-0">
+        <input type="submit" value="Save" class="btn btn-primary btn-block">
+      </div>
+    </div>
+  </form>
+</div>
+<hr>
+<pre>Model: {{ model2 | json }}</pre>

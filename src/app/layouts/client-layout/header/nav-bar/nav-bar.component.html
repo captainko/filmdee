@@ -2,7 +2,7 @@
   <div class="row width-100 mx-0">
     <div class="col-auto pl-0">
       <div (click)="showNav()" [ngClass]="{'active': checkNav}" class="menu__toggler"><span></span></div>
-        <img [src]="logo" routerLink="/home">
+      <img [src]="logo" routerLink="/home">
     </div>
     <div class="col">
       <div class="row justify-content-between set-width ml-0">
@@ -12,30 +12,46 @@
 
 
           <ul [ngClass]="{'active': checkNav}" class="d-flex align-items-center justify-content-center m-0 menu">
-            <li class="item-list"><i class="hot-m fab fa-hotjar"></i>HOT</li>
-            <li class="item-list">PHIM RẠP</li>
-            <li class="item-list">ANIME</li>
-            <li class="item-list">PHIM BỘ</li>
-            <li class="item-list">TV SHOW</li>
-            <li class="item-list" routerLink="/chart">BXH</li>
-
-
+            <span class="fix-focus" #list tabindex="-1" (blur)="showNav1()">
+              <li class="item-list"><i class="hot-m fab fa-hotjar"></i>HOT</li>
+              <li class="item-list">PHIM RẠP</li>
+              <li class="item-list">ANIME</li>
+              <li class="item-list">PHIM BỘ</li>
+              <li class="item-list">TV SHOW</li>
+              <li class="item-list" routerLink="/chart">BXH</li>
+            </span>
           </ul>
         </nav>
         <div class="col-auto pr-0">
           <div class="row justify-content-end">
             <div class="col-auto px-0">
-              <search-bar></search-bar>
+              <app-search-bar></app-search-bar>
             </div>
-            <div class="col-auto pr-0">
-              <div class="login">
-                <span class="hidden-mobile">Đăng nhập</span>
-                <i class="fal fa-sign-in hidden-pc"></i>
+            <div class="col-auto pr-0 dh">
+              <div *ngIf="!login" class="login">
+                <span routerLink="/login" class="hidden-mobile">Đăng nhập</span>
+                <i routerLink="/login" class="fal fa-sign-in hidden-pc"></i>
               </div>
-              <div class="reg">
+              <div [ngStyle]="{'display':load ? 'block' : 'none' }" *ngIf="login" class="user">
+                <span (click)="logout()" class="user-center hidden-mobile">
+                  <img (load)="load_user()" class="avatar" src="{{avatar}}"> <span class="name">{{name}}</span>
+                </span>
+                <img (click)="logout()" class="hidden-pc avatar" src="{{avatar}}">
+              </div>
+
+              <div *ngIf="!load && login" class="preloader">
+                <div class="preloader_left"></div>
+                <div class="hidden-mobile preloader_right">
+                  <div class="name_load">{{name}}</div>
+                  <div class="preloader_top"></div>
+                  <div class="preloader_bot"></div>
+                </div>
+              </div>
+
+              <!-- <div class="reg">
                 <span class="hidden-mobile">Đăng ký</span>
                 <i class="fal fa-user-plus hidden-pc"></i>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

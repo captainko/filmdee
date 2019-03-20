@@ -57,7 +57,7 @@
     "no-empty-interface": true,
     "no-eval": true,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-misused-new": true,
@@ -74,7 +74,7 @@
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
 
-    "prefer-const": true,
+    "prefer-const": false,
     "quotemark": [
       true,
       "single"

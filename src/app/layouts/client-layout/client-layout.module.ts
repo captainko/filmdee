@@ -9,7 +9,7 @@ import { ClientLayoutComponent } from './client-layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
-import { ClientLayoutRoutingModule } from './client-layout-routing.module';
+import { ClientLayoutRoutingModule } from './client-layout.routing';
 
 @NgModule({
   declarations: [

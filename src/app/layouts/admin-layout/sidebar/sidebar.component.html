@@ -1,0 +1,24 @@
+<div class="col-auto sidebar">
+  <div class="logo">DASHBOARD</div>
+
+  <div class="container">
+    <div class="content">
+      <ul class="panel">
+        <li *ngFor="let list of lists; let i = index" [ngClass]="{'active' : active === i}" (click)="activateClass(i)"
+          class="list-c1">
+          <a class="item"><i class="fal {{list.icon}} pr-2 icon"></i> {{list.title}}</a>
+          <ul class="panel slideup" [ngStyle]="{'max-height.px' :open === i && list.check_click ? height_ul : '0'}"
+            *ngIf="list.list_subs" id="list{{i}}" [ngClass]="{'toopltip1' : !check_sub, 'toopltip2' : check_sub}">
+            <li class="list-c2" *ngFor="let list_sub of list.list_subs; let isub = index" [ngClass]="{'active' : active == list_sub.id}"
+              (click)="activateClass_c2(list_sub.id); $event.stopPropagation();">
+              <a class="item d-flex align-items-center">
+                <i class="fas fa-circle pr-2 circle" [ngStyle]="{'color':list_sub.color}"></i>
+                {{list_sub.title}}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

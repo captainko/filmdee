@@ -10,16 +10,17 @@ export class ChartComponent implements OnInit {
 
 
   list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  categorysTime = [
+  
+
+  categoriesTime = [
     { active: true, name: 'Ngày' },
     { active: false, name: 'Tháng' },
     { active: false, name: 'Năm' }
   ]
-  categorys = [
+  categories = [
     { active: true, name: 'Phim lẻ' },
     { active: false, name: 'Phim bộ' },
     { active: false, name: 'Anime' }
-
   ]
 
   topTenAnime = [
@@ -186,51 +187,41 @@ export class ChartComponent implements OnInit {
       img: 'https://firebasestorage.googleapis.com/v0/b/film-dee-aaf1a.appspot.com/o/2526-f7c3590d7508e4ef53ae4209f2f6c6a0.jpg?alt=media&token=0e9d884d-5019-4944-89f3-42df95248e78'
     },
   ]
+  public stylelist = {
+    display: 'none'
+  }
   constructor() { }
 
   ngOnInit() {
+    if (window.innerWidth < 992) {
+      this.categories.forEach((cat)=> {
+        if (cat.active) {
+           this.stylelist.display = 'block';
+          
+        } else 
+         this.stylelist.display = 'none';
+
+      })
+    }
   }
 
   active(vl) {
-    for (let index = 0; index < this.categorysTime.length; index++) {
+    for (let index = 0; index < this.categoriesTime.length; index++) {
       if (index != vl) {
-        this.categorysTime[index].active = false;
+        this.categoriesTime[index].active = false;
       } else {
-        this.categorysTime[index].active = true;
+        this.categoriesTime[index].active = true;
       }
     }
   }
   active2(vl) {
-    for (let index = 0; index < this.categorys.length; index++) {
+    for (let index = 0; index < this.categories.length; index++) {
       if (index != vl) {
-        this.categorys[index].active = false;
+        this.categories[index].active = false;
+
       } else {
-        this.categorys[index].active = true;
+        this.categories[index].active = true;
       }
-    }
-  }
-  styleList0(): any {
-    if (window.innerWidth < 992) {
-      if (this.categorys[0].active) {
-        return { display: 'block' };
-      }
-      return { display: 'none' };
-    }
-  }
-  styleList1(): any {
-    if (window.innerWidth < 992) {
-      if (this.categorys[1].active) {
-        return { display: 'block' };
-      }
-      return { display: 'none' };
-    }
-  }
-  styleList2(): any {
-    if (window.innerWidth < 992) {
-      if (this.categorys[2].active) {
-        return { display: 'block' };
-      }
-      return { display: 'none' };
     }
   }
 }

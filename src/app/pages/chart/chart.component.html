@@ -1,141 +1,144 @@
-<div class="container-fluid">
-  <div class="chart">
+<div class="slide">
+  <app-slide-image></app-slide-image>
+  <div class="overlay"></div>
+</div>
+<div class="chart" style="margin-top: -70vh;">
 
-    <div class="row chart-head justify-content-between">
-      <div class="col-lg-4 col-4">
-        <h3 class="text-uppercase font-weight-bold"><i class="fas fa-chart-bar pr-4 pb-4"></i>Bảng xếp hạng</h3>
-      </div>
-      <div class="col-lg-4 col-4 category-time">
-        <div class="categoryTime" *ngFor="let category of categorysTime; let i = index" (click)="active(i)"
-          [ngClass]="{'active': category.active}">{{category.name}} </div>
-      </div>
+  <div class="row chart-head justify-content-between">
+    <div class="col-lg-4 col-4 icon">
+      <i class="fas fa-chart-bar pr-2 pb-4"></i>
+      <h3 class="text-uppercase font-weight-bold">Bảng xếp hạng</h3>
     </div>
-    <div class="chart-table text-center">
-      <div class="row title">
-        <div class="col-lg-1 col-1 top">
-          <p>Top</p>
-        </div>
-        <div class="col-lg-11 col-11">
-          <div class="row lg">
-            <div class="col-lg-4 movie">
-              <p>Phim lẻ</p>
-            </div>
-            <div class="col-lg-4 series">
-              <p>Phim bộ</p>
-            </div>
-            <div class="col-lg-4 anime">
-              <p>Anime</p>
-            </div>
-          </div>
-          <div class="sm">
-            <div class="category" *ngFor="let category of categorys; let i = index" (click)="active2(i)"
-              [ngClass]="{'active': category.active}">{{category.name}} </div>
-          </div>
-        </div>
-
+    <div class="col-lg-4 col-4 category-time">
+      <div class="categoryTime" *ngFor="let category of categoriesTime; let i = index" (click)="active(i)"
+        [ngClass]="{'active': category.active}">{{category.name}} </div>
+    </div>
+  </div>
+  <div class="chart-table text-center">
+    <div class="row title">
+      <div class="col-lg-1 col-1 top">
+        <p>Top</p>
       </div>
-      <div>
-        <div class="chart-column">
-          <div class="row">
-            <div class="col-lg-1 col-1 top">
-              <p *ngFor="let i of list" class="number"
-                [ngStyle]="i===0&&{'color': 'yellow'}||i===1&&{'color': 'silver'}||i===2&&{'color': '#cd7f32'}"
-                style="color: white">{{i+1}}</p>
-            </div>
-            <div class="col-lg-11 col-11">
-              <div class="row">
-                <div class="col-lg-4 col-12 movie" [ngStyle]="styleList0()">
-                  <div *ngFor="let i of list" class="col-lg-12 col-12 item">
-                    <div class="chart-item">
-                      <div *ngIf="topTenMovie[i]" class="movie">
-                        <div class="image">
-                          <img [src]="topTenMovie[i].img" alt="">
-                        </div>
-                        <div class="content">
-                          <div class="detail text-center">
-                            <p class="name">{{topTenMovie[i].name}}</p>
-                            <div class="info">
-                              <div class="info-like">
-                                <i class="fas fa-heart"></i> 130
-                              </div>
-                              <div class="info-view">
-                                <i class="fal fa-eye"></i> 20000
-                              </div>
-                              <div class="info-time">
-                                <i class="far fa-clock"></i> 150 phút
-                              </div>
+      <div class="col-lg-11 col-11">
+        <div class="row lg">
+          <div class="col-lg-4 movie">
+            <p>Phim lẻ</p>
+          </div>
+          <div class="col-lg-4 series">
+            <p>Phim bộ</p>
+          </div>
+          <div class="col-lg-4 anime">
+            <p>Anime</p>
+          </div>
+        </div>
+        <div class="sm">
+          <div class="category" *ngFor="let category of categories; let i = index" (click)="active2(i)"
+            [ngClass]="{'active': category.active}">{{category.name}} </div>
+        </div>
+      </div>
+
+    </div>
+    <div>
+      <div class="chart-column">
+        <div class="row">
+          <div class="col-lg-1 col-1 top">
+            <p *ngFor="let i of list" class="number"
+              [ngStyle]="i===0&&{'color': 'yellow'}||i===1&&{'color': 'silver'}||i===2&&{'color': '#cd7f32'}"
+              style="color: white">{{i+1}}</p>
+          </div>
+          <div class="col-lg-11 col-11">
+            <div class="row">
+              <div class="col-lg-4 col-12 type movie" [class.show]="categories[0].active">
+                <div *ngFor="let i of list" class="col-lg-12 col-12 item">
+                  <div class="chart-item">
+                    <div *ngIf="topTenMovie[i]" class="movie">
+                      <div class="image">
+                        <img [src]="topTenMovie[i].img" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="detail text-center">
+                          <p class="name">{{topTenMovie[i].name}}</p>
+                          <div class="info">
+                            <div class="info-like">
+                              <i class="fas fa-heart"></i> 130
+                            </div>
+                            <div class="info-view">
+                              <i class="fal fa-eye"></i> 20000
+                            </div>
+                            <div class="info-time">
+                              <i class="far fa-clock"></i> 150 phút
                             </div>
                           </div>
                         </div>
-                        <div class="play">
-                          <a class="video-play-button" href="">
-                            <span class="icon-play"></span>
-                          </a>
-                        </div>
+                      </div>
+                      <div class="play">
+                        <a class="video-play-button" href="">
+                          <span class="icon-play"></span>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-12 series" [ngStyle]="styleList1()">
-                  <div *ngFor="let i of list" class="col-lg-12 col-12 item">
-                    <div class="chart-item">
-                      <div *ngIf="topTenSeries[i]" class="movie">
-                        <div class="image">
-                          <img [src]="topTenSeries[i].img" alt="">
-                        </div>
-                        <div class="content">
-                          <div class="detail text-center">
-                            <p class="name">{{topTenSeries[i].name}}</p>
-                            <div class="info">
-                              <div class="info-like">
-                                <i class="fas fa-heart"></i> 130
-                              </div>
-                              <div class="info-view">
-                                <i class="fal fa-eye"></i> 20000
-                              </div>
-                              <div class="info-time">
-                                <i class="far fa-clock"></i> 150 phút
-                              </div>
+              </div>
+              <div class="col-lg-4 col-12 type series" [class.show]="categories[1].active">
+                <div *ngFor="let i of list" class="col-lg-12 col-12 item">
+                  <div class="chart-item">
+                    <div *ngIf="topTenSeries[i]" class="movie">
+                      <div class="image">
+                        <img [src]="topTenSeries[i].img" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="detail text-center">
+                          <p class="name">{{topTenSeries[i].name}}</p>
+                          <div class="info">
+                            <div class="info-like">
+                              <i class="fas fa-heart"></i> 130
+                            </div>
+                            <div class="info-view">
+                              <i class="fal fa-eye"></i> 20000
+                            </div>
+                            <div class="info-time">
+                              <i class="far fa-clock"></i> 150 phút
                             </div>
                           </div>
                         </div>
-                        <div class="play">
-                          <a class="video-play-button" href="">
-                            <span class="icon-play"></span>
-                          </a>
-                        </div>
+                      </div>
+                      <div class="play">
+                        <a class="video-play-button" href="">
+                          <span class="icon-play"></span>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-12 anime" [ngStyle]="styleList2()">
-                  <div *ngFor="let i of list" class="col-lg-12 col-12 item">
-                    <div class="chart-item">
-                      <div *ngIf="topTenAnime[i]" class="movie">
-                        <div class="image">
-                          <img [src]="topTenAnime[i].img" alt="">
-                        </div>
-                        <div class="content">
-                          <div class="detail text-center">
-                            <p class="name">{{topTenAnime[i].name}}</p>
-                            <div class="info">
-                              <div class="info-like">
-                                <i class="fas fa-heart"></i> 130
-                              </div>
-                              <div class="info-view">
-                                <i class="fal fa-eye"></i> 20000
-                              </div>
-                              <div class="info-time">
-                                <i class="far fa-clock"></i> 150 phút
-                              </div>
+              </div>
+              <div class="col-lg-4 col-12 type anime" [class.show]="categories[2].active">
+                <div *ngFor="let i of list" class="col-lg-12 col-12 item">
+                  <div class="chart-item">
+                    <div *ngIf="topTenAnime[i]" class="movie">
+                      <div class="image">
+                        <img [src]="topTenAnime[i].img" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="detail text-center">
+                          <p class="name">{{topTenAnime[i].name}}</p>
+                          <div class="info">
+                            <div class="info-like">
+                              <i class="fas fa-heart"></i> 130
+                            </div>
+                            <div class="info-view">
+                              <i class="fal fa-eye"></i> 20000
+                            </div>
+                            <div class="info-time">
+                              <i class="far fa-clock"></i> 150 phút
                             </div>
                           </div>
                         </div>
-                        <div class="play">
-                          <a class="video-play-button" href="">
-                            <span class="icon-play"></span>
-                          </a>
-                        </div>
+                      </div>
+                      <div class="play">
+                        <a class="video-play-button" href="">
+                          <span class="icon-play"></span>
+                        </a>
                       </div>
                     </div>
                   </div>

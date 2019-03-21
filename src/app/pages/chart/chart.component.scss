@@ -43,6 +43,8 @@ $colors: (
 }
 .title {
   color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 .image {
   position: relative;
@@ -214,7 +216,25 @@ $colors: (
 .sm {
   display: none;
 }
+.slide{
+  position: relative;
+  .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #141414 0%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+.icon{
+  display: flex;
+  align-items: baseline;
+}
+
 @media only screen and (max-width: 992px) {
+  .type{
+    display: none;
+  }
   .row.lg{
     display: none;
   }
@@ -224,6 +244,22 @@ $colors: (
   .chart-table{
     margin: 0px 7%;
   }
+  .chart{
+    padding: 0px 15px;
+  }
+  .title{
+    font-size: 17px;
+  }
+  .icon{
+    flex: unset;
+    max-width: 40%;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .show{
+    display: block;
+  }
 }
 @media only screen and (max-width: 765px) {
   .chart-table{
@@ -231,5 +267,8 @@ $colors: (
   }
   .item{
     padding: 0px;
+  }
+  h3{
+    display: none;
   }
 }

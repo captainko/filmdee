@@ -11,9 +11,6 @@ export class BoxCardComponent implements OnInit {
   loading: boolean = true;
   timer = false;
   constructor() {
-    // setTimeout(() => {
-    //   this.timer = true;
-    // }, 6000);
   }
 
   ngOnInit() {

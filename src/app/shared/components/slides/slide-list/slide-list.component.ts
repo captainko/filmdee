@@ -9,6 +9,7 @@ import { OwlCarousel } from 'ngx-owl-carousel';
 })
 export class SlideListComponent implements OnInit {
   @Input('data-list') list: BoxCard[];
+  @Input('data-name') name: string;
 
   @ViewChild('owlElement') owlElement: OwlCarousel;
 

@@ -11,6 +11,20 @@ export interface Film {
     launch?: {day: number, month: number, year: number};
 }
 
+export interface LFilm {
+    image?: string;
+    link?: string;
+    now_ep?: string;
+    total_ep?: string;
+    id?: string;
+    name_vi?: string;
+    name?: string;
+    quality?: string;
+    view?: number;
+    time_update?: { day: number, month: number, year: number };
+    caterogy?: any;
+  }
+
 @Injectable({
     providedIn: 'root'
 })
@@ -49,8 +63,8 @@ export class AddFilmService {
         return this.films;
     }
 
-    addFilm(film: Film, id: string) {
-        this.userDoc = this.afs.doc(`film/${id}`);
+    addFilm(film: LFilm, id: string) {
+        this.userDoc = this.afs.doc(`film-slide/${id}`);
         this.userDoc.set(film);
     }
 

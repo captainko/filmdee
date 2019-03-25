@@ -17,8 +17,8 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Phim', icon: 'fa-film-alt', id: 0, check_click: false,
       list_subs: [
-        { title: 'Thêm Phim', color: '#47e5d7', id: '3a' },
-        { title: 'List Phim', color: '#febe29', id: '3b' }
+        { title: 'Thêm Phim', color: '#47e5d7', id: '3a', route: "addfilm" },
+        { title: 'List Phim', color: '#febe29', id: '3b', route: "" }
       ]
     },
     {
@@ -28,8 +28,8 @@ export class SidebarComponent implements OnInit {
         { title: 'List Diễn Viên', color: '#febe29', id: '3b' }
       ]
     },
-    { title: 'User', icon: 'fa-users', id: 2},
-    { title: 'Video Background', icon: 'fa-video', id: 3},
+    { title: 'User', icon: 'fa-users', id: 2 },
+    { title: 'Video Background', icon: 'fa-video', id: 3 },
   ];
   constructor() {
     this.activateClass(0);
@@ -43,7 +43,10 @@ export class SidebarComponent implements OnInit {
     this.active = i;
     this.open = i;
     this.check_sub = false;
+
+    // tslint:disable-next-line: no-var-keyword
     for (var x in this.lists) {
+      // tslint:disable-next-line: curly
       if (x != i)
         this.lists[x + ''].check_click = false;
     }
@@ -53,7 +56,7 @@ export class SidebarComponent implements OnInit {
     } else {
       this.height_ul = 0;
     }
-    //console.log(this.height_ul);
+    // console.log(this.height_ul);
   }
 
   activateClass_c2(id) {

@@ -55,7 +55,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
       { id: '5', name: 'Martin Freeman', role: 'Everett Ross', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/05a.jpg?alt=media&token=41685429-8281-4334-966e-914296b50cd3'},
       { id: '6', name: 'Letitia Wright', role: 'Shuri', avatar: 'https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/06a.jpg?alt=media&token=193ed906-a689-447c-97d6-23931fb0819a'},
     ],
-    
+
     video_background: {
       video: 'https://firebasestorage.googleapis.com/v0/b/phimdee-video.appspot.com/o/test%2F1551414168083_demo%20(2).m3u8?alt=media&token=d0156c18-2027-4fd8-863a-06e2fdb64e5c',
       image: ''
@@ -258,7 +258,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
   prev_e() {
     this.owlElement.previous([200]);
   }
-  
+
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
     if (window.innerWidth >= 992 && !this.play) {
@@ -273,7 +273,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
     }
 
     console.log(this.data.video_background.image);
-    
+
   }
 
   onVoted() {
@@ -286,7 +286,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
   }
 
-  styleObject0(): any {
+  styleObject0(id: number): any {
     if (this.menus[0].active) {
       return { display: 'block' }
     }
@@ -301,6 +301,8 @@ export class PlayComponent implements OnInit, AfterViewInit {
   }
 
   styleObject2(): any {
+    console.log('LOL');
+
     if (this.menus[2].active) {
       return { display: 'block' }
     }
@@ -334,7 +336,7 @@ export class PlayComponent implements OnInit, AfterViewInit {
 
     var link = window.location.href.split("-");
     console.log(link[link.length - 1]);
-    
+
 
   }
 

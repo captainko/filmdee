@@ -10,7 +10,7 @@ import { SlidesModule } from '@shared/components/slides/slides.module';
 import { JwplayerModule } from '@shared/components/jwplayer/jwplayer.module';
 import { InfoFilmModule } from '@shared/components/info-film/info-film.module';
 import { OwlModule } from 'ngx-owl-carousel';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { SafePipe } from './pipe/safe.pipe';
 import { PlayRoutingModule } from './play.routing';
 

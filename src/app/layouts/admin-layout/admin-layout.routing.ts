@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: AdminLayoutComponent,
     children: [
-      { path: '', loadChildren: '../../admin/admin.module#AdminModule' }
+      { path: '', loadChildren: './pages/admin.module#AdminModule' }
     ]
   }
 ];

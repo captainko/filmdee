@@ -128,7 +128,7 @@ i.circle {
 }
 
 .slideup, .slidedown {
-    //max-height: 0;            
+    //max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.4s ease-in-out;
     -moz-transition: max-height 0.4s ease-in-out;
@@ -146,7 +146,7 @@ i.circle {
 }
 
 .container {
-    width: 240px;
+    width: 100%;
     height: calc(100vh - 70px);
     position: relative;
     overflow: auto;

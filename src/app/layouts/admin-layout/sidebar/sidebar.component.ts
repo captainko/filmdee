@@ -56,7 +56,6 @@ export class SidebarComponent implements OnInit {
     } else {
       this.height_ul = 0;
     }
-    // console.log(this.height_ul);
   }
 
   activateClass_c2(id) {

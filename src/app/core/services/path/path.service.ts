@@ -12,7 +12,6 @@ export class PathService {
     private router: Router
   ) {
     this.previousPath = this.router.url;
-    console.log(this.previousPath);
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationStart)

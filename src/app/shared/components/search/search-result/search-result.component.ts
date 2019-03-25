@@ -49,8 +49,6 @@ export class SearchResultComponent implements OnInit {
               this.noResult = false;
               // this.searchService.movieStream.next(data);
               this.boxCards = data;
-              console.log(data);
-
             }
           })
       }

@@ -72,8 +72,7 @@ export class SearchService {
             return data;
         });
     }));
-    console.log('LOL');
-    
+
     return this.lists;
 }
 

@@ -53,8 +53,7 @@ export class NavBarComponent implements OnInit {
   }
 
   constructor(private authService: AuthService) {
-    // var a = parseBoolean(localStorage.login)
-    // console.log(a);
+
 
   }
   ngOnInit() {
@@ -62,10 +61,8 @@ export class NavBarComponent implements OnInit {
   }
 
   private checkIsLogged(): void {
-    console.log(localStorage.login);
     this.authService.isLogged().subscribe((auth) => {
       if (auth) {
-        console.log(auth);
         localStorage.login = true;
         this.login = true;
         this.name = auth.displayName;
@@ -79,10 +76,8 @@ export class NavBarComponent implements OnInit {
 
     if (localStorage.login == 'true') {
       this.login = true;
-      console.log('Login');
     } else {
       this.login = false;
-      console.log('Logout');
     }
   }
 

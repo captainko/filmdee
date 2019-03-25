@@ -54,7 +54,6 @@ export class SearchBarComponent implements OnInit {
       .subscribe(value => {
         if (this.search.valid) {
 
-          // console.log(`?q=${value}`)
           this.router.navigate(['search'], { queryParams: { q: value } });
 
         }

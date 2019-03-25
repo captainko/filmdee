@@ -66,14 +66,13 @@ export class AddFilmComponent implements OnInit {
 
   ngOnInit() {
     this.films = {};
-    
+
     this.list = {};
     this.films.name = '';
     this.films.quality = '';
     this.films.launch = this.model;
     this.addfilmService.getUser().subscribe(films => {
       this.id_next = films.length + 1;
-      console.log(this.id_next);
       // this.users = users;
     })
   }

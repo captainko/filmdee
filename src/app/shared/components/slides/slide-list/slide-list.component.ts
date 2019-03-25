@@ -93,7 +93,6 @@ export class SlideListComponent implements OnInit {
 
 
   constructor() {
-    console.log(this.list);
 
    }
 

@@ -20,7 +20,6 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
     this.fakeService.getUser('fake', 'sex', 'Nữ').subscribe(users => {
-      //console.log(usersa);
       this.users = users;
     })
   }

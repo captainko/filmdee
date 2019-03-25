@@ -301,7 +301,6 @@ export class PlayComponent implements OnInit, AfterViewInit {
   }
 
   styleObject2(): any {
-    console.log('LOL');
 
     if (this.menus[2].active) {
       return { display: 'block' }
@@ -335,8 +334,6 @@ export class PlayComponent implements OnInit, AfterViewInit {
     fb.init(initParams);
 
     var link = window.location.href.split("-");
-    console.log(link[link.length - 1]);
-
 
   }
 

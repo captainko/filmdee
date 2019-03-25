@@ -1,10 +1,15 @@
 export interface BoxCard {
-  id: number,
-  total: number | string,
-  now: number | string,
-  quality: string,
-  name: string,
-  image?: string,
+  image?: string;
+  link?: string;
+  now_ep?: string;
+  total_ep?: string;
+  id?: string;
+  name_vi?: string;
+  name?: string;
+  quality?: string;
+  view?: number;
+  time_update?: { day: number, month: number, year: number };
+  caterogy?: any;
 }
 
 

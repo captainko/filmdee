@@ -1,14 +1,14 @@
 <div class="list-film">
   <div class="row list-header justify-content-between">
     <div class="col-8 col-md-4">
-      <h3 class="list-title">Mới Cập Nhật</h3>
+      <h3 class="list-title">{{name}}</h3>
     </div>
   </div>
   <div class="lazy" >
     <div (click)="prev()" class="button-prev"><i class="fal fa-chevron-left icon-prev"></i></div>
     <div (click)="next()" class="button-next"><i class="fal fa-chevron-right icon-next"></i></div>
 
-   <div lazyViewport>
+   <div *ngIf="list" lazyViewport>
       <owl-carousel #owlElement [options]="customOptions" >
         <div class="item" *ngFor="let listFilm of list; let i = index">
           <box-card [card]="listFilm"></box-card>

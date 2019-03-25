@@ -4,13 +4,13 @@
 <div class="info">
   <div class="info-content">
     <div class="avatar">
-      <img src="../../../assets/images/avatar-actor.jpg" alt="">
+      <img src="https://firebasestorage.googleapis.com/v0/b/phimdee-image.appspot.com/o/1.jpg?alt=media&token=f7199cee-cccc-4dc5-a92b-7878977ec419" alt="">
     </div>
     <div class="content ml-1">
       <h1 class="actor-name">{{ actor.name }}</h1>
       <div class="sosial-network">
         <a href="https://www.facebook.com/dpm98" target="_blank"><i class="fab fa-facebook" aria-hidden="true" style="color: #4267B2;"></i></a>
-        <a href="https://www.facebook.com/dpm98" target="_blank"><i class="fab fa-instagram instagram" aria-hidden="true" style="background: linear-gradient(to bottom left, #FFD521, #E20039, #B900B4); border-radius: 25px;"></i></a>
+        <a href="https://www.facebook.com/dpm98" target="_blank"><i class="fab fa-instagram instagram" aria-hidden="true"></i></a>
         <a href="https://www.facebook.com/dpm98" target="_blank"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
       </div>
     </div>
@@ -18,21 +18,23 @@
 </div>
 <div class="intro row">
   <div class="col-3 intro-content">
-    <div class="item">
-      <span class="title">Nghề nghiêp: </span><span>{{ actor.job }}</span>
-    </div>
+    <div class="info-a row">
+      <div class="item col-lg-12 col-sm-6 col-12 px-0">
+        <span class="title">Nghề nghiêp: </span><span>{{ actor.job }}</span>
+      </div>
 
-    <div class="item">
-      <span class="title">Ngày sinh: </span>
-      <span>{{ actor.born.day + '/' + actor.born.month + '/' + actor.born.year }}</span>
-      <span> (Tuổi {{actor.age }})</span>
-    </div >
-    <div class="item">
-      <span class="title">Quốc tịch: </span> <span>{{ actor.country }}</span>
-    </div>
+      <div class="item col-lg-12 col-sm-6 col-12 px-0">
+        <span class="title">Ngày sinh: </span>
+        <span>{{ actor.born.day + '/' + actor.born.month + '/' + actor.born.year }}</span>
+        <span> (Tuổi {{actor.age }})</span>
+      </div>
+      <div class="item col-lg-12 col-sm-6 col-12 px-0">
+        <span class="title">Quốc tịch: </span> <span>{{ actor.country }}</span>
+      </div>
 
-    <div class="item">
-      <span class="title">Giới tính: </span> <span>{{ actor.sex }}</span>
+      <div class="item col-lg-12 col-sm-6 col-12 px-0">
+        <span class="title">Giới tính: </span> <span>{{ actor.sex }}</span>
+      </div>
     </div>
 
     <div style="text-align: justify;" class="item">

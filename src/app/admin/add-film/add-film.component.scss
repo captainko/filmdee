@@ -12,3 +12,12 @@
     display: flex;
     align-items: center;
 }
+
+.row.info {
+    width: 50%;
+    margin: 0px;
+}
+
+button.btn.btn-outline-secondary.calendar {
+    border-color: #ced4da !important;
+}

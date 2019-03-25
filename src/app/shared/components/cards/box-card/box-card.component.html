@@ -1,7 +1,7 @@
-<div class="item grid">
+<div routerLink="/xem/{{boxCard.link}}" class="item grid">
   <div class="cell cell-g">
     <div class="show">
-      <div *ngIf="boxCard.total > 1" class="ep">{{boxCard.now + '/' + boxCard.total}}</div>
+      <div *ngIf="boxCard.total_ep > 1" class="ep">{{boxCard.now_ep + '/' + boxCard.total_ep}}</div>
       <div class="quality">{{boxCard.quality}}</div>
       <img async [lazySrc]="boxCard.image" lazySrcVisible="visible">
 
@@ -11,6 +11,6 @@
         <span class="icon-play"></span>
       </a>
     </div>
-    <div class="title">{{boxCard.name}}</div>
+    <div class="title">{{boxCard.name_vi}}</div>
   </div>
 </div>
